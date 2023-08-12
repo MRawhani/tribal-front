@@ -1,0 +1,363 @@
+$container-padding:1rem;
+
+svg:not(:root) {
+  overflow: visible !important;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60rem;
+  padding-left: 3.2rem;
+  padding-right: 3.2rem;
+     overflow: hidden;
+
+  &.no-hidden {
+      overflow: visible;
+
+  }
+  &.one-side{
+      margin-left: 0;
+      padding-left: 0;
+      padding-right: 0;
+      margin-right: 0;
+
+      max-width: calc(((100% - 60rem) / 2) + 60rem) !important;
+      @include respond(m){
+        margin-right: auto;
+     
+      }
+  }
+ 
+
+  @include respond(xs) {
+      max-width: 90rem; 
+      padding-left: 4rem;
+      padding-right: 4rem;
+      &.one-side{
+     
+        max-width: calc(((100% - 90rem) / 2) + 90rem) !important;
+    }
+  }
+  
+  @include respond(s) {
+      max-width: 104rem;
+      padding-left: 4.8rem;
+      padding-right: 4.8rem;
+      &.one-side{
+        
+        
+        max-width: calc(((100% - 104rem) / 2) + 104rem) !important;
+    }
+  }
+
+  @include respond(m) {
+    max-width: 114rem;
+    padding-left: $container-padding * 4;
+    padding-right: $container-padding * 4;
+    &-big{
+        max-width: 130rem;
+    
+    }
+    &.one-side{
+      padding-right: $container-padding * 4;
+       
+      max-width: calc(((100% - 114rem) / 2) + 114rem) !important;
+  }
+} @include respond(l) {
+  max-width: 122rem;
+  padding-left: $container-padding * 4;
+  padding-right: $container-padding * 4;
+  &-big{
+      max-width: 130rem;
+   
+  }
+  &.one-side{
+    padding-right: $container-padding * 4;
+    max-width: calc(((100% - 122rem) / 2) + 122rem) !important;
+}
+} 
+
+  @include respond(xl) {   
+      max-width: 145rem;
+      padding-left: 85px;
+      padding-right: 85px;
+      &-big{
+          max-width: 150rem;
+      
+      }
+      &.one-side{
+        padding-right: 85px;
+         
+        max-width: calc(((100% - 145rem) / 2) + 145rem) !important;
+    }
+  }
+
+  @include respond(xxl) {
+      max-width: 175rem;
+      padding-left: 100px;
+      padding-right: 100px;
+      &-big{ 
+          max-width: 160rem;
+      } 
+      &.one-side{
+      padding-right: 100px;
+        
+        max-width: calc(((100% - 175rem) / 2) + 175rem) !important;
+    }
+  }
+
+  @include respond(xxxl) {
+      max-width: 190rem;
+      padding-left: 100px;
+      padding-right: 100px;
+      &-big{
+          max-width: 190rem;
+      }        
+      &.one-side{
+         @include respond(m){
+          padding-right: 100px;
+
+        }   
+        max-width: calc(((100% - 190rem) / 2) + 190rem) !important;
+    }
+  }
+
+  &__not-hidden {
+      overflow: visible;
+  } 
+
+  &-fluid {
+      padding-right: 0px;
+      padding-left: 0px;
+
+  }
+
+  &.align-right {
+      margin-right: 0;
+  }
+}
+
+
+
+// $columns: 12; // number of columns in the grid system
+.row {
+  display: flex !important;
+  // padding-right: 10px;
+  // padding-left: 10px; 
+  // align-items: center;
+  //flex-direction: column;
+  // @include respond(m) {
+
+  //         flex-direction: row;
+
+  // }
+  margin: 0 -1rem;
+  &.no-margin{
+      margin: 0;
+  }
+  &.gutter-big{                 
+  margin: 0 -1.5rem;
+    .col{
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+}
+
+.row-revers {
+  flex-direction: row-reverse;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-dir {
+
+  @include respond(m) {
+      &-row {
+          flex-direction: row;
+      }
+  }
+
+}
+
+.col {
+
+  // background-color: pink;
+  // border-radius: 8px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+
+  &-no-sidePadding {
+      padding-right: 0;
+      padding-left: 0;
+  }
+
+ 
+}
+
+$columns :12;
+
+@for $width from 1 through $columns {
+  .w-#{$width} {
+      width: 100%;
+
+      padding-left: 10px;
+      padding-right: 10px;
+
+      @include respond(m) {
+          width: $width#{'%'};
+
+      }
+
+  }
+
+}
+
+.w__no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+$columns :12;
+
+@for $width from 1 through $columns {
+  .col-#{$width} {
+    
+         width: $width /
+           $columns * 100%;
+
+     
+  }
+
+}
+
+@for $width from 1 through $columns {
+  .col-#{$width}-xs {
+      @include respond(xs) {
+         width: $width /
+           $columns * 100%;
+
+      }
+  }
+
+}
+
+@for $width from 1 through $columns {
+  .col-#{$width}-sm {
+      @include respond(s) {
+         width: $width /
+           $columns * 100%;
+
+      }
+  }
+
+}
+
+
+@for $width from 1 through $columns {
+  .col-#{$width}-ta {
+      @include respond(t) {
+         width: $width /
+           $columns * 100%;
+
+      }
+  }
+
+} 
+
+@for $width from 1 through $columns {
+  .col-#{$width}-md {
+      @include respond(m) {
+         width: $width /
+           $columns * 100%;
+
+      }
+  }
+
+}
+
+@for $width from 1 through $columns {
+  .col-#{$width}-lg {
+      @include respond(l) {
+         width: $width /
+           $columns * 100%;
+
+      }
+  }
+
+}
+@for $width from 1 through $columns {
+  .col-#{$width}-xl {
+      @include respond(xl) {
+         width: $width /  
+           $columns * 100%;
+
+      }
+  }
+
+}
+@for $width from 1 through $columns {
+  .col-#{$width}-xxl {
+      @include respond(xxl) {
+         width: $width /  
+           $columns * 100%;
+
+      }
+  }
+
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-baseline {
+  align-items: baseline;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+.align-end {
+  align-items: flex-end;
+}
+.align-stretch {
+  align-items: stretch;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-end {
+  justify-content: flex-end;
+
+}
+
+.justify-center {
+  justify-content: center;
+
+}
+.flex-between{
+  justify-content: space-between;
+}
+.flexColumn {
+  flex-direction: column;
+  .col{
+      padding-right:0;
+      padding-left: 0;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+  }
+}
+
+.flex-1 {
+  flex: 1;
+}    
