@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        main: '#5B315E',
+        second: '#FFB71B', 
+      },
       fontFamily:{
         sans:['var(--font-pecita)']
       },

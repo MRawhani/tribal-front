@@ -19,7 +19,7 @@
    transform: translate(-50%,-50%);
   }
 @mixin respond($breakpoint){
-    @if $breakpoint == xsm{
+    @if $breakpoint == 2xs{
         @media (min-width: 365px) { //400
             @content
         };
@@ -30,33 +30,33 @@
         };
     }
     @if $breakpoint == s{
-        @media (min-width: 769px) { //600
+        @media (min-width: 640px) { //600
             @content
         };
     }
    
     @if $breakpoint == m{
-        @media (min-width: 1024px) { //900
+        @media (min-width: 768px) { //900
             @content
         };
     }
-    @if $breakpoint == l{
-        @media (min-width: 1200px) { //1100
+    @if $breakpoint == lg{
+        @media (min-width: 1024px) { //1100
             @content
         };
     }
     @if $breakpoint == xl{
-        @media (min-width: 1600px) { //1800
+        @media (min-width: 1280px) { //1800
             @content
         };
     }
-    @if $breakpoint == xxl{ 
-        @media (min-width: 1900px) { //1800
+    @if $breakpoint == 2xl{ 
+        @media (min-width: 1536px) { //1800
             @content
         };
     }  
-    @if $breakpoint == xxxl{ 
-        @media (min-width: 2300px) { //2500
+    @if $breakpoint == 3xl{ 
+        @media (min-width: 1900px) { //2500
             @content
         };
     }

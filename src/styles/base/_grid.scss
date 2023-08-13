@@ -11,7 +11,7 @@ svg:not(:root) {
   padding-right: 3.2rem;
      overflow: hidden;
 
-  &.no-hidden {
+  &.not-hidden {
       overflow: visible;
 
   }
