@@ -1,4 +1,7 @@
 .header {
+    padding: 2.4rem 0;
+    
+    
   &__menu-icon {
     position: relative;
     width: 2.65rem;
@@ -17,20 +20,11 @@
   }
 
   &__logo {
-    width: 4.6rem;
-    height: 4.6rem;
-
-    @include respond(m) {
-      width: 6rem;
-      height: 6rem;
-    }
-
-    &.is-dark {
-      display: inline-block;
-    }
-
-    &.is-white {
-      display: none;
+    width: 13rem; //80%
+    height: 5.6rem;//80%
+    @include respond(2xl){
+        width: 16.3rem;
+        height: 7rem;
     }
   }
 
@@ -58,37 +52,68 @@
 
   &.scrolled {
     box-shadow: 0px 3px 6px rgba($color: #707070, $alpha: 0.1);
+    padding: 2rem 0;
+    
   }
   &__menu {
     li {
       position: relative;
       list-style: none;
       cursor: pointer;
+    
+      &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0.57rem;
+        height: 0.57rem;
+        border-radius: 50%;
+        @include secondary-gradient;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+        transform: translate(-10px,2px) scale(0);
 
+        
+    }
       a {
-        &.nav-link {
-          margin: 0 3.5rem;
-        }
+        // &.nav-link {
+        //   margin: 0 2.4rem;
+        // }
 
-        padding: 1.5rem 0;
-        color: $main;
-        transition: color 0.3s;
+        padding: 0.5rem 0;
+        transition: all 0.3s;
         text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        //fallback
+        color: $tuna-800;
+        background: linear-gradient(90deg, $tuna-800 0%, $tuna-800 100%); 
 
-        font-size: 1.6rem;
-
-        @include respond(lg) {
-          font-size: 1.8rem;
-        }
-
+        background-clip: text;
+        
         &:hover {
-          color: $second;
+            @include secondary-gradient;
+            color: transparent; // This will make the text transparent
+            background-clip: text;
+          svg{
+            color: $seconday-600;
+          }
         }
       }
 
       &.active {
         a {
-          color: $second;
+            @include secondary-gradient;
+            color: transparent; // This will make the text transparent
+            background-clip: text;
+            
+        }
+        
+        &::before{
+          opacity: 1;
+        transform: translate(0,0) scale(1);
+            
         }
       }
     }

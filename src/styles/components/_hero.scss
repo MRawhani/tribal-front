@@ -1,8 +1,8 @@
 .hero {
 
     padding: 11rem 0 3.5rem;
-    min-height: 100vh;
-    height: 150vh;
+    min-height: 90vh;
+    
     @include respond(m){ 
     padding: 14rem 0 7rem;
     }

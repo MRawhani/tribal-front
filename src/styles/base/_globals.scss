@@ -22,10 +22,14 @@
 
       
 html {
-  font-size: 10px;
+  font-size: 8px;
 
-  @include respond(xl){
-  font-size: 11px;
+  @include respond(m){
+    font-size: 9px;
+
+  }
+  @include respond(lg){
+    font-size: 10px;
 
   }
   
@@ -40,7 +44,7 @@ body {
   overflow-x: hidden;
      
   position: relative;   
-  background-color: #faeded;
+  background-color: $seconday-50;
  
 }
 

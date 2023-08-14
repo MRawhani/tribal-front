@@ -1,4 +1,4 @@
-$container-padding:1rem;
+$container-padding: 1rem;
 
 svg:not(:root) {
   overflow: visible !important;
@@ -6,144 +6,137 @@ svg:not(:root) {
 .container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 60rem;
+  max-width: 400px;
   padding-left: 3.2rem;
   padding-right: 3.2rem;
-     overflow: hidden;
+  overflow: hidden;
 
   &.not-hidden {
-      overflow: visible;
-
-  }
-  &.one-side{
-      margin-left: 0;
-      padding-left: 0;
-      padding-right: 0;
-      margin-right: 0;
-
-      max-width: calc(((100% - 60rem) / 2) + 60rem) !important;
-      @include respond(m){
-        margin-right: auto;
-     
-      }
+    overflow: visible;
   }
  
-
-  @include respond(xs) {
-      max-width: 90rem; 
-      padding-left: 4rem;
-      padding-right: 4rem;
-      &.one-side{
-     
-        max-width: calc(((100% - 90rem) / 2) + 90rem) !important;
-    }
-  }
-  
+ 
   @include respond(s) {
-      max-width: 104rem;
-      padding-left: 4.8rem;
-      padding-right: 4.8rem;
-      &.one-side{
-        
-        
-        max-width: calc(((100% - 104rem) / 2) + 104rem) !important;
-    }
+    max-width: 600px;
+    padding-left: $container-padding * 2;
+    padding-right: $container-padding * 2;
   }
 
   @include respond(m) {
-    max-width: 114rem;
-    padding-left: $container-padding * 4;
-    padding-right: $container-padding * 4;
-    &-big{
-        max-width: 130rem;
-    
+    max-width: 700px;
+    padding-left: $container-padding * 2;
+    padding-right: $container-padding * 2;
+    &-big {
+      max-width: 1300px;
     }
-    &.one-side{
-      padding-right: $container-padding * 4;
-       
-      max-width: calc(((100% - 114rem) / 2) + 114rem) !important;
-  }
-} @include respond(l) {
-  max-width: 122rem;
-  padding-left: $container-padding * 4;
-  padding-right: $container-padding * 4;
-  &-big{
-      max-width: 130rem;
-   
-  }
-  &.one-side{
-    padding-right: $container-padding * 4;
-    max-width: calc(((100% - 122rem) / 2) + 122rem) !important;
-}
-} 
+    &.one-side {
+      padding-right: $container-padding * 2;
 
-  @include respond(xl) {   
-      max-width: 145rem;
-      padding-left: 85px;
+      max-width: calc(((100% - 1140px) / 2) + 1140px) !important;
+    }
+  }
+  @include respond(lg) {
+    max-width: 960px;
+    padding-left: $container-padding * 2;
+    padding-right: $container-padding * 2;
+    &-big {
+      max-width: 1300px;
+    }
+    &.one-side {
+      padding-right: $container-padding * 2;
+
+      max-width: calc(((100% - 1140px) / 2) + 1140px) !important;
+    }
+  }
+  @include respond(xl) {
+    max-width: 1140px;
+    padding-left: $container-padding * 2;
+    padding-right: $container-padding * 2;
+    &-big {
+      max-width: 1300px;
+    }
+    &.one-side {
+      padding-right: $container-padding * 2;
+
+      max-width: calc(((100% - 1140px) / 2) + 1140px) !important;
+    }
+  }
+  @include respond(2xl) {
+    max-width: 1220px;
+    padding-left: $container-padding * 2;
+    padding-right: $container-padding * 2;
+    &-big {
+      max-width: 1300px;
+    }
+    &.one-side {
+      padding-right: $container-padding * 2;
+      max-width: calc(((100% - 1220px) / 2) + 1220px) !important;
+    }
+  }
+
+  @include respond(3xl) {
+    max-width: 1450px;
+    padding-left: 85px;
+    padding-right: 85px;
+    &-big {
+      max-width: 1500px;
+    }
+    &.one-side {
       padding-right: 85px;
-      &-big{
-          max-width: 150rem;
-      
-      }
-      &.one-side{
-        padding-right: 85px;
-         
-        max-width: calc(((100% - 145rem) / 2) + 145rem) !important;
+
+      max-width: calc(((100% - 1450px) / 2) + 1450px) !important;
     }
   }
 
-  @include respond(xxl) {
-      max-width: 175rem;
-      padding-left: 100px;
-      padding-right: 100px;
-      &-big{ 
-          max-width: 160rem;
-      } 
-      &.one-side{
-      padding-right: 100px;
-        
-        max-width: calc(((100% - 175rem) / 2) + 175rem) !important;
-    }
-  }
+  // @include respond(xxl) {
+  //     max-width: 175rem;
+  //     padding-left: 100px;
+  //     padding-right: 100px;
+  //     &-big{
+  //         max-width: 160rem;
+  //     }
+  //     &.one-side{
+  //     padding-right: 100px;
 
-  @include respond(xxxl) {
-      max-width: 190rem;
-      padding-left: 100px;
-      padding-right: 100px;
-      &-big{
-          max-width: 190rem;
-      }        
-      &.one-side{
-         @include respond(m){
-          padding-right: 100px;
+  //       max-width: calc(((100% - 175rem) / 2) + 175rem) !important;
+  //   }
+  // }
 
-        }   
-        max-width: calc(((100% - 190rem) / 2) + 190rem) !important;
-    }
-  }
+  // @include respond(xxxl) {
+  //     max-width: 190rem;
+  //     padding-left: 100px;
+  //     padding-right: 100px;
+  //     &-big{
+  //         max-width: 190rem;
+  //     }
+  //     &.one-side{
+  //        @include respond(m){
+  //         padding-right: 100px;
+
+  //       }
+  //       max-width: calc(((100% - 190rem) / 2) + 190rem) !important;
+  //   }
+  // }
 
   &__not-hidden {
-      overflow: visible;
-  } 
+    overflow: visible;
+  }
 
   &-fluid {
-      padding-right: 0px;
-      padding-left: 0px;
-
+    padding-right: 0px;
+    padding-left: 0px;
   }
 
   &.align-right {
-      margin-right: 0;
+    margin-right: 0;
   }
 }
-
-
 
 // $columns: 12; // number of columns in the grid system
 .row {
   display: flex !important;
   // padding-right: 10px;
-  // padding-left: 10px; 
+  // padding-left: 10px;
   // align-items: center;
   //flex-direction: column;
   // @include respond(m) {
@@ -152,12 +145,12 @@ svg:not(:root) {
 
   // }
   margin: 0 -1rem;
-  &.no-margin{
-      margin: 0;
+  &.no-margin {
+    margin: 0;
   }
-  &.gutter-big{                 
-  margin: 0 -1.5rem;
-    .col{
+  &.gutter-big {
+    margin: 0 -1.5rem;
+    .col {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
@@ -173,47 +166,38 @@ svg:not(:root) {
 }
 
 .flex-dir {
-
   @include respond(m) {
-      &-row {
-          flex-direction: row;
-      }
+    &-row {
+      flex-direction: row;
+    }
   }
-
 }
 
 .col {
-
   // background-color: pink;
   // border-radius: 8px;
   padding-right: 1rem;
   padding-left: 1rem;
 
-
   &-no-sidePadding {
-      padding-right: 0;
-      padding-left: 0;
+    padding-right: 0;
+    padding-left: 0;
   }
-
- 
 }
 
-$columns :12;
+$columns: 12;
 
 @for $width from 1 through $columns {
   .w-#{$width} {
-      width: 100%;
+    width: 100%;
 
-      padding-left: 10px;
-      padding-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 
-      @include respond(m) {
-          width: $width#{'%'};
-
-      }
-
+    @include respond(m) {
+      width: $width#{"%"};
+    }
   }
-
 }
 
 .w__no-padding {
@@ -221,93 +205,66 @@ $columns :12;
   padding-right: 0;
 }
 
-$columns :12;
+$columns: 12;
 
 @for $width from 1 through $columns {
   .col-#{$width} {
-    
-         width: $width /
-           $columns * 100%;
-
-     
+    width: $width / $columns * 100%;
   }
-
 }
 
 @for $width from 1 through $columns {
   .col-#{$width}-xs {
-      @include respond(xs) {
-         width: $width /
-           $columns * 100%;
-
-      }
+    @include respond(xs) {
+      width: $width / $columns * 100%;
+    }
   }
-
 }
 
 @for $width from 1 through $columns {
   .col-#{$width}-sm {
-      @include respond(s) {
-         width: $width /
-           $columns * 100%;
-
-      }
+    @include respond(s) {
+      width: $width / $columns * 100%;
+    }
   }
-
 }
-
 
 @for $width from 1 through $columns {
   .col-#{$width}-ta {
-      @include respond(t) {
-         width: $width /
-           $columns * 100%;
-
-      }
+    @include respond(t) {
+      width: $width / $columns * 100%;
+    }
   }
-
-} 
+}
 
 @for $width from 1 through $columns {
   .col-#{$width}-md {
-      @include respond(m) {
-         width: $width /
-           $columns * 100%;
-
-      }
+    @include respond(m) {
+      width: $width / $columns * 100%;
+    }
   }
-
 }
 
 @for $width from 1 through $columns {
   .col-#{$width}-lg {
-      @include respond(l) {
-         width: $width /
-           $columns * 100%;
-
-      }
+    @include respond(l) {
+      width: $width / $columns * 100%;
+    }
   }
-
 }
 @for $width from 1 through $columns {
   .col-#{$width}-xl {
-      @include respond(xl) {
-         width: $width /  
-           $columns * 100%;
-
-      }
+    @include respond(xl) {
+      width: $width / $columns * 100%;
+    }
   }
-
 }
 @for $width from 1 through $columns {
   .col-#{$width}-xxl {
-      @include respond(xxl) {
-         width: $width /  
-           $columns * 100%;
-
-      }
+    @include respond(xxl) {
+      width: $width / $columns * 100%;
+    }
   }
-
 }
 
 .align-center {
@@ -338,26 +295,24 @@ $columns :12;
 
 .justify-end {
   justify-content: flex-end;
-
 }
 
 .justify-center {
   justify-content: center;
-
 }
-.flex-between{
+.flex-between {
   justify-content: space-between;
 }
 .flexColumn {
   flex-direction: column;
-  .col{
-      padding-right:0;
-      padding-left: 0;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
+  .col {
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }
 
 .flex-1 {
   flex: 1;
-}    
+}

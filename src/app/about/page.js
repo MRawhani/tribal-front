@@ -1,7 +1,14 @@
+import Hero from '@/components/Hero'
 import React from 'react'
 
-export default function Policy() {
+export default function About() {
   return (
-    <div>Policy</div>
+    <div className='container'>
+      about
+      <Hero />
+      <Hero />
+     <Hero />
+    </div>
   )
 }
+  
