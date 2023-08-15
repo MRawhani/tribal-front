@@ -1,10 +1,89 @@
 .hero {
+  padding: 15rem 3.5rem;
+  min-height: 90vh;
 
-    padding: 11rem 0 3.5rem;
-    min-height: 90vh;
-    
-    @include respond(m){ 
-    padding: 14rem 0 7rem;
+
+  &__content {
+    padding: 0 4.2rem; // added to 15rem from top and bottom, 11rem are the nav and overlapped img, 109,114
+    width: 100%;
+    margin: 0 auto;
+    @include respond(2xl) {
+      padding: 4.2rem; // added to 15rem from top and bottom, 11rem are the nav and overlapped img, 109,114
+
+
+    }
+  }
+  &__text {
+    text-transform: uppercase;
+    span {
+      font-family: var(--font-gothamBook);
+      margin-bottom: 1rem;
+      line-height: 2rem;
+      color: $tuna-950;
+      font-size: 1.2rem;
+      @include respond(2xl) {
+        margin-bottom: 1.6rem;
+        line-height: 2.8rem;
+      font-size: 1.6rem;
+
+      }
+    }
+    h1 {
+      font-family: var(--font-ncs);
+      font-size: 3.2rem;
+      @include secondary-gradient;
+      background-clip: text;
+      color: transparent;
+      @include respond(2xl) {
+        font-size: 4.8rem;
+      }
     }
 
+    h2 {
+      color: $primary-950;
+      font-size: 2.4rem;
+      @include respond(2xl) {
+        font-size: 3.6rem;
+      }
+    }
+
+    p {
+      color: $tuna-950;
+      margin: 4.1rem 0;
+      //max-width: 76.8867%; //substracted from padding
+      line-height: 3.3rem;
+      font-size: 2.4rem;
+      text-align: center;
+      strong {
+        color: #c29c6c;
+      }
+      @include respond(2xl) {
+        font-size: 3.6rem;
+        margin: 6rem 0;
+        line-height: 5rem;
+
+      }
+    }
+  }
+
+  &__arrow {
+    width: 4.5rem;
+    height: 7.8rem;
+   // box-shadow: inset 0 0 0 1px $seconday-600;
+   border: 0.5px solid $seconday-600;
+    border-radius: 50px;
+    padding: 1rem;
+    background: rgba(194, 163, 113, 0.17);
+    background: linear-gradient(
+      180deg,
+      rgba(194, 163, 113, 0.17) 0%,
+      rgba(212, 194, 159, 0.09380000000000001) 50%,
+      rgba(233, 231, 216, 0) 100%
+    );
+
+    @include respond(2xl) {
+      width: 7.5rem;
+    height: 13rem;
+    }
+  }
 }
