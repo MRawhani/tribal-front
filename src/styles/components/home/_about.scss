@@ -1,0 +1,71 @@
+.about {
+    @include primary-gradient;
+    position: relative;
+    color: $white;
+
+    &__content {
+        height: 70vh;
+    }
+
+    &__img-wrapper {
+        height: 123%;
+        //width: 30%;
+        position: relative;
+        overflow: hidden;
+        top: -3rem;
+    }
+
+    &__profile {
+        position: relative;
+        height: 100%;
+        width: auto;
+    }
+
+    &__pattern {
+        height: 50rem;
+        width: 67rem;
+        position: absolute;
+        bottom: -15rem;
+        z-index: 1;
+    }
+
+    &__text {
+        margin-left: calc(18.9rem - ($baseCalcValue * 2* 18.9rem));
+        padding: 3rem 0;
+        @include respond(2xl) {
+            margin-left: calc(18.9rem - ($baseCalcValue * 18.9rem));
+        }
+
+        @include respond(3xl) {
+            margin-left: 18.9rem;
+
+        }
+    }
+
+    &__heading {
+        font-family: var(--font-ncs);
+        font-size: calc(3.2rem - ($baseCalcValue *2 * 3.2rem));
+        line-height: calc(4.4rem - ($baseCalcValue *2 * 4.4rem));
+        margin-top: 0.8rem;
+        margin-bottom: 1.6rem;
+
+        @include respond(2xl) {
+            font-size: calc(3.2rem - ($baseCalcValue * 3.2rem));
+            line-height: calc(4.4rem - ($baseCalcValue * 4.4rem));
+        }
+
+        @include respond(3xl) {
+            font-size: 3.2rem;
+            line-height: 4.4rem;
+        }
+    }
+
+    &__logo-pattern {
+        position: absolute;
+       
+        right: 0 ;
+
+        bottom: 0;
+
+    }
+}

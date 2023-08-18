@@ -1,8 +1,7 @@
-.show-xxl{
-    display: none;
-    @include respond(xxl){
-        display: inline-block;
-    }
+.color-gradient{
+    @include secondary-gradient;
+    color: transparent; // This will make the text transparent
+    background-clip: text;
 }
 
 

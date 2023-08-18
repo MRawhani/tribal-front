@@ -14,13 +14,14 @@
   );
 }
 @mixin secondary-gradient {
-    background: rgb(194, 156, 108);
-    background: linear-gradient(
-      90deg,
-      rgba(194, 156, 108, 1) 0%,
-      rgba(140, 122, 82, 1) 100%
-    );
-  }
+  background: rgb(194, 156, 108);
+  background: linear-gradient(
+    90deg,
+    rgba(194, 156, 108, 1) 0%,
+    rgba(140, 122, 82, 1) 100%
+  );
+}
+
   @mixin secondary-gradient-2 {
     background: rgb(194,163,113);
     background: linear-gradient(90deg, rgba(194,163,113,0.17) 0%, rgba(233,231,216,0) 100%); 

@@ -58,7 +58,7 @@ export default function Navbar() {
               <ul className="header__menu relative  mx-4 row gutter-big align-center justify-end">
                 {links.map((link) =>
                   link.children ? (
-                    <li className="header__dropdown col">
+                    <li key={link.id} className="header__dropdown col">
                       <a href="#" className="nav-link flex items-center">
                         <span>My Writting</span>
                       
@@ -92,6 +92,7 @@ export default function Navbar() {
                     </li>
                   ) : (
                     <li
+                    key={link.id}
                       className={`col ${
                         pathname === link.path ? "active" : ""
                       }`}

@@ -17,7 +17,7 @@ export default function Hero() {
             alt="mouse-arrow"
             width="0"
             height="0"
-            className="w-auto h-10 2xl:h-16"
+            className="w-auto h-10 2xl:h-14 3xl:h-16"
           />
           </div>
           <p>
