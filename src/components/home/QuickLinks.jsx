@@ -10,7 +10,7 @@ export default function QuickLinks() {
           <br />
           from youth, women, tribes, and local security.
         </h1>
-        <div className="Shortcuts__wrapper row flex-wrap 3xl:gutter-big  items-center">
+        <div className=" row flex-wrap 3xl:gutter-big  items-stretch">
           {short_links.map((link) =>
             link.blank ? (
               <div key={link.id} className={`col  col-4 col-3-xl mb-10`}>

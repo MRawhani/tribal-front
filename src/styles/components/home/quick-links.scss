@@ -20,6 +20,7 @@
 
     &__card {
         min-height: 19.7rem;
+        height: 100%;
         background: $pure-white;
         background: linear-gradient(90deg, $pure-white 0%, $pure-white 100%);
 
@@ -75,6 +76,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 5rem;
+        height: 5rem;
 
     }
 
