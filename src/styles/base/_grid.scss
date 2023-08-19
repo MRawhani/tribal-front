@@ -247,7 +247,7 @@ $columns: 12;
 
 @for $width from 1 through $columns {
   .col-#{$width}-lg {
-    @include respond(l) {
+    @include respond(lg) {
       width: $width / $columns * 100%;
     }
   }
@@ -260,8 +260,8 @@ $columns: 12;
   }
 }
 @for $width from 1 through $columns {
-  .col-#{$width}-xxl {
-    @include respond(xxl) {
+  .col-#{$width}-2xl {
+    @include respond(2xl) {
       width: $width / $columns * 100%;
     }
   }

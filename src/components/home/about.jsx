@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Title from "@/components/Title";
+import Title from "@/components/shared/Title";
 
 export default function About() {
   return (

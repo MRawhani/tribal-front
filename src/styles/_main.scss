@@ -8,9 +8,10 @@
 @import 'base/grid';
 
 // components
-@import 'components/header';
-@import 'components/title';
+@import 'components/shared/header';
+@import 'components/shared/title';
 @import 'components/home/hero';
 @import 'components/home/about';
+@import 'components/home/quick-links';
 
 @import 'utils'

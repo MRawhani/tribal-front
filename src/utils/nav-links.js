@@ -57,3 +57,52 @@ export const links = [
        
     }
 ]
+
+export const short_links = [
+    {
+        id: 1,
+        name: 'Articles',
+        icon: 'articles',
+        count:24
+    },
+    {
+        id: 2,
+        name: 'Reports',
+        icon: 'reports',
+        count:8
+    },
+    {
+        id: 3,
+        name: 'Book chapters',
+        icon: 'books',
+        count:2
+    },
+    {
+        id: 4,
+        name: 'Interviews',
+        icon: 'interviews',
+        count:12
+    },
+    {
+        id: 5,
+        name: 'Policy Papers',
+        icon: 'policy',
+        count:14
+    },
+    {
+        id: 6,
+        name: 'Unpublished Research',
+        icon: 'unpublished',
+        count:7
+    },
+    {
+        id: 7,
+        name: 'Stories',
+        icon: 'stories',
+        count:24
+    },
+    {
+        id: 8,
+        blank:true
+    },
+]
