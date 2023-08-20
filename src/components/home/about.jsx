@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Title from "@/components/shared/Title";
+import Title from "@/components/shared/Heading";
 
 export default function About() {
   return (
@@ -39,7 +39,7 @@ export default function About() {
               style={{ width: "15.6rem", height: "auto" }}
             />
             <div className="mt-16 mb-20">
-              <Title title="Who we are" standard={true} />
+              <Title title="Who we are" standard={false} />
             </div>
             <Image
               src="/assets/arabic-title-white.svg"
@@ -53,7 +53,7 @@ export default function About() {
             </h1>
             <p className="about__description">
               Writing about Yemen usually focuses on political parties, but
-              Nadwa's writing covers local affairs and perspectives from locals
+              Nadwas writing covers local affairs and perspectives from locals
               like youth, women, tribes, and local security. This viewpoint can
               often be overlooked by readers with specific interests.
               <br />

@@ -37,11 +37,11 @@ export default function Navbar() {
         <div className="container not-hidden">
           <div className="row align-center justify-between">
             <div className=" col md:hidden">
-              <img
+              {/* <img
                 src="images/icons/menu.svg"
                 alt=" menu icon"
                 className="header__menu-icon"
-              />
+              /> */}
             </div>
             <div className="col ">
               <div className="header__logo relative">

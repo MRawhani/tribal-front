@@ -5,95 +5,124 @@
     clear: both;
   }
 }
+
 @mixin primary-gradient {
   background: rgb(58, 55, 111);
-  background: linear-gradient(
-    90deg,
-    rgba(58, 55, 111, 1) 0%,
-    rgba(8, 4, 74, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(58, 55, 111, 1) 0%,
+      rgba(8, 4, 74, 1) 100%);
 }
+
 @mixin secondary-gradient {
   background: rgb(194, 156, 108);
-  background: linear-gradient(
-    90deg,
-    rgba(194, 156, 108, 1) 0%,
-    rgba(140, 122, 82, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(194, 156, 108, 1) 0%,
+      rgba(140, 122, 82, 1) 100%);
 }
 
-  @mixin secondary-gradient-2 {
-    background: rgb(194,163,113);
-    background: linear-gradient(90deg, rgba(194,163,113,0.17) 0%, rgba(233,231,216,0) 100%); 
-  }
+@mixin secondary-gradient-2 {
+  background: rgb(194, 163, 113);
+  background: linear-gradient(90deg, rgba(194, 163, 113, 0.17) 0%, rgba(233, 231, 216, 0) 100%);
+}
 
-  @mixin mixed-gradient{
-    background: rgb(152,138,90);
-    background: linear-gradient(90deg, rgba(152,138,90,1) 0%, rgba(8,4,74,1) 100%); 
-  }
+@mixin mixed-gradient {
+  background: rgb(152, 138, 90);
+  background: linear-gradient(90deg, rgba(152, 138, 90, 1) 0%, rgba(8, 4, 74, 1) 100%);
+}
 
 @mixin flexCenter {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 @mixin posCenter {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin fontSizeForScreens($size) {
+  font-size: calc($size - ($baseCalcValue *2 * $size));
+
+  @include respond(2xl) {
+    font-size: calc($size - ($baseCalcValue * $size));
+  }
+
+  @include respond(3xl) {
+    font-size: $size;
+  }
+}
+@mixin lineheightForScreens($size) {
+  line-height: calc($size - ($baseCalcValue *2 * $size));
+
+  @include respond(2xl) {
+    line-height: calc($size - ($baseCalcValue * $size));
+  }
+
+  @include respond(3xl) {
+    line-height: $size;
+  }
+}
 @mixin respond($breakpoint) {
-  @if $breakpoint == 2xs {
+  @if $breakpoint ==2xs {
     @media (min-width: 365px) {
       //400
       @content;
     }
   }
-  @if $breakpoint == xs {
+
+  @if $breakpoint ==xs {
     @media (min-width: 480px) {
       //400
       @content;
     }
   }
-  @if $breakpoint == s {
+
+  @if $breakpoint ==s {
     @media (min-width: 640px) {
       //600
       @content;
     }
   }
 
-  @if $breakpoint == m {
+  @if $breakpoint ==m {
     @media (min-width: 768px) {
       //900
       @content;
     }
   }
-  @if $breakpoint == lg {
+
+  @if $breakpoint ==lg {
     @media (min-width: 1024px) {
       //1100
       @content;
     }
   }
-  @if $breakpoint == xl {
+
+  @if $breakpoint ==xl {
     @media (min-width: 1280px) {
       //1800
       @content;
     }
   }
-  @if $breakpoint == 2xl {
+
+  @if $breakpoint ==2xl {
     @media (min-width: 1536px) {
       //1800
       @content;
     }
   }
-  @if $breakpoint == 3xl {
+
+  @if $breakpoint ==3xl {
     @media (min-width: 1900px) {
       //2500
       @content;
     }
   }
-  @if $breakpoint == h {
+
+  @if $breakpoint ==h {
     @media (max-height: 500px) {
       //400
       @content;
