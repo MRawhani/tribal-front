@@ -65,6 +65,21 @@
     line-height: $size;
   }
 }
+@mixin dimsForScreens($width, $height) {
+  width: calc($width - ($baseCalcValue *2 * $width));
+  height: calc($height - ($baseCalcValue *2 * $height));
+
+  @include respond(2xl) {
+    width: calc($width - ($baseCalcValue * $width));
+    height: calc($height - ($baseCalcValue  * $height));
+
+  }
+
+  @include respond(3xl) {
+    width: $width;
+    height: $height;
+  }
+}
 @mixin respond($breakpoint) {
   @if $breakpoint ==2xs {
     @media (min-width: 365px) {

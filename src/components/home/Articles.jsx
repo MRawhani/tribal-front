@@ -13,6 +13,7 @@ import "swiper/css/navigation";
 import Heading from "../shared/Heading";
 
 import { articles as articles_list } from "@/utils/fk-data";
+import ShowMoreButton from "../shared/ShowMoreButton";
 export default function Articles() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -42,7 +43,7 @@ export default function Articles() {
     </div>
   );
   return (
-    <div className="articles articles__section">
+    <div className="articles articles__section pb-4">
       <div className="container">
         <div className="articles__content">
           <Heading title="Aricles" className="mb-4" />
@@ -116,6 +117,10 @@ export default function Articles() {
               </SwiperSlide>
             ))}
           </Swiper>
+
+          <div className="mt-10  w-full flex justify-end">
+            <ShowMoreButton text='Show More Articles' />
+          </div>
         </div>
       </div>
     </div>
