@@ -46,7 +46,7 @@ export default function Articles() {
     <div className="articles articles__section pb-4">
       <div className="container">
         <div className="articles__content">
-          <Heading title="Aricles" className="mb-4" />
+          <Heading title="Articles" className="mb-4" />
           <SliderHeader />
 
           <Swiper

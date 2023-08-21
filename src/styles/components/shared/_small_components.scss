@@ -1,10 +1,11 @@
-.showMore-btn{
+.showMore-btn {
     @include secondary-gradient-2;
     border: 1px solid #C29C6C;
-    padding: 1.7rem  3rem 1.7rem  2.4rem;
+    padding: 1.7rem 3rem 1.7rem 2.4rem;
     border-radius: 6rem;
     position: relative;
     overflow: hidden;
+
     >* {
         position: relative;
         z-index: 1;
@@ -24,13 +25,14 @@
         opacity: 0;
         transition: opacity 0.3s;
     }
-    
-    svg{
-        @include dimsForScreens(1.3rem,1.3rem);
+
+    svg {
+        @include dimsForScreens(1.3rem, 1.3rem);
         transition: all 0.9s;
-        
+
     }
-    span{
+
+    span {
         margin-right: 1.2rem;
         line-height: 2.2rem;
         @include secondary-gradient;
@@ -39,15 +41,17 @@
         @include fontSizeForScreens(1.6rem);
         transition: color 0.3s;
     }
+
     &:hover {
         &::before {
             opacity: 1;
         }
 
-        span{
+        span {
             color: $white;
         }
-        svg{
+
+        svg {
             fill: $white;
         }
     }

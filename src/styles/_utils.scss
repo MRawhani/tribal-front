@@ -4,7 +4,49 @@
     background-clip: text;
 }
 
+.centered-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.orange-gradient-onHover{
+    position: relative;
+    overflow: hidden;
 
+    >* {
+        position: relative;
+        z-index: 1;
+        
+    }
+  
+    // Overlay gradient
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        @include secondary-gradient;
+
+        z-index: 0;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
+
+        >* {
+            color: $white;
+        }
+        svg{
+            fill: $white;
+        }
+    }
+
+}
 .hide-md{
     display: inline-block;
     @include respond(m){

@@ -72,6 +72,8 @@
         color: $tuna-800;
         @include fontSizeForScreens(1.4rem);
         margin-bottom: 2.4rem;
+        font-family: var(--font-gothamBook);
+
     }
     &__recource-icon{
         width: 3.5rem;
