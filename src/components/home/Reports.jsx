@@ -16,7 +16,7 @@ export default function Reports() {
           <div className="row m-0">
             <div className="col-3-md"></div>
             <div className="flex-1">
-              {reports_list.map((report) => (
+              {reports_list.slice(0, 4).map((report) => (
                 <div key={report.id} className="report-card">
                   <div className="flex items-center justify-between">
                     <div>
@@ -72,6 +72,17 @@ export default function Reports() {
         <div className="mt-10  w-full flex justify-end">
           <ShowMoreButton text="Show More Reports" />
         </div>
+      </div>
+      <div className="reports__logo-pattern">
+      <Image
+              className=" "
+              src="/assets/logo-pattern-left.png"
+              alt="YTV"
+              width="0"
+              height="0"
+              sizes="100vw"
+              style={{ width: "auto", height: "auto" }}
+            />
       </div>
     </div>
   );
