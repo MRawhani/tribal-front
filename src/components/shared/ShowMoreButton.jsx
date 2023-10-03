@@ -25,8 +25,8 @@ export default function ShowMoreButton({ text }) {
             y2="6.00266"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#C29C6C" />
-            <stop offset="1" stop-color="#8C7A52" />
+            <stop stopColor="#C29C6C" />
+            <stop offset="1" stopColor="#8C7A52" />
           </linearGradient>
         </defs>
       </svg>
