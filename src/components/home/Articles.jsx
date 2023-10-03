@@ -17,7 +17,6 @@ import ShowMoreButton from "../shared/ShowMoreButton";
 export default function Articles() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-  const swiper = useSwiper();
   const swiperRef = useRef();
   const swiperKey = Date.now();
   const SliderHeader = () => (
