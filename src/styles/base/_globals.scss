@@ -20,17 +20,7 @@
 }
 
 html {
-  font-size: 7px;
-
-  @include respond(m) {
-    font-size: 8px;
-  }
-  @include respond(lg) {
-    font-size: 9px;
-  }
-  @include respond(lg) {
-    font-size: 10px;
-  }
+  font-size: 16px;
 }
 
 body {
@@ -52,20 +42,20 @@ img {
   height: auto;
 }
 
-p{
-  font-size: calc(1.6rem - ($baseCalcValue *2 * 1.6rem));
-  line-height: calc(2.8rem - ($baseCalcValue *2 * 2.8rem));
-  
+p {
+  font-size: calc(1.6rem - ($baseCalcValue * 2 * 1.6rem));
+  line-height: calc(2.8rem - ($baseCalcValue * 2 * 2.8rem));
+
   @include respond(2xl) {
-      font-size: calc(1.6rem - ($baseCalcValue * 1.6rem));
-      line-height: calc(2.8rem - ($baseCalcValue * 2.8rem));
+    font-size: calc(1.6rem - ($baseCalcValue * 1.6rem));
+    line-height: calc(2.8rem - ($baseCalcValue * 2.8rem));
   }
 
   @include respond(3xl) {
-      font-size: 1.6rem;
-      line-height: 2.8rem;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
   }
 }
-h1{
+h1 {
   font-family: var(--font-ncs);
 }
