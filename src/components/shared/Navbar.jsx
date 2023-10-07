@@ -133,28 +133,31 @@ const MobileNavbar = ({ isMobileNavOpen, closeMobileNavbar }) => {
 
   return (
     <div className="mobile-header">
-      <div className="mobile-header__logo flex justify-between items-center">
-        <Image
-          src="/logo-primary-color.svg"
-          width={160}
-          height={70}
-          alt="Logo"
-          priority
-        />
+      <div className="container">
+        <div className="mobile-header__logo flex justify-between items-center">
+          <Image
+            src="/logo-primary-color.svg"
+            width={160}
+            height={70}
+            alt="Logo"
+            priority
+          />
 
-        <Image
-          src="/icons/icon-x.svg"
-          height={16}
-          width={16}
-          alt="Logo"
-          priority
-          onClick={closeMobileNavbar}
-        />
+          <button onClick={closeMobileNavbar}>
+            <Image
+              src="/icons/icon-x.svg"
+              height={16}
+              width={16}
+              alt="Logo"
+              priority
+            />
+          </button>
+        </div>
+
+        <ul className="mobile-header__menu align-center justify-end">
+          <MobileNavbarItems />
+        </ul>
       </div>
-
-      <ul className="mobile-header__menu align-center justify-end">
-        <MobileNavbarItems />
-      </ul>
     </div>
   );
 };
@@ -179,7 +182,7 @@ export default function Navbar() {
     <div>
       {/* styles are converted from scss to tailwind, see chat triabl-voices-project */}
       <header
-        className={`header fixed top-0 left-0 w-full z-10 transition-all duration-400  md:bg-white 
+        className={`header sticky top-0 left-0 w-full z-10 transition-all duration-400  md:bg-white 
         ${scrolled ? "scrolled bg-white  " : ""}`}
       >
         <div className="overlay"></div>

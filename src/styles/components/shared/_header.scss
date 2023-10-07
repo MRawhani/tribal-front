@@ -1,5 +1,8 @@
 .header {
   padding: 1rem 0;
+  position: relative;
+  z-index: 100;
+
 
   &__menu-icon {
     position: relative;
@@ -191,7 +194,7 @@
 }
 
 .mobile-header {
-  padding: 16px;
+  padding: 1rem 0;
   position: fixed;
   left: 0;
   top: 0;
