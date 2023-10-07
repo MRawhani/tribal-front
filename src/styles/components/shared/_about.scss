@@ -1,24 +1,31 @@
 .about {
-  @include primary-gradient;
+  background: $primary-primary;
   position: relative;
   color: $white;
 
   &__content {
-    height: 70vh;
+    min-height: 70vh;
+  }
+
+  &__description {
+    color: #f6f5ef;
+    font-family: var(--font-gothamLight);
+    font-size: 14px;
   }
 
   &__img-wrapper {
-    height: 123%;
-    //width: 30%;
+    width: 80%;
     position: relative;
     overflow: hidden;
-    top: -3rem;
+    margin-top: -85%;
+    transform: translateY(50%);
+    margin-bottom: 30%;
   }
 
   &__profile {
     position: relative;
-    height: 100%;
-    width: auto;
+    width: 100%;
+    height: auto;
   }
 
   &__pattern {
@@ -30,16 +37,7 @@
   }
 
   &__text {
-    margin-left: calc(18.9rem - ($baseCalcValue * 2 * 18.9rem));
-    padding: 3rem 0;
-
-    @include respond(2xl) {
-      margin-left: calc(18.9rem - ($baseCalcValue * 18.9rem));
-    }
-
-    @include respond(3xl) {
-      margin-left: 18.9rem;
-    }
+    --section-title-font-size: 1rem;
   }
 
   &__heading {
@@ -61,10 +59,10 @@
   }
 
   &__logo-pattern {
+    width: 154.032px;
+    height: 240.981px;
     position: absolute;
-
-    right: 0;
-
+    right: -20px;
     bottom: 0;
   }
 }

@@ -2,19 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'base/mixins';
-@import 'base/variables';
-@import 'base/globals';
-@import 'base/grid';
+@import "base/mixins";
+@import "base/variables";
+@import "base/globals";
+@import "base/grid";
 
 // components
-@import 'components/shared/small_components';
-@import 'components/shared/header';
-@import 'components/shared/heading';
-@import 'components/home/hero';
-@import 'components/home/about';
-@import 'components/home/quick-links';
-@import 'components/home/articles';
-@import 'components/home/reports';
+@import "components/shared/index.scss";
 
-@import 'utils';
+@import "components/home/hero";
+@import "components/home/quick-links";
+@import "components/home/articles";
+@import "components/home/reports";
+
+@import "utils";
