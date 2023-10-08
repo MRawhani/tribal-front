@@ -1,101 +1,89 @@
-.Shortcuts {
+.shortcuts {
+  &__heading {
+    color: $tuna-900;
+    font-family: var(--font-ncs);
+    font-size: 1.25rem;
+  }
 
-    &__heading {
-        color: $tuna-900;
-        font-size: calc(2.8rem - ($baseCalcValue * 2.8rem));
-        ;
+  &__main-title {
+    color: $secondary-secondary;
+  }
 
-        font-family: var(--font-ncs);
-        line-height: 4.45rem;
-        margin-bottom: 4.8rem;
-        text-align: center;
-        text-transform: uppercase;
+  &__card {
+    background: $pure-white;
+    background: linear-gradient(90deg, $pure-white 0%, $pure-white 100%);
 
-        @include respond(3xl) {
-            font-size: 2.8rem;
-        }
+    border-radius: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    > * {
+      position: relative;
+      z-index: 1;
     }
 
-    &__card {
-        min-height: 19.7rem;
-        height: 100%;
-        background: $pure-white;
-        background: linear-gradient(90deg, $pure-white 0%, $pure-white 100%);
+    // Overlay gradient
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $secondary-secondary;
 
-        border-radius: 2.4rem;
-        padding: 1.6rem 2.4rem 2.4rem;
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
-
-        >* {
-            position: relative;
-            z-index: 1;
-        }
-
-        // Overlay gradient
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            @include secondary-gradient;
-
-            z-index: 0;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-
-        &--blank {
-            @include secondary-gradient;
-        }
-
-        &:hover {
-            &::before {
-                opacity: 1;
-            }
-
-            .Shortcuts__title,.Shortcuts__count{
-                color: $white;
-            }
-            svg{
-                fill: $white;
-            }
-        }
+      z-index: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
     }
 
-    &__icon {
-        border-radius: 0.8rem;
-        background-color: $seconday-100;
-        padding: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 5rem;
-        height: 5rem;
-
+    &--blank {
+      background: $secondary-secondary;
     }
 
-    &__title {
-        font-family: var(--font-ncs);
-        color: $tuna-950;
-        transition: color 0.3s;
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
 
+      .shortcuts__link-title,
+      .shortcuts__count {
+        color: $white;
+      }
+      svg {
+        fill: $white;
+      }
     }
+  }
 
-    &__count {
-        font-family: var(--font-gothamBook);
+  &__icon {
+    border-radius: 0.8rem;
+    background-color: $seconday-100;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+  }
 
-        color: $seconday-600;
-        transition: color 0.3s;
+  &__link-title {
+    font-family: var(--font-ncs);
+    font-size: 14px;
+    color: $tuna-950;
+    transition: color 0.3s;
+  }
 
+  &__count {
+    font-family: var(--font-gothamBook);
+    font-size: 14px;
+    transition: color 0.3s;
+    color: $seconday-600;
+  }
 
-    }
-    svg{
-        transition: all 0.3s;
-
-    }
+  svg {
+    transition: all 0.3s;
+  }
 }

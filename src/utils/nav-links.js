@@ -63,46 +63,49 @@ export const short_links = [
         id: 1,
         name: 'Articles',
         icon: 'articles',
-        count:24
+        count:24,
+        path: "/"
     },
     {
         id: 2,
         name: 'Reports',
         icon: 'reports',
-        count:8
+        count:8,
+        path: "/"
     },
     {
         id: 3,
         name: 'Book chapters',
         icon: 'books',
-        count:2
+        count:2,
+        path: "/"
     },
     {
         id: 4,
         name: 'Interviews',
         icon: 'interviews',
-        count:12
+        count:12,
+        path: "/"
     },
     {
         id: 5,
         name: 'Policy Papers',
         icon: 'policy',
-        count:14
+        count:14,
+        path: "/"
     },
     {
         id: 6,
         name: 'Unpublished Research',
         icon: 'unpublished',
-        count:7
+        count:7,
+        path: "/"
     },
     {
         id: 7,
         name: 'Stories',
         icon: 'stories',
-        count:24
-    },
-    {
-        id: 8,
-        blank:true
+        count:24,
+        path: "/"
     },
 ]
