@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Heading({ title,className, standard=true }) {
   return (
-    <div className={`heading flex items-center ${className}`}>
+    <div className={`heading flex gap-4 items-center ${className}`}>
       {!standard ? (
         <>
           <div className="heading__line heading__line--white "></div>

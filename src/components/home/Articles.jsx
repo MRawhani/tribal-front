@@ -9,49 +9,35 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-//comopnenets
-import Heading from "../shared/Heading";
+//
+import Heading from "@/components/shared/Heading";
+import ShowMoreButton from "@/components/shared/ShowMoreButton";
 
 import { articles as articles_list } from "@/utils/fk-data";
-import ShowMoreButton from "../shared/ShowMoreButton";
+
 export default function Articles() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const swiperRef = useRef();
   const swiperKey = Date.now();
-  const SliderHeader = () => (
-    <div className="flex justify-between items-end  mb-20">
-      <h1 className="articles__section-title">
-        Discover Yemen&apos;s Richness. Explore history, culture, and stories in
-        thought-provoking articles.
-      </h1>
-      <div className="flex items-center ml-48">
-        {/* onClick={() => swiperRef.current?.slidePrev()} */}
-        <button className="articles__nav-btn prev  mr-10" ref={prevRef}>
-          <Image src="/icons/arrow-left.svg" alt="prev" width="7" height="12" />
-        </button>
-        <button className="articles__nav-btn next" ref={nextRef}>
-          <Image
-            src="/icons/arrow-right.svg"
-            alt="next"
-            width="7"
-            height="12"
-          />
-        </button>
-      </div>
-    </div>
-  );
+
   return (
-    <div className="articles articles__section pb-4">
+    <div className="articles articles__section pt-20 pb-4">
       <div className="container">
         <div className="articles__content">
           <Heading title="Articles" className="mb-4" />
-          <SliderHeader />
+
+          <div className="lg:flex justify-between items-end  mb-8">
+            <h2 className="articles__section-title">
+              Discover Yemen&apos;s Richness. Explore history, culture, and
+              stories in thought-provoking articles.
+            </h2>
+          </div>
 
           <Swiper
             key={process.env.NODE_ENV === "development" ? swiperKey : undefined}
-            slidesPerView={1}
-            spaceBetween={30}
+            slidesPerView={1.1}
+            spaceBetween={16}
             modules={[Navigation]}
             navigation={{
               prevEl: ".articles__nav-btn.prev",
@@ -81,8 +67,8 @@ export default function Articles() {
             className="mySwiper"
           >
             {articles_list.map((article) => (
-              <SwiperSlide key={article.id} className="!h-auto">
-                <div className="article-card h-full  ">
+              <SwiperSlide key={article.id}>
+                <div className="article-card ">
                   <div className="article-card__img">
                     <Image
                       src={`/assets/${article.img}.png`}
@@ -95,20 +81,21 @@ export default function Articles() {
                     />
                   </div>
                   <div className="article-card__content">
-                    <h2 className="article-card__title">{article.title}</h2>
                     <p className="article-card__date">{article.date}</p>
+
+                    <h2 className="article-card__title line-clamp-2">{article.title}</h2>
+
                     <div className="article-card__recource flex items-center">
                       <div className="article-card__recource-icon">
                         <Image
                           src={`/assets/${article.recource_icon}.svg`}
                           alt={`article`}
-                          layout='fill'
-                          objectFit='contain'
-                           
+                          layout="fill"
+                          objectFit="contain"
                         />
                       </div>
-                      <h6 className="article-card__recource-name">
-                        {article.recource_name}
+                      <h6 className="article-card__recource-name mt-3 line-clamp-1">
+                        {article.recource_name} 
                       </h6>
                     </div>
                   </div>
@@ -117,8 +104,28 @@ export default function Articles() {
             ))}
           </Swiper>
 
+          <div className="flex items-center ml-48">
+            {/* onClick={() => swiperRef.current?.slidePrev()} */}
+            <button className="articles__nav-btn prev  mr-10" ref={prevRef}>
+              <Image
+                src="/icons/arrow-left.svg"
+                alt="prev"
+                width="7"
+                height="12"
+              />
+            </button>
+            <button className="articles__nav-btn next" ref={nextRef}>
+              <Image
+                src="/icons/arrow-right.svg"
+                alt="next"
+                width="7"
+                height="12"
+              />
+            </button>
+          </div>
+
           <div className="mt-10  w-full flex justify-end">
-            <ShowMoreButton text='Show More Articles' />
+            <ShowMoreButton text="Show More Articles" />
           </div>
         </div>
       </div>

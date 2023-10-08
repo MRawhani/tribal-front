@@ -112,7 +112,7 @@ const MobileQuickLinks = () => {
 
 export default function QuickLinksWrapper() {
   return (
-    <div className="shortcuts pt-60">
+    <div className="shortcuts pt-60 pb-20">
       <div className="container">
         <h4 className="shortcuts__heading">
           <span className="shortcuts__main-title">Our writings </span>
