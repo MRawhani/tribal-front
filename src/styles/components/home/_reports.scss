@@ -1,76 +1,87 @@
-.reports{
+.reports {
+  position: relative;
 
+  hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    // width: 94%;
+    margin: auto;
+  }
+
+  &__section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     position: relative;
-    &__section{
-        padding-top: 10rem;
-        padding-bottom: 12rem;
-        position: relative;
-        @include primary-gradient;
+    background: $primary-primary;
+  }
 
-    }
-    &__section-title{
-        color: $tuna-50;
-        @include fontSizeForScreens(2.4rem);
-        width: 82.5%;
-    }
-    &__content{
-        margin-top: 6.5rem;
-        margin-bottom: 6.5rem;
-    }
-    &__logo-pattern {
-        position: absolute;
-    
-        left: 0;
-        
-        top: 50%;
-        transform: translateY(-50%);
-      }
+  &__section-title {
+    font-family: var(--font-ncs);
+    font-size: 1rem;
+    color: $tuna-50;
+  }
+
+  &__content {
+    margin-top: 6.5rem;
+  }
+
+  &__logo-pattern {
+    position: absolute;
+
+    left: 0;
+
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
-.report-card{
-    padding: 4rem 0;
-    border-bottom: 1px solid rgba($color: $pure-white, $alpha: 0.08);
-    &__date{
-        color: $pure-white;
-        @include fontSizeForScreens(1.4rem);
-        font-family: var(--font-gothamBook);
-        
-    }
-    &__title{
-        color: $tuna-100;
-        font-family: var(--font-gothamBold);
-        margin-top: 1.2rem;
-        margin-bottom: 1.6rem;
-        cursor: pointer;
-        @include fontSizeForScreens(2rem);
-        @include lineheightForScreens(2.8rem);
-        &:hover{
-            text-decoration: underline;
-        }
-    }
-    &__link-icon{
-        cursor: pointer;
-        border-radius: 50%;
-        overflow: hidden;
-        position: relative;
-        background: $pure-white;
-        background: linear-gradient(90deg, $pure-white 0%, $pure-white 100%);
-        padding: 1rem;
-        @include dimsForScreens(5rem,5rem);
 
-        
-        //centered 
+.report-card {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba($color: $pure-white, $alpha: 0.08);
+
+  &__date {
+    color: $pure-white;
+    font-size: 14px;
+    font-family: var(--font-gothamLight);
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    color: $tuna-100;
+    font-family: var(--font-gothamBold);
+    margin-top: 1.2rem;
+    margin-bottom: 1.6rem;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
     }
-    &__recource-icon{
-        width: 3.5rem;
-        height: 3.5rem;
-        border-radius: 50%;
-        overflow: hidden;
-        position: relative;
-        margin-right: 1rem;
-    }
-    &__recource-name{
-        @include fontSizeForScreens(1.4rem);
-        @include lineheightForScreens(2rem);
-        color: $tuna-50;
-    }
+  }
+
+  &__link-icon {
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    background: $pure-white;
+    background: linear-gradient(90deg, $pure-white 0%, $pure-white 100%);
+    padding: 1rem;
+    min-width: 3.25rem;
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+
+  &__recource-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-right: 1rem;
+  }
+
+  &__recource-name {
+    color: $tuna-50;
+    font-size: 14px;
+    font-family: var(--font-gothamLight);
+  }
 }

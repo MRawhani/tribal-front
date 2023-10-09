@@ -11,8 +11,9 @@ export default async function Home() {
       <About />
       <QuickLinks />
       <Articles />
+      <Reports />
       {/* 
-      <Reports /> */}
+       */}
     </main>
   )
 }
