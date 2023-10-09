@@ -9,9 +9,9 @@ export default async function Home() {
     <main>
       <Hero />
       <About />
-      {/* 
       <QuickLinks />
       <Articles />
+      {/* 
       <Reports /> */}
     </main>
   )

@@ -83,7 +83,7 @@ const MobileQuickLinks = () => {
                 </div>
 
                 <div className="flex items-center justify-between mt-8 mb-3">
-                  <h5 className="shortcuts__link-title">{link.name}</h5>
+                  <h5 className="shortcuts__link-title  whitespace-nowrap">{link.name}</h5>
 
                   <svg
                     width="16"

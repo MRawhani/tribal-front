@@ -1,0 +1,46 @@
+.showMore-btn {
+  border: 2px solid #ae8556;
+  padding: 0.5rem 3rem 0.5rem 2rem;
+  border-radius: 6rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+
+  span {
+    position: relative;
+    color: $secondary-secondary;
+    font-size: 1rem;
+    font-family: var(--font-gothamLight);
+    transition: all 0.3s;
+  }
+
+  svg {
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .svg-before {
+    left: -2rem;
+  }
+
+  .svg-after {
+    right: 1rem;
+  }
+
+  &:hover {
+    background: var(--gradinat-secondary-opacity, linear-gradient(180deg, rgba(188, 150, 101, 0.26) 0%, rgba(188, 150, 101, 0.06) 100%));
+    
+    .svg-before {
+      left: 1.5rem;
+    }
+
+    span {
+      transform: translateX(1.5rem);
+    }
+  
+    .svg-after {
+      right: -2rem;
+    }
+  }
+}

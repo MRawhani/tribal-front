@@ -3,11 +3,11 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 
 // Import Swiper React components
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 //
 import Heading from "@/components/shared/Heading";
@@ -23,8 +23,8 @@ export default function Articles() {
 
   return (
     <div className="articles articles__section pt-20 pb-4">
-      <div className="container">
-        <div className="articles__content">
+      <div className="">
+        <div className="container articles__content">
           <Heading title="Articles" className="mb-4" />
 
           <div className="lg:flex justify-between items-end  mb-8">
@@ -33,17 +33,14 @@ export default function Articles() {
               stories in thought-provoking articles.
             </h2>
           </div>
+        </div>
 
+        <div className="ps-4 container-big articles__content">
           <Swiper
             key={process.env.NODE_ENV === "development" ? swiperKey : undefined}
             slidesPerView={1.1}
             spaceBetween={16}
-            modules={[Navigation]}
-            navigation={{
-              prevEl: ".articles__nav-btn.prev",
-              nextEl: ".articles__nav-btn.next",
-              clickable: true,
-            }}
+            modules={[Pagination]}
             onBeforeInit={(swiper) => {
               swiperRef.current = swiper;
             }}
@@ -52,6 +49,7 @@ export default function Articles() {
                 swiper.update();
               }, 300);
             }}
+            pagination={true}
             observer={true}
             observeParents={true}
             breakpoints={{
@@ -83,7 +81,9 @@ export default function Articles() {
                   <div className="article-card__content">
                     <p className="article-card__date">{article.date}</p>
 
-                    <h2 className="article-card__title line-clamp-2">{article.title}</h2>
+                    <h2 className="article-card__title line-clamp-2">
+                      {article.title}
+                    </h2>
 
                     <div className="article-card__recource flex items-center">
                       <div className="article-card__recource-icon">
@@ -95,7 +95,7 @@ export default function Articles() {
                         />
                       </div>
                       <h6 className="article-card__recource-name mt-3 line-clamp-1">
-                        {article.recource_name} 
+                        {article.recource_name}
                       </h6>
                     </div>
                   </div>
@@ -104,28 +104,8 @@ export default function Articles() {
             ))}
           </Swiper>
 
-          <div className="flex items-center ml-48">
-            {/* onClick={() => swiperRef.current?.slidePrev()} */}
-            <button className="articles__nav-btn prev  mr-10" ref={prevRef}>
-              <Image
-                src="/icons/arrow-left.svg"
-                alt="prev"
-                width="7"
-                height="12"
-              />
-            </button>
-            <button className="articles__nav-btn next" ref={nextRef}>
-              <Image
-                src="/icons/arrow-right.svg"
-                alt="next"
-                width="7"
-                height="12"
-              />
-            </button>
-          </div>
-
-          <div className="mt-10  w-full flex justify-end">
-            <ShowMoreButton text="Show More Articles" />
+          <div className="w-full flex justify-center">
+            <ShowMoreButton text="Show All Articles" />
           </div>
         </div>
       </div>

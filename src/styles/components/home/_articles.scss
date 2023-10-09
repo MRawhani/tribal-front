@@ -1,4 +1,5 @@
 .articles {
+  margin-bottom: -2rem;
   &__section {
     background-color: $pure-white;
     position: relative;
@@ -9,9 +10,9 @@
       right: 0;
       left: 0;
       bottom: 0;
-      height: 34%;
+      height: 357px;
       /* The height of the blue part */
-      @include primary-gradient;
+      background-color: $primary-primary;
       z-index: 0;
       /* Places it behind the content */
     }
@@ -27,6 +28,7 @@
   &__section-title {
     color: $tuna-900;
     font-size: 1rem;
+    text-transform: uppercase;
   }
 
   &__nav-btn {
@@ -47,6 +49,31 @@
     &.swiper-button-disabled {
       opacity: 0.4;
     }
+  }
+
+  .swiper {
+    padding-bottom: 4rem;
+
+    .swiper-pagination-bullet {
+      --swiper-pagination-bullet-inactive-color: #e9e7d6;
+      --swiper-pagination-bullet-inactive-opacity: 1;
+
+      width: 7px;
+      height: 7px;
+      transition: width 0.4s linear;
+      border-radius: 10px;
+    }
+
+    .swiper-pagination-bullet-active {
+      --swiper-pagination-color: #bc9665;
+      width: 42px;
+      height: 7px;
+      border-radius: 10px;
+    }
+  }
+
+  .swiper-pagination {
+    --swiper-pagination-bottom: 1.25rem;
   }
 }
 
