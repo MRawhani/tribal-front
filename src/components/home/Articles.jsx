@@ -90,8 +90,7 @@ export default function Articles() {
                         <Image
                           src={`/assets/${article.recource_icon}.svg`}
                           alt={`article`}
-                          layout="fill"
-                          objectFit="contain"
+                          fill
                         />
                       </div>
                       <h6 className="article-card__recource-name mt-3 line-clamp-1">
