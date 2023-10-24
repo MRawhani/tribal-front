@@ -33,6 +33,7 @@ module.exports = {
         seconday_800: "#5A4A39",
         seconday_900: "#4E4135",
         seconday_950: "#2C231C",
+        secondary_secondary: "#BC9665",
       },
       fontFamily: {
         sans: ['var(--font-pecita)']
