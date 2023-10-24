@@ -165,6 +165,7 @@ const MobileNavbar = ({ isMobileNavOpen, closeMobileNavbar }) => {
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const isHomePagePath = usePathname() === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -179,7 +180,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div>
+    <div className={isHomePagePath ? "" : "is-home-page"}>
       {/* styles are converted from scss to tailwind, see chat triabl-voices-project */}
       <header
         className={`header sticky top-0 left-0 w-full z-10 transition-all duration-400  md:bg-white 
@@ -192,7 +193,11 @@ export default function Navbar() {
             <div className="flex justify-between items-center">
               <div className="relative">
                 <Image
-                  src="/logo-primary-color.svg"
+                  src={
+                    isHomePagePath
+                      ? "/logo-primary-color.svg"
+                      : "/logo-white-color.svg"
+                  }
                   width={160}
                   height={70}
                   alt="Logo"
@@ -222,7 +227,9 @@ export default function Navbar() {
                 onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
               >
                 <Image
-                  src="/icons/menu.svg"
+                  src={
+                    isHomePagePath ? "/icons/menu.svg" : "/icons/menu-white.svg"
+                  }
                   height={40}
                   width={40}
                   alt="menu icon"
