@@ -7,6 +7,9 @@
 @import "base/globals";
 @import "base/grid";
 
+// pages
+@import 'pages/index';
+
 // components
 @import "components/shared/_index.scss";
 @import "components/home/index";

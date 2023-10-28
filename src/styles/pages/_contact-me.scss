@@ -1,0 +1,50 @@
+.contact-me {
+  &__title {
+    background: linear-gradient(90deg, #ae8556 0%, #90794c 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    font-family: var(--font-ncs);
+    font-size: 28px;
+    line-height: normal;
+  }
+
+  &__description {
+    margin-top: .5rem;
+    color: $tuna-500;
+    font-family: var(--font-gothamMedium);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  .form-control {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: 14px;
+      font-family: var(--font-gothamMedium);
+      margin-bottom: 0.25rem;
+      margin-inline-start: 0.75rem;
+    }
+
+    input,
+    textarea {
+      padding: 1rem;
+      font-family: var(--font-gothamBold);
+      font-size: 14px;
+    }
+
+    input {
+      border-radius: 4rem;
+    }
+
+    textarea {
+      border-radius: 32px;
+      resize: none;
+    }
+  }
+}

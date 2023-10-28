@@ -1,14 +1,18 @@
-import Hero from '@/components/home/Hero'
-import React from 'react'
+import React from "react";
+import About from "@/components/global/About";
+import { Breadcrumb } from "@/components/global/Breadcrumb";
 
-export default function About() {
+export default function AboutPage() {
   return (
-    <div className='container'>
-      about
-      <Hero />
-      <Hero />
-     <Hero />
+    <div>
+      <div className="container pb-8 md:pb-40">
+        <Breadcrumb
+          links={[{ title: "about us", href: "/about" }]}
+          title="about us"
+        />
+      </div>
+
+      <About />
     </div>
-  )
+  );
 }
-  
