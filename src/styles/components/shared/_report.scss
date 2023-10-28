@@ -1,0 +1,52 @@
+.c-report-card {
+  background-color: $pure-white;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  min-height: 120px;
+
+  &__img {
+    height: 100%;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__title {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    color: $text-main;
+    font-family: var(--font-gothamMedium);
+  }
+
+  &__date {
+    font-size: 12px;
+    color: $text-main;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-gothamBook);
+  }
+
+  &__recource-icon {
+    min-width: 1.75rem;
+    min-height: 1.75rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-right: 1rem;
+  }
+
+  &__recource-name {
+    font-family: var(--font-gothamBook);
+    font-size: 14px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $seconday-50;
+  }
+}

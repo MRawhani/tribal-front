@@ -35,7 +35,7 @@ const BreadcrumbLinks = ({ links }) => {
           <Link
             key={link.title + index}
             href={link?.href ?? "#"}
-            className="text-xs font-gothamLight pt-1"
+            className="text-xs font-gothamLight pt-1 capitalize"
           >
             {link.title}
           </Link>
