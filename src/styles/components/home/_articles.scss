@@ -82,6 +82,10 @@
   border-radius: 1.5rem;
   overflow: hidden;
 
+  &--is-second-bg {
+    background-color: $seconday-50;
+  }
+
   &__img {
     height: 70%;
     width: 100%;

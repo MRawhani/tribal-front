@@ -20,7 +20,7 @@ const FooterLinks = () => {
 
 export default function Footer() {
   return (
-    <div className="footer mt-16 ">
+    <div className="footer mt-8 md:mt-16 ">
       <div className="container pt-16 pb-8">
         <div className="flex items-center flex-col text-white">
           <LogoIcon />

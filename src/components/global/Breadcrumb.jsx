@@ -52,7 +52,7 @@ export function Breadcrumb({ links, title, description }) {
         <BreadcrumbLinks links={links} />
 
         <h2 className="mt-4 flex items-center gap-4 text-xl font-ncs text-secondary_secondary">
-          <span>{title}</span>
+          <span className="capitalize">{title}</span>
           <span className="bg-secondary_secondary h-px w-[7rem] flex-shrink-0"></span>
         </h2>
 

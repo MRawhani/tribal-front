@@ -14,6 +14,7 @@ import Heading from "@/components/shared/Heading";
 import ShowMoreButton from "@/components/shared/ShowMoreButton";
 
 import { articles as articles_list } from "@/utils/fk-data";
+import ArticleCard from "../global/ArticleCard";
 
 export default function Articles() {
   const prevRef = useRef(null);
@@ -66,39 +67,7 @@ export default function Articles() {
           >
             {articles_list.map((article) => (
               <SwiperSlide key={article.id}>
-                <div className="article-card ">
-                  <div className="article-card__img">
-                    <Image
-                      src={`/assets/${article.img}.png`}
-                      alt={`article`}
-                      width="0"
-                      height="0"
-                      sizes="100vw"
-                      objectFit="cover"
-                      style={{ width: "100%", height: "100%" }}
-                    />
-                  </div>
-                  <div className="article-card__content">
-                    <p className="article-card__date">{article.date}</p>
-
-                    <h2 className="article-card__title line-clamp-2">
-                      {article.title}
-                    </h2>
-
-                    <div className="article-card__recource flex items-center">
-                      <div className="article-card__recource-icon">
-                        <Image
-                          src={`/assets/${article.recource_icon}.svg`}
-                          alt={`article`}
-                          fill
-                        />
-                      </div>
-                      <h6 className="article-card__recource-name mt-3 line-clamp-1">
-                        {article.recource_name}
-                      </h6>
-                    </div>
-                  </div>
-                </div>
+                <ArticleCard article={article} />
               </SwiperSlide>
             ))}
           </Swiper>
