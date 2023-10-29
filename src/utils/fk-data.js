@@ -240,3 +240,49 @@ export const policyPapers = [
     recource_icon: "recource3",
   },
 ];
+
+export const unpublishedResearches = [
+  {
+    id: 3,
+    title: "The Houthis’ End Game in Yemen, Al-Jazeera",
+    date: "26 Feb 2023",
+    recource_name: "Al-Jazeera English",
+    recource_icon: "recource3",
+  },
+  {
+    id: 1,
+    title: "Time to Rethink International Intervention in Yemen",
+    date: "26 Feb 2023",
+    recource_name: "Middle East Institute",
+    recource_icon: "recource1",
+  },
+  {
+    id: 2,
+    title: "Yemen’s Prisoner Exchange must be depolarized",
+    date: "26 Feb 2023",
+    recource_name: "Sanaa Center for Strategic Studies",
+    recource_icon: "recource2",
+  },
+
+  {
+    id: 4,
+    title: "The Biden Administration needs a Yemen policy",
+    date: "26 Feb 2023",
+    recource_name: "Middle East Institute",
+    recource_icon: "recource1",
+  },
+  {
+    id: 5,
+    title: "Yemen’s Prisoner Exchange must be depolarized",
+    date: "26 Feb 2023",
+    recource_name: "Sanaa Center for Strategic Studies",
+    recource_icon: "recource2",
+  },
+  {
+    id: 6,
+    title: "The Houthis’ End Game in Yemen, Al-Jazeera",
+    date: "26 Feb 2023",
+    recource_name: "Al-Jazeera English",
+    recource_icon: "recource3",
+  },
+];
