@@ -286,3 +286,26 @@ export const unpublishedResearches = [
     recource_icon: "recource3",
   },
 ];
+
+export const bookChapters = [
+  {
+    id: 1,
+    year: 2022,
+    pages: "200",
+    title: "The Biden Administration needs a Yemen policy",
+    description: "The Role of Legitimacy, Hadi, and the Islah Party ",
+    authors: 'Abdulwahab Alkebsi, Nathan J Brown, Charlotta Sparre',
+    location: 'London.Palgrave-Macmillan',
+    image: "/assets/article1.png",
+  },
+  {
+    id: 2,
+    year: 2023,
+    pages: "300",
+    title: "The Biden Administration needs a Yemen policy",
+    description: "The Role of Legitimacy, Hadi, and the Islah Party ",
+    authors: 'Abdulwahab Alkebsi, Nathan J Brown, Charlotta Sparre',
+    location: 'London.Palgrave-Macmillan',
+    image: "/assets/article1.png",
+  },
+];
