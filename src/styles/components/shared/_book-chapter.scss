@@ -1,0 +1,45 @@
+.c-book-chapter {
+  background-color: $pure-white;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  min-height: 120px;
+
+  &__img {
+    height: 100%;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__title {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: $text-main;
+    font-family: var(--font-gothamMedium);
+  }
+
+  &__description {
+    display: inline-block;
+    color: var(--text-800, #5c557b);
+    font-family: var(--font-gothamLight);
+    font-size: 12px;
+    line-height: 1.5 }
+
+  &__date {
+    font-size: 12px;
+    color: $text-main;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-gothamBook);
+  }
+
+  &__content {
+    min-height: 250px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+  }
+}
