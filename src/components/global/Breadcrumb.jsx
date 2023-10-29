@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Fragment } from "react";
 
 const BreadcrumbLinks = ({ links }) => {
   return (
@@ -17,9 +18,8 @@ const BreadcrumbLinks = ({ links }) => {
       </svg>
 
       {links.map((link, index) => (
-        <>
+        <Fragment key={link.title}>
           <svg
-            key={link.title}
             width="16"
             height="17"
             viewBox="0 0 16 17"
@@ -33,13 +33,12 @@ const BreadcrumbLinks = ({ links }) => {
           </svg>
 
           <Link
-            key={link.title + index}
             href={link?.href ?? "#"}
             className="text-xs font-gothamLight pt-1 capitalize"
           >
             {link.title}
           </Link>
-        </>
+        </Fragment>
       ))}
     </div>
   );
