@@ -187,19 +187,6 @@ svg:not(:root) {
 
 $columns: 12;
 
-@for $width from 1 through $columns {
-  .w-#{$width} {
-    width: 100%;
-
-    padding-left: 10px;
-    padding-right: 10px;
-
-    @include respond(m) {
-      width: $width#{"%"};
-    }
-  }
-}
-
 .w__no-padding {
   padding-left: 0;
   padding-right: 0;
@@ -311,8 +298,4 @@ $columns: 12;
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-}
-
-.flex-1 {
-  flex: 1;
 }

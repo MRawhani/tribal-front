@@ -1,17 +1,35 @@
 .c-book-chapter {
-  background-color: $pure-white;
-  border-radius: 1rem;
-  overflow: hidden;
-  position: relative;
-  border-radius: 20px;
-  min-height: 120px;
+  .image-container {
+    align-items: center;
+    border-radius: 24px;
+    background-color: var(--secondary-secondary, #bc9665);
+    display: flex;
+    width: 70%;
+    max-width: 100%;
+    height: 300px;
+    flex-grow: 1;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 12px;
+    margin-bottom: -50px;
+    position: relative;
+    z-index: 2;
 
-  &__img {
-    height: 100%;
+    @include respond(m) {
+      width: 268px;
+      height: auto;
+    }
 
-    img {
+    .image {
+      aspect-ratio: 0.69;
       object-fit: cover;
       object-position: center;
+      width: 100%;
+      height: 100%;
+      justify-content: flex-end;
+      align-items: center;
+      align-self: stretch;
+      border-radius: 12px;
     }
   }
 
@@ -27,7 +45,8 @@
     color: var(--text-800, #5c557b);
     font-family: var(--font-gothamLight);
     font-size: 12px;
-    line-height: 1.5 }
+    line-height: 1.5;
+  }
 
   &__date {
     font-size: 12px;
@@ -38,8 +57,22 @@
 
   &__content {
     min-height: 250px;
-    padding: 2rem;
     display: flex;
     align-items: center;
+  }
+
+  .content-wrapper {
+    padding: 2rem;
+    padding-top: 4rem;
+    background-color: $seconday-50;
+
+    @include respond(maxMd) {
+      border-radius: 24px;
+    }
+
+    @include respond(m) {
+      border-top-right-radius: 24px;
+      border-bottom-right-radius: 24px;
+    }
   }
 }
