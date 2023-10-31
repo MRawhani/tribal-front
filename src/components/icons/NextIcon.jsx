@@ -1,4 +1,4 @@
-export default function NextIcon() {
+export default function NextIcon({ color = "url(#paint0_linear_639_437069)" }) {
   return (
     <svg
       width="23"
@@ -9,7 +9,7 @@ export default function NextIcon() {
     >
       <path
         d="M8.85352 5.01172L15.03 11.1882L8.85352 17.3647"
-        stroke="url(#paint0_linear_639_437069)"
+        stroke={color}
         strokeWidth="1.76471"
         strokeLinecap="round"
         strokeLinejoin="round"

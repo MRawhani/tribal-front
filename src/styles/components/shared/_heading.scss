@@ -24,5 +24,9 @@
       background: none;
       color: $primary-50;
     }
+
+    @include respond(m) {
+      font-size: var(--section-title-font-size, 1.25rem);
+    }
   }
 }

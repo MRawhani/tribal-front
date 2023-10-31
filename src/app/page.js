@@ -4,6 +4,7 @@ import QuickLinks from '@/components/home/QuickLinks'
 import Articles from '@/components/home/Articles'
 import Reports from '@/components/home/Reports'
 import Photos from '@/components/home/Photos'
+import BookChapters from '@/components/home/BookChapters'
 
 export default async function Home() {
   return (
@@ -14,6 +15,7 @@ export default async function Home() {
       <Articles />
       <Reports />
       <Photos />
+      <BookChapters />
     </main>
   )
 }
