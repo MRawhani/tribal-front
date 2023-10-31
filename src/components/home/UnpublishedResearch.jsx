@@ -9,14 +9,14 @@ import ShowMoreLink from "../shared/ShowMoreLink";
 export default function UnpublishedResearch() {
   return (
     <div className="bg-seconday_50 unpublished-research py-20 md:py-32">
-      <div className="px-4 lg:container mx-auto max-w-4xl">
+      <div className="container">
         <Heading title={homeData.unpublished_research.title} />
 
         <p className="font-ncs uppercase text-base md:text-2xl">
           {homeData.unpublished_research.description}
         </p>
 
-        <section className="grid grid-cols-3 gap-4 mt-8 md:mt-16 lg:px-10">
+        <section className="grid grid-cols-3 gap-4 mt-8 md:mt-16">
           {homeData.unpublished_research.items.map((item) => (
             <div key={item.id} className="col-span-3 md:col-span-1">
               <UnpublishedResearchCard item={item} />
