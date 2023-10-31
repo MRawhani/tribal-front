@@ -9,20 +9,20 @@ import PrevIcon from "@/components/icons/PrevIcon";
 import NextIcon from "@/components/icons/NextIcon";
 import Heading from "../shared/Heading";
 import { homeData } from "@/utils/data";
-import InterviewCard from "../global/InterviewCard";
+import StoryCard from "../global/StoryCard";
 
-export default function Interviews() {
+export default function Stories() {
   const swiperRef = useRef();
   const swiperKey = Date.now();
 
   return (
-    <div className="bg-white interviews py-20 md:py-32">
+    <div className="bg-white stories py-20 md:py-32">
       <div className="container md:flex justify-between">
         <div>
-          <Heading title={homeData.interviews.title} />
+          <Heading title={homeData.stories.title} />
 
-          <p className="interviews__description uppercase text-base md:text-2xl">
-            {homeData.interviews.description}
+          <p className="stories__description uppercase text-base md:text-2xl">
+            {homeData.stories.description}
           </p>
         </div>
 
@@ -41,8 +41,8 @@ export default function Interviews() {
         <section className="mt-8 md:mt-16">
           <Swiper
             slidesPerView={1.3}
-            spaceBetween={12}
             loop={true}
+            spaceBetween={12}
             modules={[Navigation]}
             onBeforeInit={(swiper) => {
               swiperRef.current = swiper;
@@ -66,9 +66,9 @@ export default function Interviews() {
               },
             }}
           >
-            {homeData.interviews.items.map((item) => (
+            {homeData.stories.items.map((item) => (
               <SwiperSlide key={item.id}>
-                <InterviewCard interview={item} />
+                <StoryCard story={item} />
               </SwiperSlide>
             ))}
           </Swiper>

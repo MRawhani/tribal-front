@@ -8,10 +8,11 @@ import BookChapters from '@/components/home/BookChapters'
 import UnpublishedResearch from '@/components/home/UnpublishedResearch'
 import PolicyPapers from '@/components/home/PolicyPapers'
 import Interviews from '@/components/home/Interviews'
+import Stories from '@/components/home/Stories'
 
 export default async function Home() {
   return (
-    <main>
+    <main className='-mt-8  md:-mb-16'>
       <Hero />
       <About />
       <QuickLinks />
@@ -22,6 +23,7 @@ export default async function Home() {
       <UnpublishedResearch />
       <PolicyPapers />
       <Interviews />
+      <Stories />
     </main>
   )
 }

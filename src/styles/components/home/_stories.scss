@@ -1,0 +1,33 @@
+.stories {
+
+  background-color: $seconday-50;
+
+  .slider-btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+
+  .slider-btn {
+    @include secondary-gradient;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 10rem;
+
+    &.swiper-button-disabled {
+      opacity: 0.5;
+    }
+  }
+
+  .story-card__title {
+    white-space: wrap;
+  }
+
+  .story-card__content {
+    box-sizing: border-box;
+  }
+}
