@@ -1,0 +1,26 @@
+.interviews {
+  .slider-btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+
+  .slider-btn {
+    @include secondary-gradient;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 10rem;
+
+    &.swiper-button-disabled {
+      opacity: 0.5;
+    }
+  }
+
+  .interview-card {
+    background-color: $seconday-50;
+  }
+}

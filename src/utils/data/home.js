@@ -150,4 +150,46 @@ export const homeData = {
       },
     ],
   },
+  interviews: {
+    title: "Interviews",
+    description:
+      "Discover firsthand accounts and perspectives from diverse individuals shaping the nation's future.",
+    items: [
+      {
+        id: 1,
+        img: "interview",
+        title: "Can a New U.N.Envoy Produce Peace in Yemen?",
+      },
+      {
+        id: 2,
+        img: "interview-2",
+        title: "Can a New U.N.Envoy Produce Peace in Yemen?",
+      },
+      {
+        id: 3,
+        img: "interview",
+        title: "Can a New U.N.Envoy Produce Peace in Yemen?",
+      },
+      {
+        id: 7,
+        img: "interview-2",
+        title: "Can a New U.N.Envoy Produce Peace in Yemen?",
+      },
+      {
+        id: 4,
+        img: "interview",
+        title: "Can a New U.N.Envoy Produce Peace in Yemen?",
+      },
+      {
+        id: 5,
+        img: "interview-2",
+        title: "Can a New U.N.Envoy Produce Peace in Yemen?",
+      },
+      {
+        id: 6,
+        img: "interview",
+        title: "Can a New U.N.Envoy Produce Peace in Yemen?",
+      },
+    ],
+  },
 };
