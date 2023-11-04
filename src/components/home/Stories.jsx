@@ -37,11 +37,10 @@ export default function Stories() {
         </div>
       </div>
 
-      <div>
+      <div className="stories__content container">
         <section className="mt-8 md:mt-16">
           <Swiper
             slidesPerView={1.3}
-            loop={true}
             spaceBetween={12}
             modules={[Navigation]}
             onBeforeInit={(swiper) => {

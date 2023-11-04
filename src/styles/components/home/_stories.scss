@@ -1,5 +1,6 @@
 .stories {
-
+  max-width: 100vw;
+  overflow: hidden;
   background-color: $seconday-50;
 
   .slider-btn-wrapper {
@@ -29,5 +30,15 @@
 
   .story-card__content {
     box-sizing: border-box;
+  }
+
+  &__content {
+    &.container {
+      overflow: visible;
+    }
+
+    .swiper {
+      overflow: visible;
+    }
   }
 }
