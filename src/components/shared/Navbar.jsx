@@ -61,7 +61,7 @@ const DesktopNavbarItems = () => {
   });
 };
 
-const MobileNavbarDropdownItem = ({ link }) => {
+const MobileNavbarDropdownItem = ({ link, closeMobileNavbar }) => {
   const [openDropdown, setOpenDropdown] = useState(false);
 
   return (
@@ -98,6 +98,7 @@ const MobileNavbarDropdownItem = ({ link }) => {
               className=" block px-2 py-2 hover:bg-gray-200"
               href={child.path}
               key={child.id}
+              onClick={closeMobileNavbar}
             >
               - {child.name}
             </Link>
@@ -113,7 +114,13 @@ const MobileNavbarItems = ({ closeMobileNavbar }) => {
 
   return links.map((link) => {
     if (link.children)
-      return <MobileNavbarDropdownItem key={link.id} link={link} />;
+      return (
+        <MobileNavbarDropdownItem
+          key={link.id}
+          link={link}
+          closeMobileNavbar={closeMobileNavbar}
+        />
+      );
 
     return (
       <li
