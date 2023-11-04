@@ -2,6 +2,9 @@
   background: $primary-primary;
   position: relative;
   color: $white;
+  z-index: 5;
+  max-width: 100vw;
+  overflow-x: hidden;
 
   &__content {
     min-height: 70vh;
@@ -18,7 +21,7 @@
     overflow: hidden;
     width: 100%;
     max-width: 500px;
-    
+
     @include respond(maxMd) {
       width: 80%;
       margin-top: -85%;
