@@ -15,6 +15,7 @@
       ),
       url("/assets/hero-bg.jpg"), lightgray 50% / cover no-repeat;
     background-position: center;
+    background-size: cover;
 
     @include respond(xl) {
       border-radius: 0px 60px 0px 0px;
