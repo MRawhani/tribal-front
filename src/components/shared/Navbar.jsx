@@ -108,7 +108,7 @@ const MobileNavbarDropdownItem = ({ link }) => {
   );
 };
 
-const MobileNavbarItems = () => {
+const MobileNavbarItems = ({ closeMobileNavbar }) => {
   const pathname = usePathname();
 
   return links.map((link) => {
@@ -120,7 +120,7 @@ const MobileNavbarItems = () => {
         key={link.id}
         className={`menu__item ${pathname === link.path ? "active" : ""}`}
       >
-        <Link className="nav-link" href={link.path}>
+        <Link className="nav-link" href={link.path} onClick={closeMobileNavbar}>
           {link.name}
         </Link>
       </li>
@@ -135,13 +135,15 @@ const MobileNavbar = ({ isMobileNavOpen, closeMobileNavbar }) => {
     <div className="mobile-header">
       <div className="container">
         <div className="mobile-header__logo flex justify-between items-center">
-          <Image
-            src="/logo-primary-color.svg"
-            width={160}
-            height={70}
-            alt="Logo"
-            priority
-          />
+          <Link href="/">
+            <Image
+              src="/logo-primary-color.svg"
+              width={160}
+              height={70}
+              alt="Logo"
+              priority
+            />
+          </Link>
 
           <button onClick={closeMobileNavbar}>
             <Image
@@ -155,7 +157,7 @@ const MobileNavbar = ({ isMobileNavOpen, closeMobileNavbar }) => {
         </div>
 
         <ul className="mobile-header__menu align-center justify-end">
-          <MobileNavbarItems />
+          <MobileNavbarItems closeMobileNavbar={closeMobileNavbar} />
         </ul>
       </div>
     </div>
@@ -191,7 +193,7 @@ export default function Navbar() {
         <div className="container not-hidden">
           <div className="flex align-center justify-between">
             <div className="flex justify-between items-center">
-              <div className="relative">
+              <Link href="/" className="relative">
                 <Image
                   src={
                     isHomePagePath
@@ -203,7 +205,7 @@ export default function Navbar() {
                   alt="Logo"
                   priority
                 />
-              </div>
+              </Link>
             </div>
             {/* desktop */}
             <div className="col flex-1 hidden xl:block">
