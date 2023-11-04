@@ -12,12 +12,12 @@ const DesktopNavbarItems = () => {
   return links.map((link) => {
     if (link.children)
       return (
-        <li key={link.id} className="header__dropdown col">
+        <li key={link.id} className="header__dropdown">
           <div className="nav-link flex items-center">
-            <span>My Writing</span>
+            <span className="nav-link-title">My Writing</span>
 
             <svg
-              className="mx-3  "
+              className="mx-3 dropdown-svg "
               width="11"
               height="7"
               viewBox="0 0 11 7"
@@ -32,12 +32,12 @@ const DesktopNavbarItems = () => {
           </div>
 
           <div
-            className="header__dropdown-list absolute p-4 left-0 mt-4 w-48 bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg opacity-0 
+            className="header__dropdown-list absolute p-3 left-0 mt-4 rounded-md shadow-lg opacity-0 
       transition-all duration-490 translate-y-4 invisible"
           >
             {link.children.map((child) => (
               <Link
-                className=" block px-4 py-2 hover:bg-gray-200"
+                className="text-sm flex items-center px-4 py-2 hover:bg-gray-200"
                 href={child.path}
                 key={child.id}
               >
@@ -51,9 +51,9 @@ const DesktopNavbarItems = () => {
     return (
       <li
         key={link.id}
-        className={`col ${pathname === link.path ? "active" : ""}`}
+        className={`${pathname === link.path ? "active" : ""}`}
       >
-        <Link className="nav-link" href={link.path}>
+        <Link className="nav-link nav-link-title" href={link.path}>
           {link.name}
         </Link>
       </li>
@@ -207,7 +207,7 @@ export default function Navbar() {
             </div>
             {/* desktop */}
             <div className="col flex-1 hidden xl:block">
-              <ul className="header__menu relative  mx-4 flex gutter-big align-center justify-end">
+              <ul className="header__menu relative flex mx-4 align-center justify-end">
                 <DesktopNavbarItems />
               </ul>
             </div>
