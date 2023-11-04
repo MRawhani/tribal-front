@@ -37,12 +37,11 @@ export default function Interviews() {
         </div>
       </div>
 
-      <div>
+      <div className="interviews__content container">
         <section className="mt-8 md:mt-16">
           <Swiper
             slidesPerView={1.3}
             spaceBetween={12}
-            loop={true}
             modules={[Navigation]}
             onBeforeInit={(swiper) => {
               swiperRef.current = swiper;
