@@ -36,7 +36,7 @@ export default function Articles() {
           </div>
         </div>
 
-        <div className="ps-4 container-big articles__content">
+        <div className="container ps-4 articles__content">
           <Swiper
             key={process.env.NODE_ENV === "development" ? swiperKey : undefined}
             slidesPerView={1.1}

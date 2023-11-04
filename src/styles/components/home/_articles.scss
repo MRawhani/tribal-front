@@ -1,5 +1,8 @@
 .articles {
   margin-bottom: -2rem;
+  max-width: 100vw;
+  overflow: hidden;
+  
   &__section {
     background-color: $pure-white;
     position: relative;
@@ -23,6 +26,14 @@
     z-index: 1;
     /* Ensures the content stays on top */
     color: $error-color;
+
+    &.container {
+      overflow: visible;
+    }
+
+    .swiper {
+      overflow: visible;
+    }
   }
 
   &__section-title {
