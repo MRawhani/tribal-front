@@ -63,8 +63,7 @@ const MobileQuickLinks = () => {
         observer={true}
         observeParents={true}
         breakpoints={{
-          576: { slidesPerView: 2.2, spaceBetween: 20 },
-          768: { slidesPerView: 3.2, spaceBetween: 16 },
+          768: { slidesPerView: 2.1, spaceBetween: 20 },
         }}
       >
         {short_links.map((link) => (
@@ -113,7 +112,7 @@ const MobileQuickLinks = () => {
 export default function QuickLinksWrapper() {
   return (
     <div className="shortcuts pt-60 pb-20 md:pt-32">
-      <div className="container">
+      <div className="container shortcuts__container">
         <h4 className="shortcuts__heading">
           <span className="shortcuts__main-title">Our writings </span>
           cover local affairs and perspectives

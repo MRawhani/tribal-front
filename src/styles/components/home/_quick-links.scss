@@ -1,6 +1,15 @@
 .shortcuts {
   background-color: $seconday-50;
-  
+  max-width: 100vw;
+  overflow: hidden;
+  &__container {
+    overflow: visible;
+
+    .swiper {
+      overflow: visible;
+    }
+  }
+
   &__heading {
     color: $tuna-900;
     font-family: var(--font-ncs);
