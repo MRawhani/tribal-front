@@ -1,0 +1,29 @@
+.book-chapters {
+  background-color: $primary-primary;
+
+  &__description {
+    color: white;
+    font-family: var(--font-ncs);
+  }
+
+  .slider-btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+
+  .slider-btn {
+    background-color: $seconday-50;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 10rem;
+
+    &.swiper-button-disabled {
+      opacity: 0.5;
+    }
+  }
+}

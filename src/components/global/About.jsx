@@ -5,10 +5,10 @@ import { homeData } from "@/utils/data";
 
 export default function About() {
   return (
-    <div className="about pt-20">
+    <div className="about pt-20 md:pt-0">
       <div className="container not-hidden">
-        <div className="about__content lg:flex items-center justify-between  ">
-          <div className="about__text flex-1">
+        <div className="about__content flex flex-col lg:flex-row gap-12 items-center justify-between  ">
+          <div className="md:order-2 about__text md:w-1/2">
             <Image
               className=" "
               src="/assets/waves.svg"
@@ -35,7 +35,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="about__img-wrapper">
+          <div className="md:order-1 about__img-wrapper md:max-h-[800px]">
             <Image
               className="about__profile "
               src="/assets/nadwa.png"

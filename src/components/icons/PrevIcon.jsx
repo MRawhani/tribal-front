@@ -1,4 +1,4 @@
-export default function PrevIcon() {
+export default function PrevIcon({ color = "url(#paint0_linear_639_437067)" }) {
   return (
     <svg
       width="23"
@@ -9,7 +9,7 @@ export default function PrevIcon() {
     >
       <path
         d="M14.1472 17.3647L7.9707 11.1882L14.1472 5.01172"
-        stroke="url(#paint0_linear_639_437067)"
+        stroke={color}
         strokeWidth="1.76471"
         strokeLinecap="round"
         strokeLinejoin="round"

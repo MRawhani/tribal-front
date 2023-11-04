@@ -10,9 +10,9 @@ import "swiper/css";
 
 const DesktopQuickLinks = () => {
   return (
-    <div className="row gap-4 flex-wrap 3xl:gutter-big  items-stretch">
+    <div className="grid gap-6 grid-cols-4">
       {short_links.map((link) => (
-        <div key={link.id} className={`col col-12 col-6-md col-3-xl`}>
+        <div key={link.id} className={`col-span-4 sm:col-span-2 lg:col-span-1`}>
           <div className={`shortcuts__card`}>
             <div className="flex items-center justify-end">
               <div className="shortcuts__icon">
@@ -112,7 +112,7 @@ const MobileQuickLinks = () => {
 
 export default function QuickLinksWrapper() {
   return (
-    <div className="shortcuts pt-60 pb-20">
+    <div className="shortcuts pt-60 pb-20 md:pt-32">
       <div className="container">
         <h4 className="shortcuts__heading">
           <span className="shortcuts__main-title">Our writings </span>
