@@ -12,7 +12,7 @@ import Stories from '@/components/home/Stories'
 
 export default async function Home() {
   return (
-    <main className='-mt-8  md:-mb-16'>
+    <main className='-mb-8  md:-mb-16'>
       <Hero />
       <About />
       <QuickLinks />
