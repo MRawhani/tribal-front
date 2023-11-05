@@ -1,0 +1,33 @@
+.slider-btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+
+  &.slider-center-btn {
+    justify-content: center;
+  }
+}
+
+.slider-btn {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10rem;
+
+  background-color: $seconday-50;
+
+  &--fill {
+    @include secondary-gradient;
+
+    svg {
+        color: white
+    }
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.5;
+  }
+}

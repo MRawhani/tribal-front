@@ -7,6 +7,7 @@ import { homeData } from "@/utils/data";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import ShowMoreLink from "../shared/ShowMoreLink";
 
 const PhotosList = ({ reverseDirection = false }) => {
   return (
@@ -74,7 +75,7 @@ export default function Photos() {
 
       <div className="container mt-8">
         <div className="w-full flex justify-center">
-          <ShowMoreButton text="Show All Photos" />
+          <ShowMoreLink link="/photos" text="Show All Photos" />
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@
   background: linear-gradient(91deg, #0c326a 0.09%, #0f4080 102.1%);
   position: relative;
 
-  & > .header {
+  &:not(.details-layout-navbar) > .header {
     background: linear-gradient(91deg, #0c326a 0.09%, #0f4080 102.1%);
   }
 
@@ -14,7 +14,7 @@
     color: white;
   }
 
-  &:not(.is-search-page)::after {
+  &:not(.is-search-page):not(.details-layout-navbar)::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -23,6 +23,14 @@
     left: 0;
     right: 0;
     background: linear-gradient(91deg, #0c326a 0.09%, #0f4080 102.1%);
+  }
+
+  &.details-layout-navbar {
+    background: transparent;
+
+    .header {
+      background: transparent;
+    }
   }
 }
 

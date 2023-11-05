@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-export default function ShowMoreLink({ text, link }) {
+export default function ShowMoreLink({ text, link = "" }) {
   return (
     <Link href={link} className="showMore-btn flex gap-4 items-center justify-center">
       <svg
@@ -18,7 +18,7 @@ export default function ShowMoreLink({ text, link }) {
         />
       </svg>
 
-      <span className="inline-block mt-3">{text}</span>
+      <span className="inline-block">{text}</span>
 
       <svg
         className="svg-after"

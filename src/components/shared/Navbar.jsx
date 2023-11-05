@@ -49,10 +49,7 @@ const DesktopNavbarItems = () => {
       );
 
     return (
-      <li
-        key={link.id}
-        className={`${pathname === link.path ? "active" : ""}`}
-      >
+      <li key={link.id} className={`${pathname === link.path ? "active" : ""}`}>
         <Link className="nav-link nav-link-title" href={link.path}>
           {link.name}
         </Link>
@@ -171,7 +168,7 @@ const MobileNavbar = ({ isMobileNavOpen, closeMobileNavbar }) => {
   );
 };
 
-export default function Navbar() {
+export default function Navbar({ className }) {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const isHomePagePath = usePathname() === "/";
@@ -190,7 +187,11 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className={`${isHomePagePath ? "" : "is-not-home-page"} ${isSearchPagePath ? 'is-search-page' : ''}`}>
+    <div
+      className={`${isHomePagePath ? "" : "is-not-home-page"} ${
+        isSearchPagePath ? "is-search-page" : ""
+      }  ${className} `}
+    >
       {/* styles are converted from scss to tailwind, see chat triabl-voices-project */}
       <header
         className={`header sticky top-0 left-0 w-full z-10 transition-all duration-400  md:bg-white 
@@ -223,14 +224,14 @@ export default function Navbar() {
             </div>
 
             <div className="flex gap-3 justify-between items-center">
-              {/* <Link href="/search">
+              <Link href="/search">
                 <Image
                   src="/icons/search-primary-color.svg"
                   height={24}
                   width={24}
-                  alt="menu icon"
+                  alt="search icon"
                 />
-              </Link> */}
+              </Link>
 
               <button
                 className="xl:hidden"
