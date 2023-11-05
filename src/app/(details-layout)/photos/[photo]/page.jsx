@@ -53,7 +53,7 @@ const OtherPhotos = () => {
         className="mySwiper"
       >
         {homeData.photos.items.map((item) => (
-          <SwiperSlide key={item.id}>
+          <SwiperSlide key={item.title}>
             {/* <Link href={`/photos/${item.id}`}> */}
               <Image src={item.image} alt={item.title} width={430} height={315} />
             {/* </Link> */}
