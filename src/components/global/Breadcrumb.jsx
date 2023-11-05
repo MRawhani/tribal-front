@@ -34,7 +34,7 @@ const BreadcrumbLinks = ({ links }) => {
 
           <Link
             href={link?.href ?? "#"}
-            className="text-xs font-gothamLight pt-1 capitalize"
+            className="text-xs font-gothamLight pt-1 capitalize line-clamp-1"
           >
             {link.title}
           </Link>
@@ -44,7 +44,13 @@ const BreadcrumbLinks = ({ links }) => {
   );
 };
 
-export function Breadcrumb({ links, title, description }) {
+export function Breadcrumb({
+  links,
+  title,
+  description = "",
+  subTitle = "",
+  date = "",
+}) {
   return (
     <div className="mt-3 relative breadcrumb bg-seconday_50 rounded-md shadow">
       <div className="container p-3">
@@ -55,7 +61,17 @@ export function Breadcrumb({ links, title, description }) {
           <span className="bg-secondary_secondary h-px w-[7rem] flex-shrink-0"></span>
         </h2>
 
-        <p className="mt-3 text-xs font-gothamLight">{description}</p>
+        <h4 className="mt-3 font-gothamMedium text-lg md:text-2xl text-neutral-950">
+          {subTitle}
+        </h4>
+
+        <h6 className="mt-3 text-sm font-gothamLight text-neutral-800">
+          {date}
+        </h6>
+
+        {description && (
+          <p className="mt-3 text-xs font-gothamLight">{description}</p>
+        )}
       </div>
     </div>
   );
