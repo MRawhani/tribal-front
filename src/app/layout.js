@@ -3,10 +3,8 @@ import React from "react";
 import "@/styles/_main.scss";
 
 import { custom_fonts } from "./fonts";
-// component
-import Navbar from "@/components/shared/Navbar";
-import Footer from "@/components/shared/Footer";
 import NextTopLoader from "nextjs-toploader";
+import Footer from "@/components/shared/Footer";
 
 export const metadata = {
   title: "Yemen Tribal Voices",
@@ -32,16 +30,11 @@ export default async function RootLayout({ children }) {
         <link rel="shortcut icon" href="/logo.svg" type="image/x-icon" />
       </head>
       <body className={`${custom_fonts}`}>
-        {!loading ? (
-          <>
-            <NextTopLoader />
-            <Navbar />
-            {children}
-            <Footer />
-          </>
-        ) : (
-          <div className="loading">Loading...</div>
-        )}
+        <NextTopLoader />
+
+        {!loading ? <>{children}</> : <div className="loading">Loading...</div>}
+
+        <Footer />
       </body>
     </html>
   );
