@@ -175,6 +175,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const isHomePagePath = usePathname() === "/";
+  const isSearchPagePath = usePathname() === "/search";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -189,7 +190,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className={isHomePagePath ? "" : "is-home-page"}>
+    <div className={`${isHomePagePath ? "" : "is-not-home-page"} ${isSearchPagePath ? 'is-search-page' : ''}`}>
       {/* styles are converted from scss to tailwind, see chat triabl-voices-project */}
       <header
         className={`header sticky top-0 left-0 w-full z-10 transition-all duration-400  md:bg-white 

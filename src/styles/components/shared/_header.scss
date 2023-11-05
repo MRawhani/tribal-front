@@ -1,4 +1,4 @@
-.is-home-page {
+.is-not-home-page {
   background: linear-gradient(91deg, #0c326a 0.09%, #0f4080 102.1%);
   position: relative;
 
@@ -14,7 +14,7 @@
     color: white;
   }
 
-  &::after {
+  &:not(.is-search-page)::after {
     content: "";
     position: absolute;
     width: 100%;

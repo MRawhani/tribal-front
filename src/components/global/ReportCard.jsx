@@ -20,10 +20,15 @@ export default function ReportCard({ report, className = "" }) {
         </div>
       </div>
 
-      <div className="col-span-6 sm:col-span-7 py-4 c-report-card__content">
+      <div className="col-span-8 pe-3 md:pe-0 md:col-span-7 py-4 c-report-card__content">
         <p className="c-report-card__date">{report.date}</p>
 
-        <h2 className="c-report-card__title line-clamp-2">{report.title}</h2>
+        <Link
+          className="c-report-card__title line-clamp-2"
+          href={`/reports/${report.id}`}
+        >
+          {report.title}
+        </Link>
 
         <div className="c-report-card__recource flex items-center">
           <div className="c-report-card__recource-icon">
@@ -40,7 +45,7 @@ export default function ReportCard({ report, className = "" }) {
       </div>
 
       <Link
-        className="col-span-2 sm:col-span-1 c-report-card__link"
+        className="col-span-2 md:col-span-1 c-report-card__link"
         href={`/reports/${report.id}`}
       >
         <Image

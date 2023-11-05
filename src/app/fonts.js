@@ -8,7 +8,7 @@ import localFont from 'next/font/local'
 //     display: 'swap'
 //   })
 const GothamBold = localFont({
-    src: '../../public/fonts/Gotham-Bold.otf',
+    src: '../../public/fonts/GothamBold.ttf',
     variable: '--font-gothamBold',
     
     display: 'swap'

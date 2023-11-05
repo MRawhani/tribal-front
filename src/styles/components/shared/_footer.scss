@@ -3,6 +3,11 @@
   overflow: hidden;
   position: relative;
 
+  .container {
+    position: relative;
+    z-index: 5;
+  }
+
   .logo-pattern {
     display: none;
     position: absolute;
