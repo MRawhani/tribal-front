@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import About from "@/components/global/About";
 import { Breadcrumb } from "@/components/global/Breadcrumb";

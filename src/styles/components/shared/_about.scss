@@ -4,7 +4,6 @@
   color: $white;
   z-index: 5;
   max-width: 100vw;
-  overflow-x: hidden;
 
   &__content {
     min-height: 70vh;
@@ -66,11 +65,26 @@
     }
   }
 
-  &__logo-pattern {
-    width: 154.032px;
-    height: 240.981px;
+  .logo-pattern {
+    display: none;
+    opacity: 0.7;
     position: absolute;
-    right: -20px;
-    bottom: 0;
+    right: 0;
+
+    @include respond(m) {
+      display: block;
+      bottom: -12rem;
+
+      svg {
+        width: 140px;
+      }
+    }
+
+    @include respond(2xl) {
+
+      svg {
+        width: 200px;
+      }
+    }
   }
 }
