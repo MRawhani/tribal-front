@@ -57,7 +57,7 @@ const PhotosList = ({ reverseDirection = false }) => {
 
 export default function Photos() {
   return (
-    <div className="photos pt-20 pb-4">
+    <div className="photos py-20 2xl:py-32">
       <div className="container mb-14">
         <Heading title={homeData.photos.title} />
 

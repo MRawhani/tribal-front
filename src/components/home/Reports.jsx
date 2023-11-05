@@ -2,7 +2,7 @@ import React from "react";
 import Heading from "../shared/Heading";
 import { articles as reports_list } from "@/utils/fk-data";
 import Image from "next/image";
-import ShowMoreButton from "../shared/ShowMoreButton";
+import ShowMoreLink from "../shared/ShowMoreLink";
 
 const ReportLists = () => {
   return reports_list.slice(0, 4).map((report) => (
@@ -84,7 +84,7 @@ export default function Reports() {
           </div>
         </div>
         <div className="mt-8  w-full flex justify-center md:justify-end">
-          <ShowMoreButton text="Show All Reports" />
+          <ShowMoreLink link="/reports" text="Show All Reports" />
         </div>
       </div>
       {/* <div className="reports__logo-pattern">

@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Title from "@/components/shared/Heading";
 import { homeData } from "@/utils/data";
+import LogoAnimatedIcon from "../animated-icons/LogoAnimatedIcon";
 
 export default function About() {
   return (
@@ -55,16 +56,8 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="about__logo-pattern">
-        <Image
-          className=" "
-          src="/assets/logo-pattern-right.png"
-          alt="YTV"
-          width="0"
-          height="0"
-          sizes="100vw"
-          style={{ width: "auto", height: "auto" }}
-        />
+      <div className="logo-pattern">
+        <LogoAnimatedIcon left={true} />
       </div>
     </div>
   );

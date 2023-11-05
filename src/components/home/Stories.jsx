@@ -37,12 +37,11 @@ export default function Stories() {
         </div>
       </div>
 
-      <div>
+      <div className="stories__content container">
         <section className="mt-8 md:mt-16">
           <Swiper
             slidesPerView={1.3}
-            loop={true}
-            spaceBetween={12}
+            spaceBetween={16}
             modules={[Navigation]}
             onBeforeInit={(swiper) => {
               swiperRef.current = swiper;
@@ -61,8 +60,16 @@ export default function Stories() {
             className="mySwiper"
             breakpoints={{
               768: {
-                slidesPerView: 3.4,
-                spaceBetween: 24,
+                slidesPerView: 2,
+                spaceBetween: 16,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 16,
+              },
+              1440: {
+                slidesPerView: 4,
+                spaceBetween: 16,
               },
             }}
           >

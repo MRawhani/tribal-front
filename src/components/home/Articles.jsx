@@ -11,10 +11,10 @@ import "swiper/css/pagination";
 
 //
 import Heading from "@/components/shared/Heading";
-import ShowMoreButton from "@/components/shared/ShowMoreButton";
 
 import { articles as articles_list } from "@/utils/fk-data";
 import ArticleCard from "../global/ArticleCard";
+import ShowMoreLink from "../shared/ShowMoreLink";
 
 export default function Articles() {
   const prevRef = useRef(null);
@@ -36,7 +36,7 @@ export default function Articles() {
           </div>
         </div>
 
-        <div className="ps-4 container-big articles__content">
+        <div className="container ps-4 articles__content">
           <Swiper
             key={process.env.NODE_ENV === "development" ? swiperKey : undefined}
             slidesPerView={1.1}
@@ -73,7 +73,7 @@ export default function Articles() {
           </Swiper>
 
           <div className="w-full flex justify-center">
-            <ShowMoreButton text="Show All Articles" />
+            <ShowMoreLink link="/articles" text="Show All Articles" />
           </div>
         </div>
       </div>
