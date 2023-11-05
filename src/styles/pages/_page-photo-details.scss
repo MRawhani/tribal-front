@@ -1,0 +1,47 @@
+.page-photo-details {
+  .hero-section {
+    margin-top: -119px;
+    height: 90vh;
+    max-height: 900px;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.77) 0%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      var(--hero-bg-src), lightgray 50% / cover no-repeat;
+    background-position: center;
+
+    .hero-bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+
+    .swiper-slide {
+      width: 90%;
+    }
+    @include respond(m) {
+      .swiper-slide {
+        width: 430px;
+
+        img {
+          width: 430px;
+          height: 315px;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+  }
+}

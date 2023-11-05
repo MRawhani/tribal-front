@@ -309,3 +309,12 @@ export const bookChapters = [
     image: "/assets/article1.png",
   },
 ];
+
+
+export const photoDetails = {
+  image: "/assets/hero-bg.jpg",
+  title: "Two men who had profound impact on my journey with the tribes.",
+  date: "26 Feb 2023",
+  location: "Marib",
+  content: "Two men who had profound impact on my journey with the tribes. Sheikh Mufarreh, with grey hair on the left, is prominent tribal leader from Murad tribe in Marib. I met sheikh Mufarreh in 2005. I was impressed when he told me that 20 years earlier he decided to quit chewing qat, a mildly narcotic leaves that Yemenis chew and enjoy socially, to encourage young men in the tribe to quit it. Throughout his life, he mediated and resolved many tribal conflicts across Yemen. In 2015, he had to lead a tribal force to repel Houthi’s incursion into his tribal territory. He lost four of his sons as a result of the war. To his left is Sharief Salem ben Saud, a tribal leader who devoted his life to resolving and mediating tribal conflicts. In April 2009, he was killed in crossfire when he was trying to stop violent clashes that erupted between his tribe, Al-Ashraf, & Al-Jedaan tribe."
+}
