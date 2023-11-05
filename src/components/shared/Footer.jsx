@@ -3,6 +3,7 @@ import React from "react";
 import LogoIcon from "../icons/LogoIcon";
 import { globalData } from "@/utils/data";
 import Link from "next/link";
+import LogoAnimatedIcon from "../animated-icons/LogoAnimatedIcon";
 
 const FooterLinks = () => {
   return globalData.footerLinks.map((link) => (
@@ -46,7 +47,19 @@ export default function Footer() {
         </div>
 
         {/* copyright */}
-        <p className="text-center text-white text-xs mt-6 font-gothamLight">© All rights reserved Nadwa Dawsar</p>
+        <p className="text-center text-white text-xs mt-6 font-gothamLight">
+          © All rights reserved Nadwa Dawsar
+        </p>
+      </div>
+
+      <div className="logo-pattern">
+        <div className="logo-pattern--left">
+          <LogoAnimatedIcon left={true} />
+        </div>
+
+        <div className="logo-pattern--right">
+          <LogoAnimatedIcon />
+        </div>
       </div>
     </div>
   );

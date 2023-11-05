@@ -1,6 +1,7 @@
+"use client";
 import { useEffect } from "react";
 
-export default function LogoAnimatedIcon({ left }) {
+export default function LogoAnimatedIcon({ left = '' }) {
   useEffect(() => {
     document.querySelectorAll(".animated-logo path").forEach((item, index) => {
       item.style.strokeDasharray = item.getTotalLength();

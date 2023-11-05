@@ -1,6 +1,7 @@
 .animated-logo {
   path {
-    animation: dash 5s ease-in-out alternate infinite;
+    animation: dash var(--animated-logo-time, 5s) ease-in-out infinite
+      var(--animated-logo-delay, 0s) alternate;
   }
 
   &.icon--left {

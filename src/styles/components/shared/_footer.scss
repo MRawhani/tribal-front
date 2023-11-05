@@ -1,3 +1,60 @@
 .footer {
-    background: $primary-primary;
+  background: $primary-primary;
+  overflow: hidden;
+  position: relative;
+
+  .logo-pattern {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 120%;
+
+    &--left,
+    &--right {
+      position: absolute;
+      top: 0;
+    }
+
+    &--left {
+      --animated-logo-delay: 2s;
+      --animated-logo-time: 4s;
+    }
+
+    @include respond(m) {
+      display: block;
+
+      &--left {
+        right: -20%;
+      }
+
+      &--right {
+        left: -20%;
+      }
+    }
+
+    @include respond(lg) {
+      display: block;
+
+      &--left {
+        right: -15%;
+      }
+
+      &--right {
+        left: -15%;
+      }
+    }
+
+    @include respond(xl) {
+      display: block;
+
+      &--left {
+        right: -10%;
+      }
+
+      &--right {
+        left: -10%;
+      }
+    }
+  }
 }
