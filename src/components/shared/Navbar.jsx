@@ -213,14 +213,14 @@ export default function Navbar() {
             </div>
 
             <div className="flex gap-3 justify-between items-center">
-              <Link href="/search">
+              {/* <Link href="/search">
                 <Image
                   src="/icons/search-primary-color.svg"
                   height={24}
                   width={24}
                   alt="menu icon"
                 />
-              </Link>
+              </Link> */}
 
               <button
                 className="xl:hidden"

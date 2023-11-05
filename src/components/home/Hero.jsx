@@ -1,5 +1,6 @@
 import { homeData } from "@/utils/data";
 import React from "react";
+import LogoAnimatedIcon from "../animated-icons/LogoAnimatedIcon";
 
 export default function Hero() {
   return (
@@ -14,6 +15,10 @@ export default function Hero() {
         </div>
       </div>
       <div className="hero__arrow"></div>
+
+      <div className="logo-pattern">
+        <LogoAnimatedIcon left={true} />
+      </div>
     </div>
   );
 }

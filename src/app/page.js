@@ -1,3 +1,4 @@
+"use client";
 import Hero from '@/components/home/Hero'
 import About from '@/components/global/About'
 import QuickLinks from '@/components/home/QuickLinks'
@@ -10,7 +11,7 @@ import PolicyPapers from '@/components/home/PolicyPapers'
 import Interviews from '@/components/home/Interviews'
 import Stories from '@/components/home/Stories'
 
-export default async function Home() {
+export default function Home() {
   return (
     <main className='-mb-8  md:-mb-16'>
       <Hero />

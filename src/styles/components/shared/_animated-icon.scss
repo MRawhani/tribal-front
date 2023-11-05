@@ -1,0 +1,15 @@
+.animated-logo {
+  path {
+    animation: dash 5s ease-in-out alternate infinite;
+  }
+
+  &.icon--left {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
