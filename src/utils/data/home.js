@@ -19,36 +19,43 @@ export const homeData = {
       "Yemen's Cultural Richness in Photos: Tribes, Customs, Traditions.",
     items: [
       {
+        id: 1,
         image: "/assets/photo-1.jpeg",
         title: "Tribes 1",
         link: "/",
       },
       {
+        id: 2,
         image: "/assets/photo-2.jpeg",
         title: "Tribes 2",
         link: "/",
       },
       {
+        id: 3,
         image: "/assets/photo-1.jpeg",
         title: "Tribes 3",
         link: "/",
       },
       {
+        id: 5,
         image: "/assets/photo-2.jpeg",
         title: "Tribes 4",
         link: "/",
       },
       {
+        id: 4,
         image: "/assets/photo-1.jpeg",
         title: "Tribes 5",
         link: "/",
       },
       {
+        id: 6,
         image: "/assets/photo-2.jpeg",
         title: "Tribes 6",
         link: "/",
       },
       {
+        id: 7,
         image: "/assets/photo-1.jpeg",
         title: "Tribes 7",
         link: "/",
