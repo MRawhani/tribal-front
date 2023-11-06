@@ -14,3 +14,32 @@
     stroke-dashoffset: 0;
   }
 }
+
+.animated-waves {
+  path {
+    transform: scaleY(1.2);
+    animation: loading-bar-morph 4s linear infinite;
+    transform-origin: center;
+  }
+
+  @for $i from 1 through 10 {
+    path:nth-child(3n + #{$i}) {
+      animation-delay: #{0.1 * $i}s;
+    }
+  }
+}
+
+@keyframes loading-bar-morph {
+  0% {
+    transform: scaleY(1.2);
+  }
+  25% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(0.7);
+  }
+  75% {
+    transform: scaleY(0.15);
+  }
+}

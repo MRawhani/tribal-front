@@ -37,6 +37,8 @@
 .report-card {
   padding: 1.5rem 0;
   border-bottom: 1px solid rgba($color: $pure-white, $alpha: 0.08);
+  position: relative;
+  overflow: hidden;
 
   &__date {
     color: $pure-white;
@@ -51,6 +53,8 @@
     margin-top: 1.2rem;
     margin-bottom: 1.6rem;
     cursor: pointer;
+    z-index: 2;
+    position: relative;
 
     &:hover {
       text-decoration: underline;
@@ -68,6 +72,7 @@
     min-width: 3.25rem;
     width: 3.25rem;
     height: 3.25rem;
+    transition: transform 0.3s ease-in-out;
   }
 
   &__recource-icon {
@@ -83,5 +88,50 @@
     color: $tuna-50;
     font-size: 14px;
     font-family: var(--font-gothamLight);
+  }
+
+  &__image {
+    display: none;
+    position: absolute;
+    top: 110%;
+    right: 80px;
+    z-index: 1;
+    transform: rotate(5.069deg) translateY(0);
+    opacity: 0;
+    transition: 
+    //
+      all 0.25s linear, opacity 0.5s linear;
+  }
+
+  &:hover {
+    cursor: pointer;
+    
+    .report-card {
+      &__title {
+        color: $secondary-secondary;
+      }
+    }
+  }
+
+  @include respond(lg) {
+    .report-card {
+      &__image {
+        display: block;
+      }
+    }
+
+    &:hover {
+      .report-card {
+        &__image {
+          opacity: 1;
+          top: 50%;
+          transform: rotate(5.069deg) translateY(-50%);
+        }
+
+        &__link-icon {
+          transform: translateY(-40px);
+        }
+      }
+    }
   }
 }

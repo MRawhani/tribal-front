@@ -13,6 +13,15 @@ const ReportLists = () => {
 
           <h2 className="report-card__title">{report.title}</h2>
 
+          <div className="report-card__image">
+            <Image
+              src={`/assets/${report.img}.png`}
+              alt={`report`}
+              width={254}
+              height={168}
+            />
+          </div>
+
           <div className="report-card__recource flex items-center">
             <div className="report-card__recource-icon">
               <Image
@@ -67,19 +76,16 @@ export default function Reports() {
       <div className="container">
         <Heading title="Reports" className="mb-2" />
         <h2 className="reports__section-title uppercase">
-          Uncover Yemen's Untold Realities. Explore in-depth analysis and
+          Uncover Yemen&apos;s Untold Realities. Explore in-depth analysis and
           first-hand accounts from local communities.
         </h2>
 
         <div className="reports__content">
-          <div className="row m-0">
-            <div className="col-3-md"></div>
-            <div className="flex-1">
-              <div className="container">
-                <hr />
-                <ReportLists />
-                <hr />
-              </div>
+          <div className="m-0">
+            <div className="lg:ms-20 2xl:ms-28">
+              <hr />
+              <ReportLists />
+              <hr />
             </div>
           </div>
         </div>

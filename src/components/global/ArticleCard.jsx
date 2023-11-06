@@ -3,7 +3,10 @@ import Image from "next/image";
 export default function ArticleCard({ article, className }) {
   return (
     <div className={"article-card " + className}>
-      <div className="article-card__img">
+      <div
+        className="article-card__img"
+        style={{ "--card-bg-src": `url(/assets/${article.img}.png)` }}
+      >
         <Image
           src={`/assets/${article.img}.png`}
           alt={`article`}
