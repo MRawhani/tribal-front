@@ -1,15 +1,24 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Heading from "@/components/shared/Heading";
-import ShowMoreButton from "@/components/shared/ShowMoreButton";
 import { homeData } from "@/utils/data";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import ShowMoreLink from "../shared/ShowMoreLink";
+import Link from "next/link";
+import ArrowLinkIcon from "../icons/ArrowLinkIcon";
 
 const PhotosList = ({ reverseDirection = false }) => {
+  const [swiperInit, setSwiperInit] = useState(null);
+
+  function handleMouseEnter() {
+    swiperInit?.autoplay?.stop();
+  }
+  function handleMouseLeave() {
+    swiperInit?.autoplay?.start();
+  }
   return (
     <Swiper
       modules={[Autoplay]}
@@ -26,6 +35,7 @@ const PhotosList = ({ reverseDirection = false }) => {
       loop={true}
       onInit={(swiper) => {
         setTimeout(() => {
+          setSwiperInit(swiper);
           swiper.update();
         }, 300);
       }}
@@ -41,15 +51,30 @@ const PhotosList = ({ reverseDirection = false }) => {
       }}
     >
       {homeData.photos.items.map((photo, index) => (
-        <SwiperSlide key={photo.title}>
-          <div className="w-[510px] h-48 overflow-hidden">
+        <SwiperSlide
+          key={photo.title}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          style={{ "--bg-image-src": `url(${photo.image})` }}
+        >
+          <Link
+            href={`/photos/${photo?.id}`}
+            className="block h-48 overflow-hidden swiper-slide-item"
+          >
             <Image
               src={photo.image}
               alt={photo.title}
               fill={true}
               className="object-center object-cover"
             />
-          </div>
+
+            <ArrowLinkIcon
+              width="13"
+              height="13"
+              className="arrow-icon"
+              color="#fff"
+            />
+          </Link>
         </SwiperSlide>
       ))}
     </Swiper>
@@ -68,7 +93,7 @@ export default function Photos() {
       </div>
 
       <PhotosList />
-      
+
       <div className="mt-7">
         <PhotosList reverseDirection={true} />
       </div>

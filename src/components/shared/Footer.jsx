@@ -9,7 +9,7 @@ const FooterLinks = () => {
   return globalData.footerLinks.map((link) => (
     <div key={link.title}>
       <Link
-        className="py-2 px-3 flex justify-between items-center gap-2 bg-white rounded-3xl"
+        className="py-2 px-3 flex justify-between items-center gap-2 bg-white rounded-3xl transition-all hover:bg-secondary_secondary duration-300"
         href={link.link}
       >
         <span className="text-xs font-gothamBold">{link.title}</span>
@@ -36,10 +36,15 @@ export default function Footer() {
         </div>
 
         {/* social media */}
-        <div className="flex justify-center gap-3 mt-11">
+        <div className="flex justify-center gap-2 mt-11">
           {globalData.socialMediaLinks.map((link) => (
             <div key={link.title}>
-              <a href={link.link} target="_blank" rel="noreferrer">
+              <a
+                href={link.link}
+                target="_blank"
+                rel="noreferrer"
+                className="w-8 h-8 flex justify-center items-center rounded transition-all hover:bg-secondary_secondary duration-300"
+              >
                 <Image src={link.icon} alt="icon" width={24} height={24} />
               </a>
             </div>

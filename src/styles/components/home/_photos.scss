@@ -4,4 +4,53 @@
     line-height: 1.6;
     font-family: var(--font-ncs);
   }
+
+  .arrow-icon {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 4;
+    transition: all 0.3s linear;
+    opacity: 0;
+  }
+
+  .swiper-slide-item {
+    overflow: hidden;
+
+    img,
+    &::after {
+      border-radius: 12px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 12px;
+      inset: 0;
+      opacity: 0;
+      transition: all 0.3s linear;
+      background: linear-gradient(
+          122deg,
+          rgba(9, 4, 77, 0.75) 4.25%,
+          rgba(201, 154, 100, 0.75) 101.53%
+        ),
+        lightgray 50% / cover no-repeat;
+      background-size: cover;
+      z-index: 0;
+    }
+
+    &:hover {
+      &::after {
+        z-index: 2;
+        opacity: 0.75;
+      }
+
+      .arrow-icon {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+      }
+    }
+  }
 }
