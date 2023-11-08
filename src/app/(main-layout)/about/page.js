@@ -5,8 +5,8 @@ import { Breadcrumb } from "@/components/global/Breadcrumb";
 
 export default function AboutPage() {
   return (
-    <div>
-      <div className="container pb-8 md:pb-40">
+    <div className="page-about">
+      <div className="container pb-8 md:pb-40 ">
         <Breadcrumb
           links={[{ title: "about us", href: "/about" }]}
           title="about us"

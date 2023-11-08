@@ -2,6 +2,7 @@
   background: $primary-primary;
   overflow: hidden;
   position: relative;
+  z-index: 10;
 
   .container {
     position: relative;

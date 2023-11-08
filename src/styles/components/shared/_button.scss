@@ -1,13 +1,18 @@
 .btn {
-  padding: 18px 32px 8px;
+  padding: 10px 32px;
   gap: 10px;
   font-size: 14px;
   border-radius: 50px;
   font-family: var(--font-gothamMedium);
   text-align: center;
+  transition: background .2s ease-in-out;
 
   &-primary {
     color: $white;
     background-color: $secondary-secondary;
+
+    &:hover {
+      background:darken($color: $secondary-secondary, $amount: 10);
+    }
   }
 }
