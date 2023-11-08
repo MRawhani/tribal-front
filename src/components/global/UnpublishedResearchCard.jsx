@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ArrowLinkIcon from "../icons/ArrowLinkIcon";
 
 export default function ReportCard({ item, className = "" }) {
   return (
@@ -32,14 +33,9 @@ export default function ReportCard({ item, className = "" }) {
           className="c-unpublished-research__link flex justify-between items-center gap-4"
           href={`/reports/${item.id}`}
         >
-          <span className="mt-2">Read More</span>
+          <span>Read More</span>
 
-          <Image
-            src="/icons/arrow-primary.svg"
-            alt={`link`}
-            width={16}
-            height={16}
-          />
+          <ArrowLinkIcon width="12" height="12" className="arrow-icon" color="#BC9665" />
         </Link>
       </div>
     </div>

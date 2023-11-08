@@ -18,40 +18,48 @@ export default function BookChapterCard({ item }) {
 
         {/* content */}
         <div className="py-4 c-book-chapter__content">
-          <div className="content-wrapper w-full">
-            {/* book info */}
-            <div className="flex gap-2 font-gothamMedium">
-              <div className="text-secondary_secondary  flex gap-2 text-sm">
-                <span>
-                  &copy;
-                  {item.year}
-                </span>
+          <div className="content-wrapper-border">
+            <div className="content-wrapper w-full">
+              <div className="content">
+                {/* book info */}
+                <div className="flex gap-2 font-gothamMedium">
+                  <div className="text-secondary_secondary  flex gap-2 text-sm">
+                    <span>
+                      &copy;
+                      {item.year}
+                    </span>
 
-                <span> |</span>
+                    <span> |</span>
 
-                <span>Pages:</span>
+                    <span>Pages:</span>
+                  </div>
+
+                  <span className="text-base">{item.pages}</span>
+                </div>
+
+                <h2 className="c-book-chapter__title line-clamp-2 md:whitespace-nowrap">
+                  {item.title}
+                </h2>
+
+                <q className="c-book-chapter__description ">
+                  {item.description}
+                </q>
+
+                <section className="mt-3 text-xs font-gothamMedium">
+                  <div className="flex gap-3 items-center author-icon">
+                    <AuthorIcon />
+
+                    <span className="mt-2">{item.authors}</span>
+                  </div>
+
+                  <div className="mt-3 flex gap-3 items-center location-icon">
+                    <LocationIcon />
+
+                    <span className="mt-2">{item.location}</span>
+                  </div>
+                </section>
               </div>
-
-              <strong className="text-base">{item.pages}</strong>
             </div>
-
-            <h2 className="c-book-chapter__title line-clamp-2 md:whitespace-nowrap">{item.title}</h2>
-
-            <q className="c-book-chapter__description ">{item.description}</q>
-
-            <section className="mt-3 text-xs font-gothamMedium">
-              <div className="flex gap-3 items-center">
-                <AuthorIcon />
-
-                <span className="mt-2">{item.authors}</span>
-              </div>
-
-              <div className="mt-3 flex gap-3 items-center">
-                <LocationIcon />
-
-                <span className="mt-2">{item.location}</span>
-              </div>
-            </section>
           </div>
         </div>
       </section>

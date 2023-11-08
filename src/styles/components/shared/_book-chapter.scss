@@ -41,7 +41,7 @@
   }
 
   &__description {
-    display: inline-block;
+    display: block;
     color: var(--text-800, #5c557b);
     font-family: var(--font-gothamLight);
     font-size: 12px;
@@ -57,8 +57,24 @@
 
   &__content {
     min-height: 250px;
+
+    @include respond(m) {
+      padding-top: 4.5rem;
+    }
+  }
+
+  .content-wrapper-border {
     display: flex;
     align-items: center;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+
+    @include respond(m) {
+      border: 10px solid rgba(255, 250, 238, 0.15);
+      border-inline-start: none;
+      border-top-right-radius: 24px;
+      border-bottom-right-radius: 24px;
+    }
   }
 
   .content-wrapper {
@@ -70,9 +86,52 @@
       border-radius: 24px;
     }
 
-    @include respond(m) {
-      border-top-right-radius: 24px;
-      border-bottom-right-radius: 24px;
+    // @include respond(m) {
+    //   border-top-right-radius: 24px;
+    //   border-bottom-right-radius: 24px;
+    // }
+  }
+
+  .content-wrapper,
+  .c-book-chapter__description,
+  .content,
+  .content span,
+  .content strong,
+  .content path,
+  .content circle {
+    transition: all 0.3s ease-in-out, color 0.2s linear, stroke 0.2s linear,
+      fill 0.2s linear;
+  }
+
+  &:hover {
+    .content-wrapper {
+      background-color: $secondary-secondary;
+      color: $seconday-50;
+    }
+
+    .c-book-chapter__description {
+      color: $seconday-100;
+    }
+
+    .content {
+      transform: translateX(10px);
+
+      span {
+        color: $seconday-50;
+      }
+
+      .author-icon svg {
+        path,
+        circle {
+          stroke: white;
+        }
+      }
+
+      .location-icon svg {
+        path {
+          fill: white;
+        }
+      }
     }
   }
 }

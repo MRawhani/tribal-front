@@ -6,6 +6,7 @@
   position: relative;
   border-radius: 20px;
   min-height: 120px;
+  transition: all 0.3s ease-in;
 
   &__img {
     height: 100%;
@@ -21,6 +22,7 @@
     margin-bottom: 0.8rem;
     color: $text-main;
     font-family: var(--font-gothamMedium);
+    transition: all 0.3s ease-in;
   }
 
   &__date {
@@ -28,6 +30,7 @@
     color: $text-main;
     margin-bottom: 0.5rem;
     font-family: var(--font-gothamBook);
+    transition: all 0.3s ease-in;
   }
 
   &__recource-icon {
@@ -42,6 +45,8 @@
   &__recource-name {
     font-family: var(--font-gothamBook);
     font-size: 14px;
+    color: $text-main;
+    transition: color 0.3s ease-in;
   }
 
   &__link {
@@ -49,20 +54,38 @@
       font-size: 14px;
       font-family: var(--font-gothamMedium);
       color: $secondary-secondary;
-    }
-
-    img {
       transition: all 0.3s ease-in-out;
     }
 
-    &:hover {
-      span {
-        color: $seconday-400;
-      }
+    svg path {
+      transition: all 0.3s ease-in-out;
+      color: $secondary-secondary;
+    }
 
-      img {
-        transform: translate(10px, -4px);
-      }
+    // &:hover {
+    //   span {
+    //     color: $seconday-400;
+    //   }
+
+    //   // svg {
+    //   //   transform: translate(10px, -4px);
+    //   // }
+    // }
+  }
+
+  &:hover {
+    background: $secondary-secondary;
+    color: $seconday-50;
+
+    .c-unpublished-research__title,
+    .c-unpublished-research__link span,
+    .c-unpublished-research__date,
+    .c-unpublished-research__recource-name {
+      color: $seconday-50;
+    }
+
+    .c-unpublished-research__link svg path {
+      fill: $seconday-50;
     }
   }
 }
