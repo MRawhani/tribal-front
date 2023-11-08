@@ -26,11 +26,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: all 0.3s linear;
+      transform: translate(0, 0);
 
       img {
         transform: translate(20px, 20px);
         width: 30px;
         height: 30px;
+        transition: all 0.3s linear;
       }
     }
 
@@ -48,6 +51,7 @@
           rgba(8, 4, 74, 0.6) 82.55%
         ),
         lightgray 50% / cover no-repeat;
+      transition: all 0.4s linear;
     }
 
     img {
@@ -76,5 +80,29 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 150%;
+  }
+
+  &:hover {
+    cursor: pointer;
+    
+    .interview-card__img::after {
+      opacity: 0.8;
+      background: linear-gradient(
+          301deg,
+          $secondary-secondary -6.67%,
+          rgba(8, 4, 74, 0.75) 82.55%
+        ),
+        lightgray 50% / cover no-repeat;
+    }
+
+    .img-icon {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      img {
+        transform: translate(0);
+      }
+    }
   }
 }
