@@ -58,6 +58,20 @@
     }
   }
 
+  .c-card__content-effect {
+    position: absolute;
+    top: 1rem;
+    left: 36%;
+    transition: all 0.3s linear;
+
+    .c-report-card__title,
+    .c-report-card__date,
+    .c-report-card__recource-name {
+      color: $seconday-50;
+    }
+    opacity: 0;
+  }
+
   @include respond(m) {
     transition: all 0.3s linear;
 
@@ -80,20 +94,6 @@
         opacity: 0;
         transition: all 0.3s linear;
       }
-    }
-
-    .c-card__content-effect {
-      position: absolute;
-      top: 1rem;
-      left: 36%;
-      transition: all 0.3s linear;
-
-      .c-report-card__title,
-      .c-report-card__date,
-      .c-report-card__recource-name {
-        color: $seconday-50;
-      }
-      opacity: 0;
     }
 
     &:hover {
