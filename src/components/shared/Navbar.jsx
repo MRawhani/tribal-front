@@ -168,10 +168,10 @@ const MobileNavbar = ({ isMobileNavOpen, closeMobileNavbar }) => {
   );
 };
 
-export default function Navbar({ className }) {
+export default function Navbar({ className = "", isHomePage = true }) {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
-  const isHomePagePath = usePathname() === "/";
+  const isHomePagePath = usePathname() === "/" && isHomePage;
   const isSearchPagePath = usePathname() === "/search";
 
   useEffect(() => {

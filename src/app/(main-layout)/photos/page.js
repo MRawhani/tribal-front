@@ -1,23 +1,37 @@
+"use client";
 import { Breadcrumb } from "@/components/global/Breadcrumb";
-import Hero from "@/components/home/Hero";
+import PhotoDetailsModal from "@/components/shared/PhotoDetailsModal";
 import { homeData } from "@/utils/data";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 export default function Photos() {
+  const [showModal, setShowModal] = useState(false);
+  const [photoData, setPhotoData] = useState(null);
+
+  function openPhotoModal(photo) {
+    setShowModal(true);
+    setPhotoData(photo);
+  }
+
   return (
-    <div className="container">
+    <div className="container page-photos-details">
       <Breadcrumb
         links={[{ title: "photos", href: "/photos" }]}
         title="Photos"
         description="Yemen's Cultural Richness in Photos: Tribes, Customs, Traditions."
       />
 
-      <section className="mt-16 grid grid-cols-3 gap-3">
+      <div id="photo-modal-wrapper">
+        <PhotoDetailsModal showModal={showModal} photoData={photoData} />
+      </div>
+
+      <section className="photos-wrapper mt-16 grid grid-cols-3 gap-3">
         {homeData.photos.items.map((photo) => (
           <div
             key={photo.title}
-            className="col-span-3 md:col-span-1 rounded-xl overflow-hidden"
+            className="photo-modal-item col-span-3 md:col-span-1 rounded-xl overflow-hidden"
+            onClick={() => openPhotoModal(photo)}
           >
             <Image
               src={photo.image}

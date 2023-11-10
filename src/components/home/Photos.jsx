@@ -7,10 +7,10 @@ import { homeData } from "@/utils/data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import ShowMoreLink from "../shared/ShowMoreLink";
-import Link from "next/link";
 import ArrowLinkIcon from "../icons/ArrowLinkIcon";
+import PhotoDetailsModal from "../shared/PhotoDetailsModal";
 
-const PhotosList = ({ reverseDirection = false }) => {
+const PhotosList = ({ reverseDirection = false, openPhotoModal }) => {
   const [swiperInit, setSwiperInit] = useState(null);
 
   function handleMouseEnter() {
@@ -57,9 +57,9 @@ const PhotosList = ({ reverseDirection = false }) => {
           onMouseLeave={handleMouseLeave}
           style={{ "--bg-image-src": `url(${photo.image})` }}
         >
-          <Link
-            href={`/photos/${photo?.id}`}
-            className="block h-48 overflow-hidden swiper-slide-item"
+          <div
+            onClick={() => openPhotoModal(photo)}
+            className="cursor-pointer block h-48 overflow-hidden swiper-slide-item photo-modal-item"
           >
             <Image
               src={photo.image}
@@ -74,7 +74,7 @@ const PhotosList = ({ reverseDirection = false }) => {
               className="arrow-icon"
               color="#fff"
             />
-          </Link>
+          </div>
         </SwiperSlide>
       ))}
     </Swiper>
@@ -82,25 +82,43 @@ const PhotosList = ({ reverseDirection = false }) => {
 };
 
 export default function Photos() {
+  const [showModal, setShowModal] = useState(false);
+  const [photoData, setPhotoData] = useState(null);
+
+  function openPhotoModal(photo) {
+    setShowModal(true);
+    setPhotoData(photo);
+  }
+
   return (
-    <div className="photos py-20 2xl:py-32">
-      <div className="container mb-14">
-        <Heading title={homeData.photos.title} />
-
-        <p className="photos__description uppercase">
-          {homeData.photos.description}
-        </p>
+    <div>
+      <div id="photo-modal-wrapper">
+        <PhotoDetailsModal
+          key={showModal}
+          showModal={showModal}
+          photoData={photoData}
+        />
       </div>
 
-      <PhotosList />
+      <div className="photos py-20 2xl:py-32">
+        <div className="container mb-14">
+          <Heading title={homeData.photos.title} />
 
-      <div className="mt-7">
-        <PhotosList reverseDirection={true} />
-      </div>
+          <p className="photos__description uppercase">
+            {homeData.photos.description}
+          </p>
+        </div>
 
-      <div className="container mt-8">
-        <div className="w-full flex justify-center">
-          <ShowMoreLink link="/photos" text="Show All Photos" />
+        <PhotosList openPhotoModal={openPhotoModal} />
+
+        <div className="mt-7">
+          <PhotosList openPhotoModal={openPhotoModal} reverseDirection={true} />
+        </div>
+
+        <div className="container mt-8">
+          <div className="w-full flex justify-center">
+            <ShowMoreLink link="/photos" text="Show All Photos" />
+          </div>
         </div>
       </div>
     </div>

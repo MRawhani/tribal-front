@@ -54,3 +54,21 @@
     }
   }
 }
+
+#photo-modal-wrapper {
+  position: fixed;
+  z-index: 110;
+  background-color: white;
+  overflow-y: scroll;
+}
+
+.photo-modal-item {
+  transition: 0.75s;
+  cursor: pointer;
+
+  &.full-screen {
+    height: 100vh;
+    margin: 0;
+    border-radius: 0;
+  }
+}
