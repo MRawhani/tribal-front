@@ -210,7 +210,7 @@ export default function Navbar({ className = "", isHomePage = true }) {
                       : "/logo-white-color.svg"
                   }
                   width={160}
-                  height={70}
+                  height={87}
                   alt="Logo"
                   priority
                 />
