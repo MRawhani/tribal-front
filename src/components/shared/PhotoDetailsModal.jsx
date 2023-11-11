@@ -135,11 +135,13 @@ export default function PhotoDetailsModal({ showModal = false, photoData }) {
   }, [router, showModal, photoData]);
 
   useEffect(() => {
-    window.history.pushState(
-      null,
-      "photo details page",
-      `/photos/${photoData?.id}`
-    );
+    if (showModal && photoData?.id) {
+      window.history.pushState(
+        null,
+        "photo details page",
+        `/photos/${photoData?.id}`
+      );
+    }
 
     document.body.style.overflowY = showModal ? "hidden" : "auto";
 
