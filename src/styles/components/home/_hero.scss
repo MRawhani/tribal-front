@@ -76,6 +76,8 @@
     @include respond(2xl) {
       width: 6rem;
       height: 10.6rem;
+      max-width: 20px;
+      max-height: 25px;
     }
 
     @include respond(3xl) {
@@ -208,6 +210,10 @@
       svg {
         width: 150px;
       }
+    }
+
+    @include respond(xl) {
+      right: 50px;
     }
 
     @include respond(2xl) {
