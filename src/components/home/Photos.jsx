@@ -52,7 +52,7 @@ const PhotosList = ({ reverseDirection = false, openPhotoModal }) => {
     >
       {homeData.photos.items.map((photo, index) => (
         <SwiperSlide
-          key={photo.title}
+          key={photo.id}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           style={{ "--bg-image-src": `url(${photo.image})` }}

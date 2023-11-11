@@ -60,6 +60,30 @@ export const homeData = {
         title: "Tribes 7",
         link: "/",
       },
+      {
+        id: 9,
+        image: "/assets/photo-2.jpeg",
+        title: "Tribes 6",
+        link: "/",
+      },
+      {
+        id: 8,
+        image: "/assets/photo-1.jpeg",
+        title: "Tribes 7",
+        link: "/",
+      },
+      {
+        id: 19,
+        image: "/assets/photo-2.jpeg",
+        title: "Tribes 6",
+        link: "/",
+      },
+      {
+        id: 28,
+        image: "/assets/photo-1.jpeg",
+        title: "Tribes 7",
+        link: "/",
+      },
     ],
   },
   bookChapters: {
