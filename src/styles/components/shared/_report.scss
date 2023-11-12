@@ -4,7 +4,7 @@
   overflow: hidden;
   position: relative;
   border-radius: 20px;
-  min-height: 200px;
+  min-height: 170px;
   height: 100%;
 
   &__img {
@@ -81,7 +81,7 @@
 
       img {
         min-height: 170px;
-        max-height: 200px;
+        max-height: 170px;
 
         @include respond(3xl) {
           max-height: 200px;
