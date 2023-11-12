@@ -1,18 +1,22 @@
 "use client";
 import { Breadcrumb } from "@/components/global/Breadcrumb";
-import PhotoDetailsModal from "@/components/shared/PhotoDetailsModal";
-import { homeData } from "@/utils/data";
-import Image from "next/image";
-import React, { useState } from "react";
+import PhotosSection from "@/components/photos/PhotosSection";
+import React, { useEffect, useState } from "react";
 
 export default function Photos() {
-  const [showModal, setShowModal] = useState(false);
-  const [photoData, setPhotoData] = useState(null);
+  const [keyCount, setKeyCount] = useState(0);
 
-  function openPhotoModal(photo) {
-    setShowModal(true);
-    setPhotoData(photo);
-  }
+  useEffect(() => {
+    const handleEvent = () => {
+      console.log("close", keyCount, new Date().getTime());
+
+      setKeyCount(new Date().getTime());
+    };
+
+    window.addEventListener("router-link", handleEvent);
+
+    return () => window.removeEventListener("router-link", handleEvent);
+  }, [keyCount]);
 
   return (
     <div className="container page-photos-details">
@@ -22,27 +26,7 @@ export default function Photos() {
         description="Yemen's Cultural Richness in Photos: Tribes, Customs, Traditions."
       />
 
-      <div id="photo-modal-wrapper">
-        <PhotoDetailsModal showModal={showModal} photoData={photoData} />
-      </div>
-
-      <section className="photos-wrapper mt-16 grid grid-cols-3 gap-3">
-        {homeData.photos.items.map((photo) => (
-          <div
-            key={photo.title}
-            className="photo-modal-item col-span-3 md:col-span-1 rounded-xl overflow-hidden"
-            onClick={() => openPhotoModal(photo)}
-          >
-            <Image
-              src={photo.image}
-              alt={photo.title}
-              width={358}
-              height={213}
-              className="object-cover object-center w-full h-full"
-            />
-          </div>
-        ))}
-      </section>
+      <PhotosSection key={keyCount} />
     </div>
   );
 }

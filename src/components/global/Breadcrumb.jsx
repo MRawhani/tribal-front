@@ -1,7 +1,14 @@
+"use client";
 import Link from "next/link";
 import { Fragment } from "react";
 
 const BreadcrumbLinks = ({ links }) => {
+  const onLinkClick = () => {
+    const event = new CustomEvent("router-link", { bubbles: true });
+
+    window.dispatchEvent(event);
+  };
+
   return (
     <div className="flex gap-2 items-center">
       <svg
@@ -35,6 +42,7 @@ const BreadcrumbLinks = ({ links }) => {
           <Link
             href={link?.href ?? "#"}
             className="text-xs font-gothamLight pt-1 capitalize line-clamp-1"
+            onClick={onLinkClick}
           >
             {link.title}
           </Link>

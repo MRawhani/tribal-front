@@ -5,6 +5,12 @@ import { usePathname } from "next/navigation";
 import { links } from "@/utils/nav-links";
 import Image from "next/image";
 
+const onLinkClick = () => {
+  const event = new CustomEvent("router-link", { bubbles: true });
+
+  window.dispatchEvent(event);
+};
+
 // desktop
 const DesktopNavbarItems = () => {
   const pathname = usePathname();
@@ -40,6 +46,7 @@ const DesktopNavbarItems = () => {
                 className="text-sm flex items-center px-4 py-2 hover:bg-gray-200"
                 href={child.path}
                 key={child.id}
+                onClick={onLinkClick}
               >
                 {child.name}
               </Link>
@@ -50,7 +57,11 @@ const DesktopNavbarItems = () => {
 
     return (
       <li key={link.id} className={`${pathname === link.path ? "active" : ""}`}>
-        <Link className="nav-link nav-link-title" href={link.path}>
+        <Link
+          className="nav-link nav-link-title"
+          href={link.path}
+          onClick={onLinkClick}
+        >
           {link.name}
         </Link>
       </li>
@@ -60,6 +71,11 @@ const DesktopNavbarItems = () => {
 
 const MobileNavbarDropdownItem = ({ link, closeMobileNavbar }) => {
   const [openDropdown, setOpenDropdown] = useState(false);
+
+  const handleLink = () => {
+    closeMobileNavbar();
+    onLinkClick();
+  };
 
   return (
     <li className="menu__item header__dropdown header__dropdown-wrapper">
@@ -95,7 +111,7 @@ const MobileNavbarDropdownItem = ({ link, closeMobileNavbar }) => {
               className=" block px-2 py-2 hover:bg-gray-200"
               href={child.path}
               key={child.id}
-              onClick={closeMobileNavbar}
+              onClick={handleLink}
             >
               - {child.name}
             </Link>
@@ -108,6 +124,11 @@ const MobileNavbarDropdownItem = ({ link, closeMobileNavbar }) => {
 
 const MobileNavbarItems = ({ closeMobileNavbar }) => {
   const pathname = usePathname();
+
+  const handleLink = () => {
+    closeMobileNavbar();
+    onLinkClick();
+  };
 
   return links.map((link) => {
     if (link.children)
@@ -124,7 +145,7 @@ const MobileNavbarItems = ({ closeMobileNavbar }) => {
         key={link.id}
         className={`menu__item ${pathname === link.path ? "active" : ""}`}
       >
-        <Link className="nav-link" href={link.path} onClick={closeMobileNavbar}>
+        <Link className="nav-link" href={link.path} onClick={handleLink}>
           {link.name}
         </Link>
       </li>
@@ -139,7 +160,7 @@ const MobileNavbar = ({ isMobileNavOpen, closeMobileNavbar }) => {
     <div className="mobile-header">
       <div className="container">
         <div className="mobile-header__logo flex justify-between items-center">
-          <Link href="/">
+          <Link href="/" onClick={onLinkClick}>
             <Image
               src="/logo-primary-color.svg"
               width={160}
@@ -202,7 +223,7 @@ export default function Navbar({ className = "", isHomePage = true }) {
         <div className="container not-hidden">
           <div className="flex align-center justify-between">
             <div className="flex justify-between items-center">
-              <Link href="/" className="relative">
+              <Link href="/" className="relative" onClick={onLinkClick}>
                 <Image
                   src={
                     isHomePagePath
@@ -224,7 +245,7 @@ export default function Navbar({ className = "", isHomePage = true }) {
             </div>
 
             <div className="flex gap-3 justify-between items-center">
-              <Link href="/search">
+              <Link href="/search" onClick={onLinkClick}>
                 <Image
                   src="/icons/search-primary-color.svg"
                   height={24}
