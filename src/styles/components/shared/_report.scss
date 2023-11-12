@@ -4,7 +4,8 @@
   overflow: hidden;
   position: relative;
   border-radius: 20px;
-  min-height: 120px;
+  min-height: 200px;
+  height: 100%;
 
   &__img {
     height: 100%;
@@ -79,7 +80,12 @@
       transition: all 0.3s linear;
 
       img {
-        max-height: 160px;
+        min-height: 170px;
+        max-height: 200px;
+
+        @include respond(3xl) {
+          max-height: 200px;
+        }
       }
 
       &::after {
