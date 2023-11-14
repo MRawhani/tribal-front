@@ -263,9 +263,9 @@
 
   .menu__item {
     transform: translateX(-150%);
-    transition: transform 0.5s 0.25s ease-in-out;
+    transition: transform 0.4s ease-in-out;
 
-    $time-offset: 0;
+    $time-offset: 0.15;
     @for $i from 1 through 6 {
       &:nth-child(#{$i}) {
         $time-offset: $time-offset + 0.1;
