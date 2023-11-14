@@ -43,20 +43,18 @@
     z-index: 10;
     color: white;
   }
-
+  
   &__title {
     font-family: var(--font-gothamBook);
     font-size: 1rem;
   }
-
+  
   &__description {
     margin-top: 0.5rem;
-    font-size: 1.25rem;
     font-family: var(--font-ncs);
+    width: clamp(200px, 100%, 600px);
 
-    @include respond(xl) {
-      font-size: 1.5rem;
-    }
+    @include  responsiveFontSize(20px, 28px);
   }
 
   &__arrow {
