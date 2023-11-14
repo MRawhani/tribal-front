@@ -60,6 +60,10 @@ export default function Interviews() {
             className="mySwiper"
             breakpoints={{
               768: {
+                slidesPerView: 2.4,
+                spaceBetween: 24,
+              },
+              1024: {
                 slidesPerView: 3.4,
                 spaceBetween: 24,
               },
