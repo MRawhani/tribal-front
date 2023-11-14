@@ -154,10 +154,10 @@ const MobileNavbarItems = ({ closeMobileNavbar }) => {
 };
 
 const MobileNavbar = ({ isMobileNavOpen, closeMobileNavbar }) => {
-  if (!isMobileNavOpen) return null;
+  // if (!isMobileNavOpen) return null;
 
   return (
-    <div className="mobile-header">
+    <div className={`mobile-header ${isMobileNavOpen ? 'is--open' : 'is--close'}`}>
       <div className="container">
         <div className="mobile-header__logo flex justify-between items-center">
           <Link href="/" onClick={onLinkClick}>
@@ -170,13 +170,17 @@ const MobileNavbar = ({ isMobileNavOpen, closeMobileNavbar }) => {
             />
           </Link>
 
-          <button onClick={closeMobileNavbar}>
+          <button
+            onClick={closeMobileNavbar}
+            className="menu__close-btn flex justify-center items-center w-10 h-10"
+          >
             <Image
               src="/icons/icon-x.svg"
-              height={16}
-              width={16}
+              height={24}
+              width={24}
               alt="Logo"
               priority
+              className="opacity-75"
             />
           </button>
         </div>
