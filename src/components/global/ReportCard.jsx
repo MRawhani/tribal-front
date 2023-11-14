@@ -20,10 +20,8 @@ export default function ReportCard({ report, className = "" }) {
         <div className="c-card__content">
           <p className="c-report-card__date">{report.date}</p>
 
-          <Link
-            className="c-report-card__title line-clamp-2"
-            href={`/reports/${report.id}`}
-          >
+          <Link className="c-report-card__title line-clamp-2" href="#">
+            {/* href={`/reports/${report.id}`} */}
             {report.title}
           </Link>
 
@@ -44,10 +42,7 @@ export default function ReportCard({ report, className = "" }) {
         <div className="c-card__content-effect">
           <p className="c-report-card__date">{report.date}</p>
 
-          <Link
-            className="c-report-card__title line-clamp-2"
-            href={`/reports/${report.id}`}
-          >
+          <Link className="c-report-card__title line-clamp-2" href="#">
             {report.title}
           </Link>
 
@@ -66,17 +61,14 @@ export default function ReportCard({ report, className = "" }) {
         </div>
       </div>
 
-      <Link
-        className="md:w-1/12 c-report-card__link"
-        href={`/reports/${report.id}`}
-      >
+      <div className="md:w-1/12 c-report-card__link" href="#">
         <Image
           src="/icons/arrow-primary.svg"
           alt={`link`}
           width={16}
           height={16}
         />
-      </Link>
+      </div>
     </div>
   );
 }
