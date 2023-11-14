@@ -1,6 +1,6 @@
 .page-about {
-  @include respond(m) {
-    .about__image-wrapper {
+  @include respond(lg) {
+    .about__img-wrapper {
       margin-top: -100px;
     }
   }

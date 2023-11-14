@@ -5,6 +5,12 @@
   z-index: 5;
   max-width: 100vw;
 
+  @include respond(lg) {
+    .about__img-wrapper {
+      margin-top: -50px;
+    }
+  }
+
   &__content {
     min-height: 70vh;
   }
@@ -20,12 +26,24 @@
     overflow: hidden;
     width: 100%;
     max-width: 500px;
+    border-end-start-radius: 2rem;
+    border-end-end-radius: 2rem;
+
 
     @include respond(maxMd) {
       width: 80%;
       margin-top: -85%;
       transform: translateY(50%);
       margin-bottom: 30%;
+    }
+
+    @include respond(md) {
+      margin-bottom: -20%;
+    }
+
+    @include respond(lg) {
+      margin-bottom: 0;
+      border-radius: 0;
     }
   }
 
@@ -81,7 +99,6 @@
     }
 
     @include respond(2xl) {
-
       svg {
         width: 200px;
       }

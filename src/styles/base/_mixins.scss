@@ -55,6 +55,20 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin responsiveFontSize($min, $max: 1rem) {
+  @include respond(maxMd) {
+    font-size: $min;
+  }
+
+  @include respond(m) {
+    font-size: clamp($min, $min + 0.4vw, $max);
+  }
+
+  @include respond(2xl) {
+    font-size: $max;
+  }
+}
+
 @mixin fontSizeForScreens($size) {
   font-size: calc($size - ($baseCalcValue * 2 * $size));
 
@@ -120,6 +134,12 @@
     }
   }
 
+  @if $breakpoint ==md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
   @if $breakpoint ==lg {
     @media (min-width: 1024px) {
       //1100
@@ -150,6 +170,12 @@
 
   @if $breakpoint ==maxMd {
     @media (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==maxLg {
+    @media (max-width: 1023px) {
       @content;
     }
   }
