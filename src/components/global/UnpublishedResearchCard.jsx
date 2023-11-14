@@ -4,7 +4,7 @@ import ArrowLinkIcon from "../icons/ArrowLinkIcon";
 
 export default function ReportCard({ item, className = "" }) {
   return (
-    <div className={"c-unpublished-research shadow-sm " + className}>
+    <div className={"c-unpublished-research h-full shadow-sm " + className}>
       <div className="py-4 c-unpublished-research__content">
         {/* recourse */}
         <div className="c-unpublished-research__recource mb-5 flex items-center">
@@ -31,7 +31,7 @@ export default function ReportCard({ item, className = "" }) {
       <div className="flex justify-end">
         <Link
           className="c-unpublished-research__link flex justify-between items-center gap-4"
-          href={`/reports/${item.id}`}
+          href={'#' ??`/reports/${item.id}`}
         >
           <span>Read More</span>
 
