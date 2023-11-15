@@ -16,7 +16,7 @@
     }
 
     .right-layer--2 {
-      transition-delay: 0.2s;
+      transition-delay: 148ms;
       background: $primary-50;
     }
 
@@ -27,7 +27,7 @@
   }
 
   &.is--hidden {
-    animation: hide-section 0s linear 1.25s forwards;
+    animation: hide-section 0s linear 1000ms forwards;
 
     .animated-logo,
     .shapes {
@@ -40,10 +40,12 @@
   }
 
   @keyframes hide-section {
-    from {
+    0% {
       display: flex;
+      background: none;
     }
-    to {
+
+    100% {
       display: none;
     }
   }
