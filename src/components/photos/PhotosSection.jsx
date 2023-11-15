@@ -3,6 +3,7 @@ import PhotoDetailsModal from "@/components/shared/PhotoDetailsModal";
 import { homeData } from "@/utils/data";
 import Image from "next/image";
 import React, { useState } from "react";
+import ArrowLinkIcon from "../icons/ArrowLinkIcon";
 
 export default function Photos() {
   const [showModal, setShowModal] = useState(false);
@@ -32,6 +33,13 @@ export default function Photos() {
               width={358}
               height={213}
               className="object-cover object-center w-full h-full"
+            />
+
+            <ArrowLinkIcon
+              width="13"
+              height="13"
+              className="arrow-icon"
+              color="#fff"
             />
           </div>
         ))}
