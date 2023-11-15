@@ -60,6 +60,21 @@
   z-index: 110;
   background-color: white;
   overflow-y: scroll;
+
+  .header {
+    transform: translateY(-100%);
+    animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 750ms
+      forwards;
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .photo-modal-item {
