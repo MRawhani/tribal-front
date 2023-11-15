@@ -1,0 +1,74 @@
+.page-transition {
+  background: linear-gradient(90deg, #ae8556 0%, #90794c 100%);
+
+  &-layers {
+    .right-layer {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 100%;
+      bottom: 0;
+      right: auto;
+      background: $primary-primary;
+      transition: all 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
+      z-index: 10;
+    }
+
+    .right-layer--2 {
+      transition-delay: 0.2s;
+      background: $primary-50;
+    }
+
+    .right-layer--3 {
+      background: linear-gradient(90deg, #ae8556 0%, #90794c 100%);
+      transition-delay: 0.3s;
+    }
+  }
+
+  &.is--hidden {
+    animation: hide-section 0s linear 1.25s forwards;
+
+    .animated-logo,
+    .shapes {
+      display: none;
+    }
+
+    .right-layer {
+      left: -140%;
+    }
+  }
+
+  @keyframes hide-section {
+    from {
+      display: flex;
+    }
+    to {
+      display: none;
+    }
+  }
+
+  .animated-logo {
+    width: clamp(150px, 150px + 10vw, 400px);
+  }
+
+  .shapes {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    &-top,
+    &-bottom {
+      position: absolute;
+    }
+
+    &-top {
+      top: -40px;
+    }
+
+    &-bottom {
+      bottom: -550px;
+      right: -30px;
+    }
+  }
+}

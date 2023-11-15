@@ -5,6 +5,7 @@ import "@/styles/_main.scss";
 import { custom_fonts } from "./fonts";
 import NextTopLoader from "nextjs-toploader";
 import Footer from "@/components/shared/Footer";
+import { PageTransitionSection } from "@/components/global/PageTransitionSection";
 
 export const metadata = {
   title: "Yemen Tribal Voices",
@@ -31,6 +32,8 @@ export default async function RootLayout({ children }) {
       </head>
       <body className={`${custom_fonts}`}>
         <NextTopLoader />
+
+        <PageTransitionSection />
 
         {!loading ? <>{children}</> : <div className="loading">Loading...</div>}
 
