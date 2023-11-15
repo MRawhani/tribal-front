@@ -315,6 +315,13 @@
     }
   }
 
+  &.is--close {
+    .mobile-header__logo img {
+      opacity: 0;
+      transition: all 0.5s linear;
+    }
+  }
+
   &.is--close::after {
     animation: mobile-menu-close 750ms linear forwards;
   }
