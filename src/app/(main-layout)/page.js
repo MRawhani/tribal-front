@@ -23,8 +23,12 @@ export default function Home() {
     };
 
     window.addEventListener("router-link", handleEvent);
+    window.addEventListener("popstate", handleEvent);
 
-    return () => window.removeEventListener("router-link", handleEvent);
+    return () => {
+      window.removeEventListener("router-link", handleEvent);
+      window.removeEventListener("popstate", handleEvent);
+    };
   }, [keyCount]);
 
   return (
