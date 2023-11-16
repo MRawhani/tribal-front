@@ -38,12 +38,12 @@ const DesktopNavbarItems = () => {
           </div>
 
           <div
-            className="header__dropdown-list absolute p-3 left-0 mt-4 rounded-md shadow-lg opacity-0 
+            className="header__dropdown-list absolute p-3 left-0 rounded-md shadow-lg opacity-0 
       transition-all duration-490 translate-y-4 invisible"
           >
             {link.children.map((child) => (
               <Link
-                className="text-sm flex items-center px-4 py-2 hover:bg-gray-200"
+                className="text-sm flex whitespace-nowrap items-center px-4 py-2 hover:bg-gray-200"
                 href={child.path}
                 key={child.id}
                 onClick={onLinkClick}
