@@ -28,7 +28,7 @@ export default function StoryCard({ story }) {
               height={32}
             />
           </div>
-          <h6 className="story-card__recource-name mt-3 line-clamp-1">
+          <h6 className="story-card__recource-name line-clamp-1">
             {story.recource_name}
           </h6>
         </div>
