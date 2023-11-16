@@ -75,3 +75,10 @@ h1 {
 .font-gothamLight {
   font-family: var(--font-gothamLight);
 }
+
+.container {
+  @include respond(xl) {
+    max-width: 1140px !important;
+    padding: 0 !important;
+  }
+}
