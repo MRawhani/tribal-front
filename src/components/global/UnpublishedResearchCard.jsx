@@ -16,7 +16,7 @@ export default function ReportCard({ item, className = "" }) {
             />
           </div>
 
-          <h6 className="c-unpublished-research__recource-name mt-3 line-clamp-1">
+          <h6 className="c-unpublished-research__recource-name line-clamp-1">
             {item.recource_name}
           </h6>
         </div>
