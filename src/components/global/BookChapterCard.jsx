@@ -17,7 +17,7 @@ export default function BookChapterCard({ item }) {
         </div>
 
         {/* content */}
-        <div className="py-4 c-book-chapter__content">
+        <div className="py-4 c-book-chapter__content w-full">
           <div className="content-wrapper-border">
             <div className="content-wrapper w-full">
               <div className="content">

@@ -11,20 +11,22 @@ import NextIcon from "@/components/icons/NextIcon";
 import Heading from "../shared/Heading";
 import { homeData } from "@/utils/data";
 
-export default function BookChapters () {
+export default function BookChapters() {
   const swiperRef = useRef();
   const swiperKey = Date.now();
 
   return (
     <div className="bg-white book-chapters py-20 md:py-32">
-      <div className="px-4 lg:container mx-auto max-w-4xl">
+      <div className="container max-w-4xl">
         <Heading title={homeData.bookChapters.title} />
 
         <p className="book-chapters__description uppercase text-base md:text-2xl">
           {homeData.bookChapters.description}
         </p>
+      </div>
 
-        <section className="mt-8 md:mt-16 lg:px-10">
+      <div className="px-4  mx-auto  lg:container">
+        <section className="mt-8 max-w-4xl mx-auto md:mt-16 lg:px-10">
           <Swiper
             key={process.env.NODE_ENV === "development" ? swiperKey : undefined}
             slidesPerView={1}
