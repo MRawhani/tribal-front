@@ -32,7 +32,7 @@ const ReportLists = () => {
               />
             </div>
 
-            <h6 className="report-card__recource-name mt-3">
+            <h6 className="report-card__recource-name">
               {report.recource_name}
             </h6>
           </div>
