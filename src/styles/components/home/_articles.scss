@@ -26,14 +26,6 @@
     z-index: 1;
     /* Ensures the content stays on top */
     color: $error-color;
-
-    &.container {
-      overflow: visible;
-    }
-
-    .swiper {
-      overflow: visible;
-    }
   }
 
   &__section-title {

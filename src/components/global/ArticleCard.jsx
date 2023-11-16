@@ -18,7 +18,7 @@ export default function ArticleCard({ article, className }) {
         />
       </div>
       <div className="article-card__content">
-        <p className="article-card__date">{article.date}</p>
+        <span className="article-card__date">{article.date}</span>
 
         <h2 className="article-card__title line-clamp-2">{article.title}</h2>
 

@@ -56,7 +56,7 @@ export default function Articles() {
             breakpoints={{
               768: {
                 slidesPerView: 2,
-                spaceBetween: 20,
+                spaceBetween: 16,
               },
               1280: {
                 slidesPerView: 3,
