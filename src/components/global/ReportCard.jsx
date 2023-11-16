@@ -25,7 +25,7 @@ export default function ReportCard({ report, className = "" }) {
             {report.title}
           </Link>
 
-          <div className="c-report-card__recource flex items-center">
+          <div className="c-report-card__recource mt-4 md:mt-5 flex items-center">
             <div className="c-report-card__recource-icon">
               <Image
                 src={`/assets/${report.recource_icon}.svg`}
@@ -33,7 +33,7 @@ export default function ReportCard({ report, className = "" }) {
                 fill
               />
             </div>
-            <h6 className="c-report-card__recource-name mt-3 line-clamp-1">
+            <h6 className="c-report-card__recource-name line-clamp-1">
               {report.recource_name}
             </h6>
           </div>
@@ -46,7 +46,7 @@ export default function ReportCard({ report, className = "" }) {
             {report.title}
           </Link>
 
-          <div className="c-report-card__recource flex items-center">
+          <div className="c-report-card__recource mt-4 md:mt-5 flex items-center">
             <div className="c-report-card__recource-icon">
               <Image
                 src={`/assets/${report.recource_icon}.svg`}
@@ -54,7 +54,7 @@ export default function ReportCard({ report, className = "" }) {
                 fill
               />
             </div>
-            <h6 className="c-report-card__recource-name mt-3 line-clamp-1">
+            <h6 className="c-report-card__recource-name line-clamp-1">
               {report.recource_name}
             </h6>
           </div>
