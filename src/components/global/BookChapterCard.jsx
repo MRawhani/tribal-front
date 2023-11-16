@@ -23,7 +23,7 @@ export default function BookChapterCard({ item }) {
               <div className="content">
                 {/* book info */}
                 <div className="flex gap-2 font-gothamMedium">
-                  <div className="text-secondary_secondary  flex gap-2 text-sm">
+                  <div className="text-secondary_secondary  flex items-center gap-2 text-sm">
                     <span>
                       &copy;
                       {item.year}
