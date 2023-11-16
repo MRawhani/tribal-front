@@ -1,12 +1,6 @@
 import { Open_Sans } from 'next/font/google'
 import localFont from 'next/font/local'
-// Font files can be colocated inside of `pages`
-// const Pecita = localFont({
-//     src: '../../public/fonts/Pecita.otf',
-//     variable: '--font-pecita',
-    
-//     display: 'swap'
-//   })
+
 const GothamBold = localFont({
     src: '../../public/fonts/GothamBold.ttf',
     variable: '--font-gothamBold',

@@ -30,7 +30,7 @@ export default function ArticleCard({ article, className }) {
               fill
             />
           </div>
-          <h6 className="article-card__recource-name mt-3 line-clamp-1">
+          <h6 className="article-card__recource-name line-clamp-1">
             {article.recource_name}
           </h6>
         </div>
