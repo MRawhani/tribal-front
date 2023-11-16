@@ -49,13 +49,13 @@ export default function BookChapterCard({ item }) {
                   <div className="flex gap-3 items-center author-icon">
                     <AuthorIcon />
 
-                    <span className="mt-2">{item.authors}</span>
+                    <span>{item.authors}</span>
                   </div>
 
                   <div className="mt-3 flex gap-3 items-center location-icon">
                     <LocationIcon />
 
-                    <span className="mt-2">{item.location}</span>
+                    <span>{item.location}</span>
                   </div>
                 </section>
               </div>
