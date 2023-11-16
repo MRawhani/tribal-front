@@ -23,7 +23,7 @@ const DesktopNavbarItems = () => {
             <span className="nav-link-title">My Writing</span>
 
             <svg
-              className="mx-3 dropdown-svg "
+              className="mx-3 pt-3 dropdown-svg "
               width="11"
               height="7"
               viewBox="0 0 11 7"
@@ -157,7 +157,9 @@ const MobileNavbar = ({ isMobileNavOpen, closeMobileNavbar }) => {
   // if (!isMobileNavOpen) return null;
 
   return (
-    <div className={`mobile-header ${isMobileNavOpen ? 'is--open' : 'is--close'}`}>
+    <div
+      className={`mobile-header ${isMobileNavOpen ? "is--open" : "is--close"}`}
+    >
       <div className="container">
         <div className="mobile-header__logo flex justify-between items-center">
           <Link href="/" onClick={onLinkClick}>
