@@ -7,7 +7,7 @@ export default function ReportCard({ item, className = "" }) {
     <div className={"c-unpublished-research h-full shadow-sm " + className}>
       <div className="py-4 c-unpublished-research__content">
         {/* recourse */}
-        <div className="c-unpublished-research__recource mb-5 flex items-center">
+        <div className="c-unpublished-research__recource mb-4 flex items-center">
           <div className="c-unpublished-research__recource-icon">
             <Image
               src={`/assets/${item.recource_icon}.svg`}
@@ -21,7 +21,7 @@ export default function ReportCard({ item, className = "" }) {
           </h6>
         </div>
 
-        <p className="c-unpublished-research__date">{item.date}</p>
+        <div className="c-unpublished-research__date mb-2">{item.date}</div>
 
         <h2 className="c-unpublished-research__title line-clamp-2">
           {item.title}

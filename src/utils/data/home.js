@@ -111,8 +111,6 @@ export const homeData = {
   },
   unpublished_research: {
     title: "Unpublished Research",
-    description:
-      "Unearthing Yemen's Hidden Knowledge. Discover cutting-edge insights.",
     items: [
       {
         id: 3,

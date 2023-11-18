@@ -12,11 +12,11 @@ export default function UnpublishedResearch() {
       <div className="container">
         <Heading title={homeData.unpublished_research.title} />
 
-        <p className="font-ncs uppercase text-base md:text-2xl">
-          {homeData.unpublished_research.description}
+        <p className="font-ncs mt-3 uppercase md:capitalize text-base md:text-2xl">
+        Unearthing Yemen&lsquo;s Hidden Knowledge. Discover cutting-<br className="hidden xl:block" />edge insights.
         </p>
 
-        <section className="grid grid-cols-3 gap-4 mt-8 md:mt-16">
+        <section className="grid grid-cols-3 gap-4 mt-12">
           {homeData.unpublished_research.items.map((item) => (
             <div key={item.id} className="col-span-3 md:col-span-1">
               <UnpublishedResearchCard item={item} />
