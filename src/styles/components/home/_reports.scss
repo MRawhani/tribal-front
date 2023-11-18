@@ -16,12 +16,8 @@
 
   &__section-title {
     font-family: var(--font-ncs);
-    font-size: 1rem;
     color: $tuna-50;
-  }
-
-  &__content {
-    margin-top: 6.5rem;
+    @include responsiveFontSize(16px, 24px);
   }
 
   &__logo-pattern {
@@ -47,14 +43,15 @@
   }
 
   &__title {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     color: $tuna-100;
     font-family: var(--font-gothamBold);
-    margin-top: 1.2rem;
-    margin-bottom: 1.6rem;
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
     cursor: pointer;
     z-index: 2;
     position: relative;
+    transition: all 0.3s linear;
 
     &:hover {
       text-decoration: underline;
@@ -105,7 +102,7 @@
 
   &:hover {
     cursor: pointer;
-    
+
     .report-card {
       &__title {
         color: $secondary-secondary;

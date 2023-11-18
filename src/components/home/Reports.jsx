@@ -9,7 +9,7 @@ const ReportLists = () => {
     <div key={report.id} className="report-card">
       <section className="flex gap-4 items-center justify-between">
         <div>
-          <p className="report-card__date">{report.date}</p>
+          <div className="report-card__date">{report.date}</div>
 
           <h2 className="report-card__title">{report.title}</h2>
 
@@ -75,12 +75,12 @@ export default function Reports() {
     <div className="reports reports__section">
       <div className="container">
         <Heading title="Reports" className="mb-2" />
-        <h2 className="reports__section-title uppercase">
-          Uncover Yemen&apos;s Untold Realities. Explore in-depth analysis and
+        <h2 className="reports__section-title uppercase md:capitalize">
+          Uncover Yemen&apos;s Untold Realities. Explore in-depth <br /> analysis and
           first-hand accounts from local communities.
         </h2>
 
-        <div className="reports__content">
+        <div className="reports__content mt-8 md:mt-12">
           <div className="m-0">
             <div className="lg:ms-20 2xl:ms-28">
               <hr />
