@@ -17,7 +17,7 @@ const QuickLinkCard = ({ link }) => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between mt-8 mb-3">
+      <div className="flex items-center justify-between mt-8 mb-2">
         <h5 className="shortcuts__link-title  whitespace-nowrap">
           {link.name}
         </h5>
@@ -44,7 +44,7 @@ const QuickLinkCard = ({ link }) => {
 
 const DesktopQuickLinks = () => {
   return (
-    <div className="grid gap-6 grid-cols-12">
+    <div className="grid gap-4 grid-cols-12">
       {short_links.map((link) => (
         <Link
           key={link.id}
