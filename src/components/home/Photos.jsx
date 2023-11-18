@@ -101,10 +101,10 @@ export default function Photos() {
       </div>
 
       <div className="photos py-20 2xl:py-32">
-        <div className="container mb-14">
+        <div className="container mb-8 md:mb-12">
           <Heading title={homeData.photos.title} />
 
-          <p className="photos__description uppercase">
+          <p className="photos__description mt-2 uppercase md:capitalize">
             {homeData.photos.description}
           </p>
         </div>
