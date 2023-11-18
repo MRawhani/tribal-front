@@ -86,8 +86,6 @@ export const homeData = {
   },
   bookChapters: {
     title: "Book Chapters",
-    description:
-      "Unfold history, culture, and untold tales in captivating literature.",
     items: [
       {
         id: 1,

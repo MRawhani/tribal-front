@@ -424,7 +424,7 @@ export const homeData = {
       {
         id: 1,
         year: 2022,
-        pages: "200",
+        pages: "211",
         title: "The Biden Administration needs a Yemen policy",
         description: "The Role of Legitimacy, Hadi, and the Islah Party ",
         authors: "Abdulwahab Alkebsi, Nathan J Brown, Charlotta Sparre",
@@ -434,7 +434,7 @@ export const homeData = {
       {
         id: 2,
         year: 2023,
-        pages: "300",
+        pages: "212",
         title: "The Biden Administration needs a Yemen policy",
         description: "The Role of Legitimacy, Hadi, and the Islah Party ",
         authors: "Abdulwahab Alkebsi, Nathan J Brown, Charlotta Sparre",
