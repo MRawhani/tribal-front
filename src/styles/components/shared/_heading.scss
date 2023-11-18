@@ -23,8 +23,8 @@
       color: $primary-50;
     }
 
-    @include respond(m) {
-      font-size: var(--section-title-font-size, 1.25rem);
+    @include respond(md) {
+      font-size: var(--section-title-font-size, 1.125rem);
     }
   }
 }
