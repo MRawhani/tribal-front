@@ -13,7 +13,7 @@
       right: 0;
       left: 0;
       bottom: 0;
-      height: 317px;
+      height: 312px;
       /* The height of the blue part */
       background-color: $primary-primary;
       z-index: 0;
@@ -30,8 +30,11 @@
 
   &__section-title {
     color: $tuna-900;
-    font-size: 1rem;
     text-transform: uppercase;
+    @include responsiveFontSize(18px, 24px);
+    @include respond(md) {
+      text-transform: capitalize
+    }
   }
 
   &__nav-btn {
@@ -56,6 +59,10 @@
 
   .swiper {
     padding-bottom: 4rem;
+
+    @include respond(xl) {
+      padding-bottom: 3rem;
+    }
 
     .swiper-pagination-bullet {
       --swiper-pagination-bullet-inactive-color: #e9e7d6;
@@ -132,18 +139,18 @@
 
   &__content {
     padding: 1.5rem;
+    min-height: 131px;
   }
 
   &__title {
     transition: all 0.3s linear;
-    font-size: 1rem;
+    font-size: 18px;
     color: $tuna-950;
-    margin-bottom: 0.8rem;
-    text-wrap: nowrap;
+    margin-bottom: 1rem;
   }
 
   &__date {
-    @include fontSizeForScreens(1rem);
+    font-size: 14px;
     color: $tuna-800;
     margin-bottom: 0.5rem;
     font-family: var(--font-gothamBook);

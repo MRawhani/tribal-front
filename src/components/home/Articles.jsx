@@ -4,10 +4,11 @@ import Image from "next/image";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 //
 import Heading from "@/components/shared/Heading";
@@ -15,6 +16,8 @@ import Heading from "@/components/shared/Heading";
 import { articles as articles_list } from "@/utils/fk-data";
 import ArticleCard from "../global/ArticleCard";
 import ShowMoreLink from "../shared/ShowMoreLink";
+import PrevIcon from "../icons/PrevIcon";
+import NextIcon from "../icons/NextIcon";
 
 export default function Articles() {
   const prevRef = useRef(null);
@@ -28,11 +31,24 @@ export default function Articles() {
         <div className="container articles__content">
           <Heading title="Articles" className="mb-4" />
 
-          <div className="lg:flex justify-between items-end  mb-8">
-            <h2 className="articles__section-title">
-              Discover Yemen&apos;s Richness. Explore history, culture, and
-              stories in thought-provoking articles.
-            </h2>
+          <div className="flex justify-between gap-20 items-center  mb-8 md:mb-12">
+            <div className="lg:flex justify-between items-end ">
+              <h2 className="articles__section-title font-ncs">
+                Discover Yemen&apos;s Richness. Explore history, culture, and
+                <br className="hidden xl:block" />
+                stories in thought-provoking articles.
+              </h2>
+            </div>
+
+            {/* swiper button */}
+            <div className="!hidden xl:!flex slider-btn-wrapper">
+              <button className="slider-btn slider-btn--fill slider-prev-btn">
+                <PrevIcon />
+              </button>
+              <button className="slider-btn slider-btn--fill slider-next-btn">
+                <NextIcon />
+              </button>
+            </div>
           </div>
         </div>
 
@@ -41,7 +57,7 @@ export default function Articles() {
             key={process.env.NODE_ENV === "development" ? swiperKey : undefined}
             slidesPerView={1.1}
             spaceBetween={16}
-            modules={[Pagination]}
+            modules={[Pagination, Navigation]}
             onBeforeInit={(swiper) => {
               swiperRef.current = swiper;
             }}
@@ -51,6 +67,10 @@ export default function Articles() {
               }, 300);
             }}
             pagination={true}
+            navigation={{
+              prevEl: ".slider-prev-btn",
+              nextEl: ".slider-next-btn",
+            }}
             observer={true}
             observeParents={true}
             breakpoints={{
@@ -59,6 +79,7 @@ export default function Articles() {
                 spaceBetween: 16,
               },
               1280: {
+                pagination: false,
                 slidesPerView: 3,
                 spaceBetween: 16,
               },
@@ -72,7 +93,7 @@ export default function Articles() {
             ))}
           </Swiper>
 
-          <div className="w-full flex justify-center">
+          <div className="w-full flex justify-center xl:justify-end">
             <ShowMoreLink link="/articles" text="Show All Articles" />
           </div>
         </div>
