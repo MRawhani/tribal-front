@@ -21,18 +21,19 @@ export default function Stories() {
         <div>
           <Heading title={homeData.stories.title} />
 
-          <p className="stories__description uppercase text-base md:text-2xl">
-            {homeData.stories.description}
+          <p className="stories__description mt-3 uppercase md:capitalize font-ncs text-base md:text-2xl">
+            Discover firsthand accounts and perspectives from <br /> diverse
+            individuals shaping the nation&apos;s future.{" "}
           </p>
         </div>
 
         {/* swiper button */}
         <div className="hidden md:block slider-btn-wrapper mt-6 md:mt-14">
           <button className="slider-btn slider-prev-btn">
-            <PrevIcon />
+            <PrevIcon color="white" />
           </button>
           <button className="slider-btn slider-next-btn">
-            <NextIcon />
+            <NextIcon color="white" />
           </button>
         </div>
       </div>

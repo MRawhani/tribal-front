@@ -15,7 +15,7 @@ export default function StoryCard({ story }) {
         />
       </div>
       <div className="story-card__content">
-        <p className="story-card__date">{story.date}</p>
+        <div className="story-card__date">{story.date}</div>
 
         <h2 className="story-card__title line-clamp-2">{story.title}</h2>
 
