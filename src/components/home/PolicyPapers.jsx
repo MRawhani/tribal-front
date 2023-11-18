@@ -12,8 +12,8 @@ export default function PolicyPapers() {
       <div className="container">
         <Heading title={homeData.policy_papers.title} />
 
-        <p className="book-chapters__description uppercase text-base md:text-2xl">
-          {homeData.policy_papers.description}
+        <p className="book-chapters__description mt-2 uppercase md:capitalize text-base md:text-2xl">
+        Informed Solutions for Yemen&lsquo;s Future. Explore well-researched  <br /> insights to drive progress.
         </p>
 
         <section className="grid grid-cols-2 gap-4 mt-8 md:mt-16">
