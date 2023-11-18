@@ -62,12 +62,12 @@
   }
 
   &__content {
-    padding: 1rem;
+    padding: 1.5rem 1rem ;
     text-align: center;
   }
 
   &__title {
-    font-size: 1rem;
+    font-size: 18px;
     color: $tuna-900;
     margin-top: 0.75rem;
     font-family: var(--font-gothamMedium);
