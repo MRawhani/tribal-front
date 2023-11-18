@@ -17,28 +17,29 @@ export default function Interviews() {
 
   return (
     <div className="bg-white interviews py-20 md:py-32">
-      <div className="container md:flex justify-between">
-        <div>
-          <Heading title={homeData.interviews.title} />
+      <div className="container">
+        <Heading title={homeData.interviews.title} />
+      </div>
 
-          <p className="interviews__description uppercase text-base md:text-2xl">
-            {homeData.interviews.description}
-          </p>
-        </div>
+      <div className="container md:flex justify-between items-center gap-10">
+        <p className="interviews__description  font-ncs mt-3 uppercase md:capitalize text-base md:text-2xl">
+          Discover firsthand accounts and perspectives from <br /> diverse
+          individuals shaping the nation&apos;s future.{" "}
+        </p>
 
         {/* swiper button */}
-        <div className="hidden md:block slider-btn-wrapper mt-6 md:mt-14">
+        <div className="!hidden md:!flex slider-btn-wrapper">
           <button className="slider-btn slider-prev-btn">
-            <PrevIcon />
+            <PrevIcon  color="white"/>
           </button>
           <button className="slider-btn slider-next-btn">
-            <NextIcon />
+            <NextIcon color="white" />
           </button>
         </div>
       </div>
 
       <div className="interviews__content container">
-        <section className="mt-8 md:mt-16">
+        <section className="mt-8 md:mt-11">
           <Swiper
             slidesPerView={1.3}
             spaceBetween={12}
@@ -65,7 +66,6 @@ export default function Interviews() {
               },
               1024: {
                 slidesPerView: 3.4,
-                spaceBetween: 24,
               },
             }}
           >
