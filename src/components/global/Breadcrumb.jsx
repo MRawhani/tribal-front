@@ -69,16 +69,22 @@ export function Breadcrumb({
           <span className="bg-secondary_secondary h-px w-[7rem] flex-shrink-0"></span>
         </h2>
 
-        <h4 className="mt-3 font-gothamMedium text-lg md:text-2xl text-neutral-950">
-          {subTitle}
-        </h4>
+        {subTitle && (
+          <h4 className="mt-3 font-gothamMedium text-lg md:text-2xl text-neutral-950">
+            {subTitle}
+          </h4>
+        )}
 
-        <h6 className="mt-3 text-sm font-gothamLight text-neutral-800">
-          {date}
-        </h6>
+        {date && (
+          <h6 className="mt-3 text-sm font-gothamLight text-neutral-800">
+            {date}
+          </h6>
+        )}
 
         {description && (
-          <p className="mt-3 text-xs font-gothamLight">{description}</p>
+          <p className="mt-2 text-xs md:text-sm font-gothamLight">
+            {description}
+          </p>
         )}
       </div>
     </div>
