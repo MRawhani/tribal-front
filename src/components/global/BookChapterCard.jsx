@@ -23,7 +23,7 @@ export default function BookChapterCard({ item }) {
               <div className="content">
                 {/* book info */}
                 <div className="flex gap-2 font-gothamMedium">
-                  <div className="text-secondary_secondary  flex items-center gap-2 text-sm">
+                  <div className="text-secondary_secondary  flex items-center gap-3 text-sm">
                     <span>
                       &copy;
                       {item.year}
@@ -37,7 +37,7 @@ export default function BookChapterCard({ item }) {
                   <span className="text-base">{item.pages}</span>
                 </div>
 
-                <h2 className="c-book-chapter__title line-clamp-2 md:whitespace-nowrap">
+                <h2 className="c-book-chapter__title mt-2 line-clamp-2 md:whitespace-nowrap">
                   {item.title}
                 </h2>
 

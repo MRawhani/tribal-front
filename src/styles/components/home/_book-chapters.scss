@@ -1,8 +1,24 @@
 .book-chapters {
   background-color: $primary-primary;
+  position: relative;
+  overflow: hidden;
 
   &__description {
     color: white;
     font-family: var(--font-ncs);
+  }
+
+  .shapes-top, .shapes-bottom {
+    position: absolute;
+  }
+
+  .shapes-top {
+    top: -30px;
+    left: -40px;
+  }
+
+  .shapes-bottom {
+    bottom: -63%;
+    right: -10px;
   }
 }
