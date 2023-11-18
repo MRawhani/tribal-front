@@ -4,7 +4,7 @@ import { Breadcrumb } from "@/components/global/Breadcrumb";
 export default function AboutPage() {
   return (
     <div className="contact-me">
-      <div className="container pb-8 md:pb-40">
+      <div className="container pb-16">
         <Breadcrumb
           links={[{ title: "contact me", href: "/contact-me" }]}
           title="contact me"
