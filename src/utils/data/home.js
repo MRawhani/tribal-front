@@ -15,8 +15,6 @@ export const homeData = {
   },
   photos: {
     title: "Photos",
-    description:
-      "Yemen's Cultural Richness in Photos: Tribes, Customs, Traditions.",
     items: [
       {
         id: 1,

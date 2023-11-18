@@ -105,7 +105,7 @@ export default function Photos() {
           <Heading title={homeData.photos.title} />
 
           <p className="photos__description mt-2 uppercase md:capitalize">
-            {homeData.photos.description}
+          Yemen&lsquo;s Cultural Richness in Photos: Tribes, Customs, <br /> Traditions.
           </p>
         </div>
 
