@@ -13,9 +13,9 @@ export default function PolicyPapers() {
           description="Unearthing Yemen's Hidden Knowledge. Discover cutting-edge insights."
         />
 
-        <section className="mt-8 md:mt-16 grid grid-cols-6 gap-4">
+        <section className="mt-8 md:mt-16 grid grid-cols-12 gap-4">
           {policyPapers.map((policyPaper) => (
-            <div key={policyPaper.id} className="col-span-6 sm:col-span-3 lg:col-span-3">
+            <div key={policyPaper.id} className="col-span-12 sm:col-span-6 xl:col-span-4">
               <UnpublishedResearchCard item={policyPaper} />
             </div>
           ))}
