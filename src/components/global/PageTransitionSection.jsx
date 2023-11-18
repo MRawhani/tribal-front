@@ -4,12 +4,19 @@ import LogoAnimatedIcon from "../animated-icons/LogoAnimatedIcon";
 
 export function PageTransitionSection() {
   const [showTransition, setShowTransition] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
       setShowTransition(false);
     }, 2000);
+
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 3000);
   });
+
+  if(isLoaded) return null;
 
   return (
     <section

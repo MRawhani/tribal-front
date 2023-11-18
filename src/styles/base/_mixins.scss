@@ -60,11 +60,11 @@
     font-size: $min;
   }
 
-  @include respond(m) {
+  @include respond(md) {
     font-size: clamp($min, $min + 0.4vw, $max);
   }
 
-  @include respond(2xl) {
+  @include respond(xl) {
     font-size: $max;
   }
 }

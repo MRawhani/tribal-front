@@ -60,8 +60,8 @@ export function Breadcrumb({
   date = "",
 }) {
   return (
-    <div className="mt-3 relative breadcrumb bg-seconday_50 rounded-md shadow">
-      <div className="container p-3">
+    <div className="mt-3 px-3 py-4 md:px-6 md:py-6 relative breadcrumb bg-seconday_50 rounded-md shadow">
+      <div className="container ">
         <BreadcrumbLinks links={links} />
 
         <h2 className="mt-4 flex items-center gap-4 text-xl font-ncs text-secondary_secondary">

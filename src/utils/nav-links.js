@@ -41,7 +41,7 @@ export const links = [
     path: "/photos",
   },
   {
-    id: 5,
+    id: 7,
     name: "stories",
     path: "/stories",
   },

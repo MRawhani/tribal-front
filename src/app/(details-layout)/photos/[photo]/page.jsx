@@ -1,19 +1,19 @@
 "use client";
 
 import { Breadcrumb } from "@/components/global/Breadcrumb";
-import { photoDetails } from "@/utils/fk-data";
-import React, { useRef } from "react";
+import { photoDetails, homeData } from "@/utils/fk-data";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards, EffectCoverflow, Navigation } from "swiper/modules";
+import { EffectCoverflow, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import 'swiper/css/effect-coverflow';
+import "swiper/css/effect-coverflow";
 
 import PrevIcon from "@/components/icons/PrevIcon";
 import NextIcon from "@/components/icons/NextIcon";
-import { homeData } from "@/utils/data";
 import Link from "next/link";
 import Image from "next/image";
+import { useParams } from "next/navigation";
 
 const OtherPhotos = () => {
   const swiperRef = useRef();
@@ -23,17 +23,17 @@ const OtherPhotos = () => {
     <div>
       <Swiper
         key={process.env.NODE_ENV === "development" ? swiperKey : undefined}
-        slidesPerView='auto'
+        slidesPerView="auto"
         spaceBetween={100}
         centeredSlides={true}
         modules={[Navigation, EffectCoverflow]}
-        effect='coverflow'
-        coverflowEffect={ {
+        effect="coverflow"
+        coverflowEffect={{
           rotate: 0,
           stretch: 100,
           depth: 150,
           modifier: 1.5,
-          slideShadows : false,
+          slideShadows: false,
         }}
         grabCursor={true}
         onBeforeInit={(swiper) => {
@@ -55,7 +55,12 @@ const OtherPhotos = () => {
         {homeData.photos.items.map((item) => (
           <SwiperSlide key={item.title}>
             <Link href={`/photos/${item.id}`}>
-              <Image src={item.image} alt={item.title} width={430} height={315} />
+              <Image
+                src={item.image}
+                alt={item.title}
+                width={430}
+                height={315}
+              />
             </Link>
           </SwiperSlide>
         ))}
@@ -74,11 +79,25 @@ const OtherPhotos = () => {
 };
 
 export default function PhotoDetails() {
+  const urlParams = useParams();
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const photoData = homeData.photos.items.find(
+      (item) => item.id === +urlParams?.photo
+    );
+
+    if (!photoData) return;
+
+    setData(photoData);
+  }, [urlParams]);
+
   return (
     <div className="page-photo-details">
       <div
         className="hero-section"
-        style={{ "--hero-bg-src": `url(${photoDetails.image}` }}
+        style={{ "--hero-bg-src": `url(${data?.image}` }}
       ></div>
 
       <div className="container -mt-20">
@@ -87,7 +106,7 @@ export default function PhotoDetails() {
             { title: "photos", href: "/photos" },
             {
               title: photoDetails.title,
-              href: `/photos/${3}`,
+              href: `/photos/${urlParams.photo}`,
             },
           ]}
           title="Photos"
