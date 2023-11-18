@@ -25,10 +25,9 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    max-width: 500px;
+    max-width: 240px;
     border-end-start-radius: 2rem;
     border-end-end-radius: 2rem;
-
 
     @include respond(maxMd) {
       width: 80%;
@@ -42,6 +41,7 @@
     }
 
     @include respond(lg) {
+      max-width: 400px;
       margin-bottom: 0;
       border-radius: 0;
     }
@@ -62,25 +62,16 @@
   }
 
   &__text {
-    --section-title-font-size: 1rem;
+    @include respond(md) {
+      --section-title-font-size: 1rem;
+    }
   }
 
   &__heading {
     font-family: var(--font-ncs);
-    font-size: calc(3.2rem - ($baseCalcValue * 2 * 3.2rem));
-    line-height: calc(4.4rem - ($baseCalcValue * 2 * 4.4rem));
     margin-top: 0.8rem;
-    margin-bottom: 1.6rem;
-
-    @include respond(2xl) {
-      font-size: calc(3.2rem - ($baseCalcValue * 3.2rem));
-      line-height: calc(4.4rem - ($baseCalcValue * 4.4rem));
-    }
-
-    @include respond(3xl) {
-      font-size: 3.2rem;
-      line-height: 4.4rem;
-    }
+    margin-bottom: 12px;
+    font-size: 24px;
   }
 
   .logo-pattern {

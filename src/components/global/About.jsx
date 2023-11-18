@@ -9,8 +9,8 @@ export default function About() {
   return (
     <div className="about pt-20 lg:pt-0">
       <div className="container not-hidden">
-        <div className="about__content flex flex-col lg:flex-row gap-12 items-center justify-between  ">
-          <div className="lg:order-2 about__text md:w-1/2">
+        <div className="about__content flex flex-col lg:flex-row gap-8 lg:gap-20 items-center justify-between  ">
+          <div className="lg:order-2 about__text md:w-full">
             <AboutWavesAnimatedIcon />
 
             <div className="mt-3 mb-4 text-sm ">

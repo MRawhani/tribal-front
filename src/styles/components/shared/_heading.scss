@@ -8,7 +8,6 @@
     &--white {
       background: $primary-50;
       width: 5.1rem;
-      margin-right: 1.6rem;
     }
   }
 
@@ -17,7 +16,6 @@
     @include secondary-gradient;
     color: transparent; // This will make the text transparent
     background-clip: text;
-    line-height: 3.6rem;
     font-size: var(--section-title-font-size, .9rem);
     text-transform: uppercase;
     &--white {
