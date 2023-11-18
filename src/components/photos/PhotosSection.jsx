@@ -9,6 +9,20 @@ export default function Photos() {
   const [showModal, setShowModal] = useState(false);
   const [photoData, setPhotoData] = useState(null);
 
+  const gridClasses = ([
+    "h-stretch",
+    "big-stretch",
+    "v-stretch",
+    "v-stretch",
+    "big-stretch",
+    "h-stretch",
+    "v-stretch",
+    "big-stretch",
+    "v-stretch",
+    "v-stretch",
+    "h-stretch",
+  ]);
+
   function openPhotoModal(photo) {
     setShowModal(true);
     setPhotoData(photo);
@@ -20,11 +34,11 @@ export default function Photos() {
         <PhotoDetailsModal showModal={showModal} photoData={photoData} />
       </div>
 
-      <section className="photos-wrapper mt-16 grid grid-cols-3 gap-3">
-        {homeData.photos.items.map((photo) => (
+      <section className="photos-wrapper mt-16 grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-3">
+        {homeData.photos.items.map((photo, index) => (
           <div
             key={photo.title}
-            className="photo-modal-item col-span-3 md:col-span-1 rounded-xl overflow-hidden"
+            className={`photo-modal-item rounded-xl overflow-hidden ${gridClasses[index]}`}
             onClick={() => openPhotoModal(photo)}
           >
             <Image

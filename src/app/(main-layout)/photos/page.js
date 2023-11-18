@@ -23,7 +23,7 @@ export default function Photos() {
   }, [keyCount]);
 
   return (
-    <div className="container page-photos-details">
+    <div className="container page-photos-details page-photos">
       <Breadcrumb
         links={[{ title: "photos", href: "/photos" }]}
         title="Photos"

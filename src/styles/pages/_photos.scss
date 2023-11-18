@@ -1,0 +1,29 @@
+.page-photos {
+  .v-stretch {
+    grid-row: span 2;
+  }
+
+  .h-stretch {
+    grid-column: span 2;
+  }
+
+  .big-stretch {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
+  @media (max-width: 560px) {
+    .v-stretch {
+      grid-row: span 1;
+    }
+
+    .h-stretch {
+      grid-column: span 1;
+    }
+
+    .big-stretch {
+      grid-row: span 1;
+      grid-column: span 1;
+    }
+  }
+}
