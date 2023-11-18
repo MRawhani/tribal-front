@@ -89,11 +89,11 @@ export default function QuickLinksWrapper() {
   return (
     <div className="shortcuts pt-60 pb-20 md:pt-32">
       <div className="container shortcuts__container">
-        <h4 className="shortcuts__heading">
+        <h4 className="shortcuts__heading lg:text-center">
           <span className="shortcuts__main-title">Our writings </span>
-          cover local affairs and perspectives
+          cover local affairs and perspectives from youth, women,
           <br />
-          from youth, women, tribes, and local security.
+          tribes, and local security.
         </h4>
 
         <div className="mt-12">
