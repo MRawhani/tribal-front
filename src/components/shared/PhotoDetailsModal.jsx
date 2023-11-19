@@ -70,10 +70,10 @@ const OtherPhotos = () => {
 
         <div className="slider-btn-wrapper slider-center-btn mt-6 md:mt-14">
           <button className="slider-btn slider-btn--fill slider-prev-btn">
-            <PrevIcon />
+            <PrevIcon color="white" />
           </button>
           <button className="slider-btn slider-btn--fill slider-next-btn">
-            <NextIcon />
+            <NextIcon color="white" />
           </button>
         </div>
       </Swiper>
