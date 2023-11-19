@@ -38,27 +38,6 @@ export default function ReportCard({ report, className = "" }) {
             </h6>
           </div>
         </div>
-
-        <div className="c-card__content-effect">
-          <p className="c-report-card__date">{report.date}</p>
-
-          <Link className="c-report-card__title line-clamp-2" href="#">
-            {report.title}
-          </Link>
-
-          <div className="c-report-card__recource mt-4 md:mt-5 flex items-center">
-            <div className="c-report-card__recource-icon">
-              <Image
-                src={`/assets/${report.recource_icon}.svg`}
-                alt={`report`}
-                fill
-              />
-            </div>
-            <h6 className="c-report-card__recource-name line-clamp-1">
-              {report.recource_name}
-            </h6>
-          </div>
-        </div>
       </div>
 
       <div className="md:w-1/12 c-report-card__link" href="#">

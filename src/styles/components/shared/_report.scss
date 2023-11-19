@@ -19,6 +19,7 @@
     font-size: 0.9rem;
     color: $text-main;
     font-family: var(--font-gothamMedium);
+    max-width: 244px;
   }
 
   &__date {
@@ -57,24 +58,26 @@
     }
   }
 
-  .c-card__content-effect {
+  .c-card__content {
     position: absolute;
     top: 1rem;
     left: 36%;
-    transition: all 0.3s linear;
+    transition: all 0.4s linear;
     max-width: 304px;
+  }
 
-    .c-report-card__title,
-    .c-report-card__date,
-    .c-report-card__recource-name {
-      color: $seconday-50;
-    }
-    opacity: 0;
+  .c-report-card__title,
+  .c-report-card__date,
+  .c-report-card__recource-name {
+    transition: all 0.3s linear;
   }
 
   @include respond(md) {
     transition: all 0.3s linear;
 
+    .c-report-card__content-wrapper {
+      transition: all 0.4s linear;
+    }
     .c-report-card__img-wrapper {
       transition: all 0.3s linear;
       height: 100%;
@@ -113,28 +116,19 @@
 
         &::after {
           position: absolute;
-
           opacity: 0.75;
         }
       }
 
       .c-card__content {
-        display: none;
-      }
-
-      .c-card__content-effect {
         left: 0;
         padding: 0 24px;
         opacity: 1;
-        transition: all 0.2s ease-out;
-      }
-
-      .c-report-card__title {
-        max-width: 220px;
       }
 
       .c-report-card__title,
-      .c-report-card__date {
+      .c-report-card__date,
+      .c-report-card__recource-name {
         color: white;
       }
     }
