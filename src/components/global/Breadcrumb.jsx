@@ -41,7 +41,7 @@ const BreadcrumbLinks = ({ links }) => {
 
           <Link
             href={link?.href ?? "#"}
-            className="text-xs font-gothamLight pt-1 capitalize line-clamp-1"
+            className="text-xs font-gothamLight capitalize line-clamp-1"
             onClick={onLinkClick}
           >
             {link.title}
@@ -60,32 +60,34 @@ export function Breadcrumb({
   date = "",
 }) {
   return (
-    <div className="mt-3 px-3 py-4 md:px-6 md:py-6 relative breadcrumb bg-seconday_50 rounded-md shadow">
-      <div className="container ">
-        <BreadcrumbLinks links={links} />
+    <div className="breadcrumb-wrapper relative mt-3 rounded-2xl">
+      <div className="px-3 py-4 md:px-6 md:py-6  breadcrumb bg-seconday_50 rounded-xl shadow">
+        <div className="container ">
+          <BreadcrumbLinks links={links} />
 
-        <h2 className="mt-4 flex items-center gap-4 text-xl font-ncs text-secondary_secondary">
-          <span className="capitalize">{title}</span>
-          <span className="bg-secondary_secondary h-px w-[7rem] flex-shrink-0"></span>
-        </h2>
+          <h2 className="mt-4 flex items-center gap-4 text-xl font-ncs text-secondary_secondary">
+            <span className="capitalize text-lg md:text-xl">{title}</span>
+            <span className="bg-secondary_secondary h-px w-[7rem] flex-shrink-0"></span>
+          </h2>
 
-        {subTitle && (
-          <h4 className="mt-3 font-gothamMedium text-lg md:text-2xl text-neutral-950">
-            {subTitle}
-          </h4>
-        )}
+          {subTitle && (
+            <h4 className="mt-3 font-gothamMedium text-lg md:text-2xl text-neutral-950">
+              {subTitle}
+            </h4>
+          )}
 
-        {date && (
-          <h6 className="mt-3 text-sm font-gothamLight text-neutral-800">
-            {date}
-          </h6>
-        )}
+          {date && (
+            <h6 className="mt-3 text-sm font-gothamLight text-neutral-800">
+              {date}
+            </h6>
+          )}
 
-        {description && (
-          <p className="mt-2 text-xs md:text-sm font-gothamLight">
-            {description}
-          </p>
-        )}
+          {description && (
+            <p className="mt-2 text-xs md:text-sm text-neutral-900 font-gothamLight">
+              {description}
+            </p>
+          )}
+        </div>
       </div>
     </div>
   );
