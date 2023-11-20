@@ -1,8 +1,8 @@
 "use client";
 import { Breadcrumb } from "@/components/global/Breadcrumb";
-import { articleDetails } from "@/utils/fk-data";
+import { articleDetails, articles } from "@/utils/fk-data";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const ShareToSocialMedia = () => {
@@ -77,11 +77,25 @@ const ShareToSocialMedia = () => {
 };
 
 export default function ArticleDetails() {
+  const urlParams = useParams();
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const articleData = articles.find(
+      (item) => item.id === +urlParams?.articleId
+    );
+
+    if (!articleData) return;
+
+    setData(articleData);
+  }, [urlParams]);
+
   return (
     <div className="page-article-details">
       <div
         className="hero-section"
-        style={{ "--hero-bg-src": `url(${articleDetails.image}` }}
+        style={{ "--hero-bg-src": `url(${data?.image}` }}
       ></div>
 
       <div className="container -mt-20">
@@ -89,13 +103,13 @@ export default function ArticleDetails() {
           links={[
             { title: "articles", href: "/articles" },
             {
-              title: articleDetails.title,
+              title: data?.title,
               href: `/articles/${3}`,
             },
           ]}
           title="articles"
-          subTitle={articleDetails.title}
-          date={articleDetails.date}
+          subTitle={data?.title}
+          date={data?.date}
         />
       </div>
 

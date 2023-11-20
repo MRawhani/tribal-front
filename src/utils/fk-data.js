@@ -2,6 +2,7 @@ export const articles = [
   {
     id: 1,
     img: "article1",
+    image: "/assets/article1.png",
     title: "Can a New U.N.Envoy Produce Peace in Yemen?",
     date: "26 Feb 2023",
     recource_name: "Middle East Institute",
@@ -10,6 +11,7 @@ export const articles = [
   {
     id: 2,
     img: "article2",
+    image: "/assets/article2.png",
     title: "Yemen’s Prisoner Exchange must be depolarized",
     date: "26 Feb 2023",
     recource_name: "Sanaa Center for Strategic Studies",
@@ -18,6 +20,7 @@ export const articles = [
   {
     id: 3,
     img: "article3",
+    image: "/assets/article3.png",
     title: "The Houthis’ End Game in Yemen, Al-Jazeera",
     date: "26 Feb 2023",
     recource_name: "Al-Jazeera English",
@@ -26,6 +29,7 @@ export const articles = [
   {
     id: 4,
     img: "article1",
+    image: "/assets/article1.png",
     title: "The Biden Administration needs a Yemen policy",
     date: "26 Feb 2023",
     recource_name: "Middle East Institute",
@@ -34,6 +38,7 @@ export const articles = [
   {
     id: 5,
     img: "article2",
+    image: "/assets/article2.png",
     title: "Yemen’s Prisoner Exchange must be depolarized",
     date: "26 Feb 2023",
     recource_name: "Sanaa Center for Strategic Studies",
@@ -42,6 +47,7 @@ export const articles = [
   {
     id: 6,
     img: "article3",
+    image: "/assets/article3.png",
     title: "The Houthis’ End Game in Yemen, Al-Jazeera",
     date: "26 Feb 2023",
     recource_name: "Al-Jazeera English",

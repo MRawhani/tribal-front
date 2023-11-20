@@ -25,7 +25,7 @@ const BreadcrumbLinks = ({ links }) => {
       </svg>
 
       {links.map((link, index) => (
-        <Fragment key={link.title}>
+        <Fragment key={link.title + index}>
           <svg
             width="16"
             height="17"
