@@ -90,10 +90,9 @@
     width: 100vw;
 
     .hero-section {
-      animation: fade-out 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-      forwards;
+      animation: fade-out 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     }
-    
+
     &.full-screen {
       height: 100vh;
     }
@@ -110,6 +109,13 @@
   }
 
   @include respond(md) {
+    transition: all 0.6s linear;
+    top: var(--top);
+    left: var(--left);
+    width: var(--width);
+    min-height: var(--min-height);
+    margin: var(--margin);
+
     &.full-screen {
       height: 100vh;
       width: 100vw;
@@ -118,13 +124,6 @@
       top: 0;
       left: 0;
     }
-
-    transition: all 0.4s linear;
-    top: var(--top);
-    left: var(--left);
-    width: var(--width);
-    min-height: var(--min-height);
-    margin: var(--margin);
   }
 
   &::-webkit-scrollbar {
