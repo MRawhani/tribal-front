@@ -19,6 +19,7 @@ const ReportLists = () => {
               alt={`report`}
               width={254}
               height={168}
+              className="rounded"
             />
           </div>
 
