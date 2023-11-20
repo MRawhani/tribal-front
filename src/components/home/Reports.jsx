@@ -3,10 +3,16 @@ import Heading from "../shared/Heading";
 import { articles as reports_list } from "@/utils/fk-data";
 import Image from "next/image";
 import ShowMoreLink from "../shared/ShowMoreLink";
+import Link from "next/link";
 
 const ReportLists = () => {
   return reports_list.slice(0, 4).map((report) => (
-    <div key={report.id} className="report-card">
+    <a
+      key={report.id}
+      href={report?.link ?? "https://google.com"}
+      target="_blank"
+      className="block report-card"
+    >
       <section className="flex gap-4 items-center justify-between">
         <div>
           <div className="report-card__date">{report.date}</div>
@@ -67,7 +73,7 @@ const ReportLists = () => {
           </svg>
         </div>
       </section>
-    </div>
+    </a>
   ));
 };
 
@@ -77,8 +83,8 @@ export default function Reports() {
       <div className="container">
         <Heading title="Reports" className="mb-2" />
         <h2 className="reports__section-title uppercase md:capitalize">
-          Uncover Yemen&apos;s Untold Realities. Explore in-depth <br /> analysis and
-          first-hand accounts from local communities.
+          Uncover Yemen&apos;s Untold Realities. Explore in-depth <br />{" "}
+          analysis and first-hand accounts from local communities.
         </h2>
 
         <div className="reports__content mt-8 md:mt-12">

@@ -25,7 +25,7 @@ export default function PolicyPapers() {
         </section>
 
         <div className="flex justify-center mt-6">
-          <ShowMoreLink text="Show All Research" link="/unpublished-research" />
+          <ShowMoreLink text="Show All Policy Papers" link="/policy-papers" />
         </div>
       </div>
     </div>

@@ -2,7 +2,9 @@ import Image from "next/image";
 
 export default function StoryCard({ story }) {
   return (
-    <div className="story-card ">
+    <a href={story?.link ?? "https://google.com"}
+    target="_blank"
+    className="story-card block">
       <div className="story-card__img">
         <Image
           src={`/assets/${story.img}.png`}
@@ -33,6 +35,6 @@ export default function StoryCard({ story }) {
           </h6>
         </div>
       </div>
-    </div>
+    </a>
   );
 }

@@ -4,7 +4,7 @@ import ArrowLinkIcon from "../icons/ArrowLinkIcon";
 
 export default function ReportCard({ item, className = "" }) {
   return (
-    <div className={"c-unpublished-research h-full shadow-sm " + className}>
+    <div className={"c-unpublished-research cursor-pointer h-full shadow-sm " + className}>
       <div className="py-4 c-unpublished-research__content">
         {/* recourse */}
         <div className="c-unpublished-research__recource mb-4 flex items-center">

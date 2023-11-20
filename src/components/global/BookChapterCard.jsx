@@ -3,7 +3,7 @@ import LocationIcon from "../icons/LocationIcon";
 
 export default function BookChapterCard({ item }) {
   return (
-    <div className="c-book-chapter">
+    <a href={item?.link ?? "https://google.com"} className="c-book-chapter block">
       <section className="main-container justify-center md:flex max-md:flex-col max-md:items-stretch max-md:gap-0">
         <div className="col-span-3  image-wrapper">
           <div className="image-container">
@@ -63,6 +63,6 @@ export default function BookChapterCard({ item }) {
           </div>
         </div>
       </section>
-    </div>
+    </a>
   );
 }
