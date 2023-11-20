@@ -297,14 +297,18 @@ export default function Navbar({ className = "", isHomePage = true }) {
             </div>
           </div>
         </div>
-
-        <div className="xl:hidden">
-          <MobileNavbar
-            isMobileNavOpen={isMobileNavOpen}
-            closeMobileNavbar={() => setIsMobileNavOpen(false)}
-          />
-        </div>
       </header>
+
+      <div
+        className={`xl:hidden mobile-header-wrapper ${
+          isMobileNavOpen && "is--open"
+        }`}
+      >
+        <MobileNavbar
+          isMobileNavOpen={isMobileNavOpen}
+          closeMobileNavbar={() => setIsMobileNavOpen(false)}
+        />
+      </div>
     </div>
   );
 }
