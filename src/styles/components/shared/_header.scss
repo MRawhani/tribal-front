@@ -120,7 +120,7 @@
         padding-block: 12px;
         padding-inline: 1rem;
       }
-      a {
+      a,span {
         // &.nav-link {
         //   margin: 0 2.4rem;
         // }
@@ -166,8 +166,29 @@
 
       a {
         color: white;
-        text-wrap: nowrap;
+       
+        // text-wrap: nowrap;
+       
       }
+      .active-sub-nav{
+       a{
+
+         color: $secondary-secondary;
+       }
+       svg{
+        fill: $secondary-secondary ;
+       }
+        
+      }
+    }
+    &-item{
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+      margin-bottom: 10px;
+      &:last-child {
+        border-bottom: none; /* Remove border for the last item */
+        margin-bottom: 0;
+      
+      } 
     }
 
     &:hover {

@@ -31,7 +31,7 @@
   &__section-title {
     color: $tuna-900;
     text-transform: uppercase;
-    @include responsiveFontSize(18px, 24px);
+    @include responsiveFontSize(16px, 24px);
     @include respond(md) {
       text-transform: capitalize
     }

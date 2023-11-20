@@ -13,20 +13,31 @@ export const links = [
     name: "My Writing",
     id: 3,
     children: [
+     
       {
         id: 1,
-        name: "Unpublished research",
-        path: "/unpublished-research",
-      },
-      {
-        id: 2,
         name: "Articles",
         path: "/articles",
       },
       {
+        id: 2,
+        name: "Reports",
+        path: "/reports",
+      },
+      {
         id: 3,
-        name: "Books",
+        name: "Book Chapters",
         path: "/book-chapters",
+      },
+      {
+        id: 4,
+        name: "Policy Papers",
+        path: "/policy-papers",
+      },
+      {
+        id: 5,
+        name: "Unpublished Research",
+        path: "/unpublished-research",
       },
     ],
   },

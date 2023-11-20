@@ -31,7 +31,7 @@ export default async function RootLayout({ children }) {
         <link rel="shortcut icon" href="/logo.svg" type="image/x-icon" />
       </head>
       <body className={`${custom_fonts}`}>
-        <NextTopLoader />
+        <NextTopLoader color="#90794C"/>
 
         <PageTransitionSection />
 

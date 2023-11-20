@@ -50,7 +50,7 @@ export default function About() {
         </div>
       </div>
       <div className="logo-pattern">
-        <LogoAnimatedIcon left={true} />
+        <LogoAnimatedIcon color="#FFFAEE" left={true} />
       </div>
     </div>
   );

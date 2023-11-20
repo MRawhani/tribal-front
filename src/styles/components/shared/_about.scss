@@ -13,12 +13,19 @@
 
   &__content {
     min-height: 70vh;
+   
   }
 
   &__description {
     color: #f6f5ef;
     font-family: var(--font-gothamLight);
     font-size: 14px;
+    @include respond(md) {
+      font-size: 16px;
+      line-height: 24px;
+
+    }
+    line-height: 21px;
   }
 
   &__img-wrapper {
@@ -26,22 +33,32 @@
     overflow: hidden;
     width: 100%;
     max-width: 240px;
-    border-end-start-radius: 2rem;
+    border-end-start-radius: 2rem; 
     border-end-end-radius: 2rem;
 
     @include respond(maxMd) {
       width: 80%;
-      margin-top: -85%;
+      margin-top: -55%;
+
       transform: translateY(50%);
       margin-bottom: 30%;
-    }
+    } 
+    @include respond(max2xs) {
+      margin-top: -85%;
+     
+    } 
+    @include respond(maxS) {
+      margin-top: -65%;
+    
+    } 
+   
 
     @include respond(md) {
       margin-bottom: -20%;
     }
 
-    @include respond(lg) {
-      max-width: 400px;
+    @include respond(lg) { 
+      max-width: 35%;
       margin-bottom: 0;
       border-radius: 0;
     }
@@ -57,7 +74,7 @@
     height: 50rem;
     width: 67rem;
     position: absolute;
-    bottom: -15rem;
+    bottom: -20rem;
     z-index: 1;
   }
 
@@ -76,22 +93,25 @@
 
   .logo-pattern {
     display: none;
-    opacity: 0.7;
+    opacity: 0.4;
     position: absolute;
     right: 0;
-
     @include respond(m) {
       display: block;
       bottom: -12rem;
+      width: 17%;
 
       svg {
-        width: 140px;
+        // width: 140px;
+        width: 100%;
+
       }
     }
 
     @include respond(2xl) {
       svg {
-        width: 200px;
+        // width: 200px;
+        width: 100%;
       }
     }
   }

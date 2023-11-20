@@ -167,7 +167,27 @@
       @content;
     }
   }
+// max
+@if $breakpoint ==max2xs {
+  @media (max-width: 365px) {
+    //400
+    @content;
+  }
+}
 
+@if $breakpoint ==maxXs {
+  @media (max-width: 480px) {
+    //400
+    @content;
+  }
+}
+
+@if $breakpoint ==maxS {
+  @media (max-width: 640px) {
+    //600
+    @content;
+  }
+}
   @if $breakpoint ==maxMd {
     @media (max-width: 767px) {
       @content;
