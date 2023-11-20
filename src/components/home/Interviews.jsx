@@ -8,8 +8,8 @@ import "swiper/css/navigation";
 import PrevIcon from "@/components/icons/PrevIcon";
 import NextIcon from "@/components/icons/NextIcon";
 import Heading from "../shared/Heading";
-import { homeData } from "@/utils/data";
 import InterviewCard from "../global/InterviewCard";
+import { interviews } from "@/utils/fk-data";
 
 export default function Interviews() {
   const swiperRef = useRef();
@@ -18,7 +18,7 @@ export default function Interviews() {
   return (
     <div className="bg-white interviews py-20 md:py-32">
       <div className="container">
-        <Heading title={homeData.interviews.title} />
+        <Heading title="INTERVIEWS" />
       </div>
 
       <div className="container md:flex justify-between items-center gap-10">
@@ -69,7 +69,7 @@ export default function Interviews() {
               },
             }}
           >
-            {homeData.interviews.items.map((item) => (
+            {interviews.map((item) => (
               <SwiperSlide key={item.id}>
                 <InterviewCard interview={item} />
               </SwiperSlide>
