@@ -1,15 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        main: '#5B315E',
-        second: '#FFB71B',
+        main: "#5B315E",
+        second: "#FFB71B",
         primary_50: "#F2F4FF",
         primary_100: "#E7EAFF",
         primary_200: "#D1D6FF",
@@ -36,14 +36,17 @@ module.exports = {
         secondary_secondary: "#BC9665",
       },
       fontFamily: {
-        sans: ['var(--font-pecita)']
+        sans: ["var(--font-pecita)"],
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },
-  plugins: [],
-}
+  plugins: [
+    //
+    require("@tailwindcss/typography"),
+  ],
+};

@@ -102,7 +102,7 @@ export default function ArticleDetails() {
       <section className="content container mt-5 md:mt-11">
         {/* content */}
         <div
-          className="font-gothamLight text-lg"
+          className="font-gothamLight text-lg prose"
           dangerouslySetInnerHTML={{ __html: articleDetails.content }}
         />
       </section>
