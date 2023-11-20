@@ -62,7 +62,7 @@ export function Breadcrumb({
   return (
     <div className="breadcrumb-wrapper relative mt-3 rounded-2xl">
       <div className="px-3 py-4 md:px-6 md:py-6  breadcrumb bg-seconday_50 rounded-xl shadow">
-        <div className="container ">
+        <div className="container !px-0">
           <BreadcrumbLinks links={links} />
 
           <h2 className="mt-4 flex items-center gap-4 text-xl font-ncs text-secondary_secondary">

@@ -63,14 +63,68 @@
 
   .header {
     transform: translateY(-100%);
-    animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 750ms
+
+    animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1500ms
       forwards;
+
+    @include respond(md) {
+      animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 750ms
+        forwards;
+    }
   }
 
   .breadcrumb-wrapper {
     transform: translateY(100%);
-    animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 750ms
+    animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1500ms
       forwards;
+
+    @include respond(md) {
+      animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 750ms
+        forwards;
+    }
+  }
+
+  @include respond(maxMd) {
+    top: 0;
+    left: 0;
+    width: 100vw;
+
+    .hero-section {
+      animation: fade-out 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      forwards;
+    }
+    
+    &.full-screen {
+      height: 100vh;
+    }
+
+    .header {
+      animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 500ms
+        forwards;
+    }
+
+    .breadcrumb-wrapper {
+      animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 500ms
+        forwards;
+    }
+  }
+
+  @include respond(md) {
+    &.full-screen {
+      height: 100vh;
+      width: 100vw;
+      margin: 0;
+      border-radius: 0;
+      top: 0;
+      left: 0;
+    }
+
+    transition: all 0.4s linear;
+    top: var(--top);
+    left: var(--left);
+    width: var(--width);
+    min-height: var(--min-height);
+    margin: var(--margin);
   }
 
   &::-webkit-scrollbar {
@@ -96,13 +150,17 @@
   }
 }
 
-.photo-modal-item {
-  transition: 0.75s;
-  cursor: pointer;
-
-  &.full-screen {
-    height: 100vh;
-    margin: 0;
-    border-radius: 0;
+@keyframes fade-out {
+  0% {
+    transform: translateY(20%);
+    opacity: 0.75;
   }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.photo-modal-item {
+  cursor: pointer;
 }

@@ -102,11 +102,15 @@ export default function PhotoDetailsModal({ showModal = false, photoData }) {
         getComputedStyle($this).getPropertyValue("--bg-src")
       );
 
-      modalElementsWrapper.style.top = position.top + "px";
-      modalElementsWrapper.style.left = position.left + "px";
-      modalElementsWrapper.style.minHeight = size.height;
-      modalElementsWrapper.style.width = size.width;
-      modalElementsWrapper.style.margin = $this.style.margin;
+
+      modalElementsWrapper.style.setProperty('--top', position.top + "px")
+      modalElementsWrapper.style.setProperty('--left', position.left + "px")
+      modalElementsWrapper.style.setProperty('--width', size.width)
+      modalElementsWrapper.style.setProperty('--min-height', size.height)
+      modalElementsWrapper.style.setProperty('--margin', $this.style.margin)
+      
+      modalElementsWrapper.classList.add("growing");
+
 
       setTimeout(function () {
         let classes = $this.classList.value.split(" ");
@@ -116,11 +120,12 @@ export default function PhotoDetailsModal({ showModal = false, photoData }) {
         }
 
         modalElementsWrapper.classList.add("growing");
-        modalElementsWrapper.style.minHeight = "100vh";
-        modalElementsWrapper.style.width = "100vw";
-        modalElementsWrapper.style.top = "0";
-        modalElementsWrapper.style.left = "0";
-        modalElementsWrapper.style.margin = "0";
+
+        modalElementsWrapper.style.setProperty('--top', 0)
+        modalElementsWrapper.style.setProperty('--left', 0)
+        modalElementsWrapper.style.setProperty('--width', '100vw')
+        modalElementsWrapper.style.setProperty('--min-height', '100vh')
+        modalElementsWrapper.style.setProperty('--margin', 0)
       }, 1);
 
       setTimeout(function () {
