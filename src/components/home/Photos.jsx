@@ -9,6 +9,7 @@ import { Autoplay } from "swiper/modules";
 import ShowMoreLink from "../shared/ShowMoreLink";
 import ArrowLinkIcon from "../icons/ArrowLinkIcon";
 import PhotoDetailsModal from "../shared/PhotoDetailsModal";
+import Link from "next/link";
 
 const PhotosList = ({ reverseDirection = false, openPhotoModal }) => {
   const [swiperInit, setSwiperInit] = useState(null);
@@ -25,9 +26,9 @@ const PhotosList = ({ reverseDirection = false, openPhotoModal }) => {
       slidesPerView={1.5}
       spaceBetween={16}
       centeredSlides={true}
-      speed={1600}
+      speed={reverseDirection ? 4500 : 4400}
       autoplay={{
-        delay: 1000,
+        delay: 0,
         pauseOnMouseEnter: true,
         disableOnInteraction: false,
         reverseDirection: reverseDirection,
@@ -57,8 +58,9 @@ const PhotosList = ({ reverseDirection = false, openPhotoModal }) => {
           onMouseLeave={handleMouseLeave}
           style={{ "--bg-image-src": `url(${photo.image})` }}
         >
-          <div
-            onClick={() => openPhotoModal(photo)}
+          {/* onClick={() => openPhotoModal(photo)} */}
+          <Link
+            href={`/photos/${photo.id}`}
             className="cursor-pointer block h-48 overflow-hidden swiper-slide-item photo-modal-item"
           >
             <Image
@@ -74,7 +76,7 @@ const PhotosList = ({ reverseDirection = false, openPhotoModal }) => {
               className="arrow-icon"
               color="#fff"
             />
-          </div>
+          </Link>
         </SwiperSlide>
       ))}
     </Swiper>
@@ -92,20 +94,21 @@ export default function Photos() {
 
   return (
     <div>
-      <div id="photo-modal-wrapper">
+      {/* <div id="photo-modal-wrapper">
         <PhotoDetailsModal
           key={showModal}
           showModal={showModal}
           photoData={photoData}
         />
-      </div>
+      </div> */}
 
       <div className="photos py-20 2xl:py-32">
         <div className="container mb-8 md:mb-12">
           <Heading title={homeData.photos.title} />
 
           <p className="photos__description mt-2 uppercase md:capitalize">
-          Yemen&lsquo;s Cultural Richness in Photos: Tribes, Customs, <br /> Traditions.
+            Yemen&lsquo;s Cultural Richness in Photos: Tribes, Customs, <br />{" "}
+            Traditions.
           </p>
         </div>
 

@@ -61,6 +61,7 @@ const OtherPhotos = () => {
                 alt={item.title}
                 width={430}
                 height={315}
+                className="rounded"
               />
             </Link>
           </SwiperSlide>

@@ -5,6 +5,10 @@
     @include responsiveFontSize(16px, 24px);
   }
 
+  .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
+
   .arrow-icon {
     position: absolute;
     top: 75%;
