@@ -46,6 +46,7 @@ const DesktopNavbarItems = () => {
                 className={`${
                   pathname === child.path ? "active-sub-nav" : ""
                 } header__dropdown-item flex items-center justify-between   `}
+                key={child.id}
               >
                 <Link
                   className={`${
