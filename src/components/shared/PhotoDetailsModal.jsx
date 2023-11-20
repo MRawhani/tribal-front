@@ -28,6 +28,7 @@ const OtherPhotos = () => {
         key={process.env.NODE_ENV === "development" ? swiperKey : undefined}
         slidesPerView="auto"
         spaceBetween={100}
+        loop={true}
         centeredSlides={true}
         modules={[Navigation, EffectCoverflow]}
         effect="coverflow"
