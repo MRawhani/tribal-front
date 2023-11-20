@@ -18,6 +18,10 @@
       background-color: $primary-primary;
       z-index: 0;
       /* Places it behind the content */
+
+      @include respond(xl) {
+        height: 296px;
+      }
     }
   }
 
@@ -33,7 +37,7 @@
     text-transform: uppercase;
     @include responsiveFontSize(16px, 24px);
     @include respond(md) {
-      text-transform: capitalize
+      text-transform: capitalize;
     }
   }
 
