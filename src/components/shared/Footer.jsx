@@ -27,11 +27,13 @@ export default function Footer() {
           <LogoIcon />
           <p className="font-gothamLight text-xs leading-4 mt-6 text-center">
             Conflict & political Analyst. Community Development Practitioner.
-            Yemen. Tribes. Author of “Foe Not Friend: Yemeni Tribes & AQAP”
+            Yemen. Tribes.
+            <br />
+            Author of “Foe Not Friend: Yemeni Tribes & AQAP”
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-2 md:justify-center mt-11 ">
+        <div className="flex flex-wrap gap-2 justify-center mt-11 max-w-2xl mx-auto ">
           <FooterLinks />
         </div>
 
