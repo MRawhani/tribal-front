@@ -1,4 +1,13 @@
 .page-book-chapters {
+  background-color: $seconday-50;
+  margin-bottom: -2rem;
+  padding-bottom: 5.5rem;
+  
+  @include respond(md) {
+    margin-bottom: -4rem;
+    padding-bottom: 7.5rem;
+  }
+
   .slider-btn-wrapper {
     display: flex;
     justify-content: flex-end;
@@ -16,7 +25,28 @@
     border-radius: 10rem;
 
     &.swiper-button-disabled {
-        opacity: .5;
+      opacity: 0.5;
+    }
+  }
+
+  .swiper {
+    @include respond(md) {
+      max-width: 78%;
+    }
+
+    @include respond(xl) {
+      max-width: 900px;
+    }
+  }
+
+  .c-book-chapter {
+    margin: {
+      left: auto;
+      right: auto;
+    }
+
+    .content-wrapper {
+      background-color: white;
     }
   }
 }
