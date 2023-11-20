@@ -1,5 +1,7 @@
 .page-transition {
   background: linear-gradient(90deg, #ae8556 0%, #90794c 100%);
+  transition: all 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transform-origin: 100% 100%;
 
   &-layers {
     .right-layer {
@@ -10,32 +12,29 @@
       left: 100%;
       bottom: 0;
       right: auto;
-      background: $primary-primary;
-      transition: all 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: all 2.75s cubic-bezier(0.645, 0.045, 0.355, 1);
       z-index: 10;
-    }
-
-    .right-layer--2 {
-      transition-delay: 148ms;
       background: $primary-50;
     }
 
-    .right-layer--3 {
-      background: linear-gradient(90deg, #ae8556 0%, #90794c 100%);
-      transition-delay: 0.3s;
+    .right-layer--2 {
+      left: 150%;
+      background: $primary-primary;
     }
   }
 
   &.is--hidden {
-    animation: hide-section 0s linear 1000ms forwards;
+    animation: hide-section 0s linear 3000ms forwards;
+    transform: translateX(-140%);
 
     .animated-logo,
     .shapes {
-      display: none;
+      opacity: 0;
+      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
 
     .right-layer {
-      left: -140%;
+      left: -150%;
     }
   }
 

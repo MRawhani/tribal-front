@@ -13,14 +13,14 @@ export function PageTransitionSection() {
 
     setTimeout(() => {
       setIsLoaded(true);
-    }, 3000);
+    }, 4000);
   });
 
   if(isLoaded) return null;
 
   return (
     <section
-      className={`page-transition z-[120] bg-red-500 fixed w-screen h-screen inset-0 flex flex-col justify-center items-center ${
+      className={`page-transition z-[120] fixed w-screen h-screen inset-0 flex flex-col justify-center items-center ${
         showTransition ? "" : "is--hidden"
       }`}
     >
@@ -28,7 +28,7 @@ export function PageTransitionSection() {
         <div className="container">
           <div className="right-layer"></div>
           <div className="right-layer right-layer--2"></div>
-          <div className="right-layer right-layer--3"></div>
+          {/* <div className="right-layer right-layer--3"></div> */}
         </div>
       </div>
 
