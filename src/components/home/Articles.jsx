@@ -42,10 +42,10 @@ export default function Articles() {
 
             {/* swiper button */}
             <div className="!hidden xl:!flex slider-btn-wrapper">
-              <button className="slider-btn slider-btn--fill slider-prev-btn">
+              <button className="slider-btn slider-btn--fill articles-slider-prev-btn">
                 <PrevIcon />
               </button>
-              <button className="slider-btn slider-btn--fill slider-next-btn">
+              <button className="slider-btn slider-btn--fill articles-slider-next-btn">
                 <NextIcon />
               </button>
             </div>
@@ -68,8 +68,8 @@ export default function Articles() {
             }}
             pagination={true}
             navigation={{
-              prevEl: ".slider-prev-btn",
-              nextEl: ".slider-next-btn",
+              prevEl: ".articles-slider-prev-btn",
+              nextEl: ".articles-slider-next-btn",
             }}
             observer={true}
             observeParents={true}

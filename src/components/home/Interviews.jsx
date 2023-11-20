@@ -29,10 +29,10 @@ export default function Interviews() {
 
         {/* swiper button */}
         <div className="!hidden md:!flex slider-btn-wrapper">
-          <button className="slider-btn slider-prev-btn">
+          <button className="slider-btn interview-slider-prev-btn">
             <PrevIcon  color="white"/>
           </button>
-          <button className="slider-btn slider-next-btn">
+          <button className="slider-btn interview-slider-next-btn">
             <NextIcon color="white" />
           </button>
         </div>
@@ -53,8 +53,8 @@ export default function Interviews() {
               }, 300);
             }}
             navigation={{
-              prevEl: ".slider-prev-btn",
-              nextEl: ".slider-next-btn",
+              prevEl: ".interview-slider-prev-btn",
+              nextEl: ".interview-slider-next-btn",
             }}
             observer={true}
             observeParents={true}
