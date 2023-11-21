@@ -20,7 +20,11 @@ export default function ReportCard({ report, className = "" }) {
         <div className="c-card__content">
           <p className="c-report-card__date">{report.date}</p>
 
-          <Link className="c-report-card__title line-clamp-2" href="#">
+          <Link className="c-report-card__title line-clamp-2" 
+          target="_blank"
+          href={report?.link ?? "https://google.com"}
+          
+          >
             {/* href={`/reports/${report.id}`} */}
             {report.title}
           </Link>

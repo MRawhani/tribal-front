@@ -31,7 +31,9 @@ export default function ReportCard({ item, className = "" }) {
       <div className="flex justify-end">
         <Link
           className="c-unpublished-research__link flex justify-between items-center gap-4"
-          href={'#' ??`/reports/${item.id}`}
+          href={item?.link ?? "https://google.com"}
+          target="_blank"
+
         >
           <span>Read More</span>
 

@@ -45,6 +45,14 @@
       right: auto;
     }
 
+    .image-container {
+      @include respond(m) {
+       
+      border: solid 6px var(--secondary-secondary, #bc9665);
+  
+      }
+  
+    }
     .content-wrapper {
       background-color: white;
     }

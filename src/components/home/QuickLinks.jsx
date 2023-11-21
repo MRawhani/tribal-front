@@ -49,7 +49,7 @@ const DesktopQuickLinks = () => {
         <Link
           key={link.id}
           href={link.path}
-          className={`col-span-4 2xl:col-span-3`}
+          className={`col-span-4 xl:col-span-3`}
         >
           <QuickLinkCard link={link} />
         </Link>

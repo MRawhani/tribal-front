@@ -316,7 +316,7 @@ export const bookChapters = [
     description: "The Role of Legitimacy, Hadi, and the Islah Party ",
     authors: "Abdulwahab Alkebsi, Nathan J Brown, Charlotta Sparre",
     location: "London.Palgrave-Macmillan",
-    image: "/assets/article1.png",
+    image: "/assets/book.jpg",
   },
   {
     id: 2,
@@ -326,7 +326,7 @@ export const bookChapters = [
     description: "The Role of Legitimacy, Hadi, and the Islah Party ",
     authors: "Abdulwahab Alkebsi, Nathan J Brown, Charlotta Sparre",
     location: "London.Palgrave-Macmillan",
-    image: "/assets/article1.png",
+    image: "/assets/book2.jpg",
   },
 ];
 
@@ -449,7 +449,7 @@ export const homeData = {
         description: "The Role of Legitimacy, Hadi, and the Islah Party ",
         authors: "Abdulwahab Alkebsi, Nathan J Brown, Charlotta Sparre",
         location: "London.Palgrave-Macmillan",
-        image: "/assets/article1.png",
+        image: "/assets/book.jpg",
       },
       {
         id: 2,
@@ -459,7 +459,7 @@ export const homeData = {
         description: "The Role of Legitimacy, Hadi, and the Islah Party ",
         authors: "Abdulwahab Alkebsi, Nathan J Brown, Charlotta Sparre",
         location: "London.Palgrave-Macmillan",
-        image: "/assets/article1.png",
+        image: "/assets/book2.jpg",
       },
     ],
   },

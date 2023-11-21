@@ -3,7 +3,11 @@ import Link from "next/link";
 
 export default function ArticleCard({ article, className }) {
   return (
-    <Link href={`/articles/${article?.id}`}>
+    <Link 
+    
+    target="_blank"
+    
+    href={article?.link ?? "https://google.com"}>
       <div className={"article-card " + className}>
         <div
           className="article-card__img"

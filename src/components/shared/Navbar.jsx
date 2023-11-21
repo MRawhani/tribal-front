@@ -77,7 +77,7 @@ const DesktopNavbarItems = () => {
       );
 
     return (
-      <li key={link.id} className={`${pathname === link.path ? "active" : ""}`}>
+      <li key={link.id} className={`${(pathname === link.path || (link.path !== '/' && pathname.includes(link.path) ))? "active" : ""}`}>
         <Link
           className="nav-link nav-link-title"
           href={link.path}
