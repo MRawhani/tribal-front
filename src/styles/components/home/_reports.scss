@@ -34,7 +34,8 @@
   padding: 1.5rem 0;
   border-bottom: 1px solid rgba($color: $pure-white, $alpha: 0.08);
   position: relative;
-  overflow: hidden;
+  z-index: 1;
+  // overflow: hidden;
 
   &__date {
     color: $pure-white;
@@ -56,6 +57,18 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  &__desc {
+    font-size: 1rem;
+    color: $tuna-200;
+    font-family: var(--font-gothamBold);
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+    transition: all 0.3s linear;
   }
 
   &__link-icon {
@@ -98,6 +111,11 @@
     transition: 
     //
       all 0.25s linear, opacity 0.5s linear;
+
+    img {
+      object-fit: contain;
+      height: 300px;
+    }
   }
 
   &:hover {

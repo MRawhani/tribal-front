@@ -1,60 +1,32 @@
 .page-book-chapters {
-  background-color: $seconday-50;
-  margin-bottom: -2rem;
-  padding-bottom: 5.5rem;
-  
-  @include respond(md) {
-    margin-bottom: -4rem;
-    padding-bottom: 7.5rem;
-  }
-
-  .slider-btn-wrapper {
+  .c-page-book-chapter {
+    background-color: $pure-white;
+    padding: 24px;
+    border-radius: 1rem;
+    position: relative;
+    border-radius: 20px;
+    min-height: 120px;
+    transition: all 0.3s ease-in;
     display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
-  .slider-btn {
-    @include secondary-gradient;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 10rem;
-
-    &.swiper-button-disabled {
-      opacity: 0.5;
-    }
-  }
-
-  .swiper {
-    @include respond(md) {
-      max-width: 78%;
+  .c-page-book-chapter__link {
+    span {
+      font-size: 14px;
+      font-family: var(--font-gothamMedium);
+      color: $secondary-secondary;
+      transition: all 0.3s ease-in-out;
     }
 
-    @include respond(xl) {
-      max-width: 900px;
-    }
-  }
+    svg {
+      transition: all 0.3s ease-in-out;
+      color: $secondary-secondary;
 
-  .c-book-chapter {
-    margin: {
-      left: auto;
-      right: auto;
     }
-
-    .image-container {
-      @include respond(m) {
-       
-      border: solid 6px var(--secondary-secondary, #bc9665);
-  
-      }
-  
-    }
-    .content-wrapper {
-      background-color: white;
+    &:hover svg {
+      transform: translateY(-8px);
     }
   }
 }

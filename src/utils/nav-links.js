@@ -6,38 +6,22 @@ export const links = [
   },
   {
     id: 2,
-    name: "About",
+    name: "About me",
     path: "/about",
   },
   {
     name: "My Writing",
     id: 3,
     children: [
-     
       {
         id: 1,
         name: "Articles",
         path: "/articles",
       },
       {
-        id: 2,
-        name: "Reports",
-        path: "/reports",
-      },
-      {
         id: 3,
         name: "Book Chapters",
         path: "/book-chapters",
-      },
-      {
-        id: 4,
-        name: "Policy Papers",
-        path: "/policy-papers",
-      },
-      {
-        id: 5,
-        name: "Unpublished Research",
-        path: "/unpublished-research",
       },
     ],
   },
@@ -45,11 +29,6 @@ export const links = [
     id: 4,
     name: "Interviews",
     path: "/interviews",
-  },
-  {
-    id: 5,
-    name: "Photos",
-    path: "/photos",
   },
   {
     id: 7,
@@ -71,13 +50,13 @@ export const short_links = [
     count: 4,
     path: "/articles",
   },
-  {
-    id: 2,
-    name: "Reports",
-    icon: "/icons/reports.svg",
-    count: 8,
-    path: "/reports",
-  },
+  // {
+  //   id: 2,
+  //   name: "Reports",
+  //   icon: "/icons/reports.svg",
+  //   count: 8,
+  //   path: "/reports",
+  // },
   {
     id: 3,
     name: "Book chapters",
@@ -93,31 +72,10 @@ export const short_links = [
     path: "/interviews",
   },
   {
-    id: 5,
-    name: "Policy Papers",
-    icon: "/icons/policy.svg",
-    count: 14,
-    path: "/policy-papers",
-  },
-  {
-    id: 6,
-    name: "Unpublished Research",
-    icon: "/icons/unpublished.svg",
-    count: 7,
-    path: "/unpublished-research",
-  },
-  {
     id: 7,
     name: "Stories",
     icon: "/icons/stories.svg",
     count: 4,
     path: "/stories",
-  },
-  {
-    id: 8,
-    name: "Photos",
-    icon: "/icons/photos.svg",
-    count: 8,
-    path: "/photos",
   },
 ];

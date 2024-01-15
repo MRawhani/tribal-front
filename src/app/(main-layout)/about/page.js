@@ -8,8 +8,8 @@ export default function AboutPage() {
     <div className="page-about pb-48 md:pb-40 lg:pb-8">
       <div className="container pb-8 md:pb-40 ">
         <Breadcrumb
-          links={[{ title: "about us", href: "/about" }]}
-          title="about us"
+          links={[{ title: "about me", href: "/about" }]}
+          title="about me"
         />
       </div>
 

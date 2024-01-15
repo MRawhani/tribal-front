@@ -13,6 +13,13 @@ export const homeData = {
       "The Yemen Travel Voices project aims to document these perspectives and create an archive, with the potential for establishing an institution in the future. ",
     image: "/assets/about-bg.png",
   },
+  aboutPage: {
+    mainDescription:
+      "Writing about Yemen usually focuses on political parties, but Nadwa's writing covers local affairs and perspectives from locals like youth, women, tribes, and local security. This viewpoint can often be overlooked by readers with specific interests.",
+    secondDescription:
+      "The Yemen Travel Voices project aims to document these perspectives and create an archive, with the potential for establishing an institution in the future. ",
+    image: "/assets/about-bg.png",
+  },
   photos: {
     title: "Photos",
     items: [

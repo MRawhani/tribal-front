@@ -1,68 +1,65 @@
 import AuthorIcon from "../icons/AuthorIcon";
 import LocationIcon from "../icons/LocationIcon";
+import Link from "next/link";
+import ArrowLinkIcon from "../icons/ArrowLinkIcon";
 
-export default function BookChapterCard({ item }) {
+export default function BookChapterCard({ item, className = "" }) {
   return (
-    <a href={item?.link ?? "https://google.com"} className="c-book-chapter block">
-      <section className="main-container justify-center items-center md:flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-        <div className="col-span-3  image-wrapper">
-          <div className="image-container">
-            <img
-              loading="lazy"
-              srcSet={item.image}
-              alt="Description of the image"
-              className="image"
-            />
-          </div>
+    <div
+      className={
+        "c-page-book-chapter w-full h-full border border-gray-100 !p-4 overflow-hidden rounded-xl" +
+        className
+      }
+    >
+      <div className="col-span-3 image-wrapper">
+        <div className="image-container h-72 -mx-4 -mt-4">
+          <img
+            loading="lazy"
+            srcSet={item.image}
+            alt="Description of the image"
+            className="image h-full object-cover w-full"
+          />
+        </div>
+      </div>
+
+      <div className="py-4 c-unpublished-research__content">
+        <h2 className="c-book-chapter__title mt-2 line-clamp-2">
+          {item.title}
+        </h2>
+
+        <q className="c-book-chapter__description mt-2">{item.description}</q>
+      </div>
+
+      <section className="mt-3 text-xs font-gothamMedium">
+        <div className="flex gap-3 items-center author-icon">
+          <AuthorIcon />
+
+          <span>{item.authors}</span>
         </div>
 
-        {/* content */}
-        <div className="py-4 c-book-chapter__content w-full">
-          <div className="content-wrapper-border">
-            <div className="content-wrapper w-full">
-              <div className="content">
-                {/* book info */}
-                <div className="flex gap-2 font-gothamMedium">
-                  <div className="text-secondary_secondary  flex items-center gap-3 text-sm">
-                    <span>
-                      &copy;
-                      {item.year}
-                    </span>
+        <div className="mt-3 flex gap-3 items-center location-icon">
+          <LocationIcon />
 
-                    <span> |</span>
-
-                    <span>Pages:</span>
-                  </div>
-
-                  <span className="text-base">{item.pages}</span>
-                </div>
-
-                <h2 className="c-book-chapter__title mt-2 line-clamp-2 md:whitespace-nowrap">
-                  {item.title}
-                </h2>
-
-                <q className="c-book-chapter__description ">
-                  {item.description}
-                </q>
-
-                <section className="mt-3 text-xs font-gothamMedium">
-                  <div className="flex gap-3 items-center author-icon">
-                    <AuthorIcon />
-
-                    <span>{item.authors}</span>
-                  </div>
-
-                  <div className="mt-3 flex gap-3 items-center location-icon">
-                    <LocationIcon />
-
-                    <span>{item.location}</span>
-                  </div>
-                </section>
-              </div>
-            </div>
-          </div>
+          <span>{item.location}</span>
         </div>
       </section>
-    </a>
+
+      <div className="flex justify-end mt-4">
+        <Link
+          className="c-page-book-chapter__link  flex justify-between items-center gap-4"
+          href={item?.link ?? "https://google.com"}
+          target="_blank"
+        >
+          <span>Read More</span>
+
+          <ArrowLinkIcon
+            width="12"
+            height="12"
+            className="arrow-icon"
+            color="#BC9665"
+          />
+        </Link>
+      </div>
+    </div>
   );
 }

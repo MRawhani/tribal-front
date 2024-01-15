@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function StoryCard({ story }) {
   return (
-    <a href={story?.link ?? "https://google.com"}
+    <a href={`/stores/${story?.id}`}
     target="_blank"
     className="story-card block">
       <div className="story-card__img">

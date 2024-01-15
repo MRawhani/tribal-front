@@ -14,19 +14,15 @@ export default function About() {
             <AboutWavesAnimatedIcon />
 
             <div className="mt-3 mb-4 text-sm ">
-              <Title title="Who we are" standard={false} />
+              <Title title="Who I am?" standard={false} />
             </div>
 
-            <h2 className="about__heading color-gradient">
-              {homeData.about.title}
-            </h2>
-
             <p className="about__description">
-              {homeData.about.mainDescription}
+              {homeData.aboutPage.mainDescription}
             </p>
 
             <p className="mt-4 about__description">
-              {homeData.about.secondDescription}
+              {homeData.aboutPage.secondDescription}
             </p>
           </div>
 

@@ -1,48 +1,50 @@
 import React from "react";
 import Heading from "../shared/Heading";
-import { articles as reports_list } from "@/utils/fk-data";
+import { bookChapters } from "@/utils/fk-data";
 import Image from "next/image";
 import ShowMoreLink from "../shared/ShowMoreLink";
-import Link from "next/link";
+import AuthorIcon from "../icons/AuthorIcon";
+import LocationIcon from "../icons/LocationIcon";
 
-const ReportLists = () => {
-  return reports_list.slice(0, 4).map((report) => (
+const BookChapterList = () => {
+  return bookChapters.slice(0, 4).map((report) => (
     <a
       key={report.id}
       href={report?.link ?? "https://google.com"}
       target="_blank"
       className="block report-card"
     >
-      <section className="flex gap-4 items-center justify-between">
+      <section className="flex gap-4 py-4 items-center justify-between">
         <div>
-          <div className="report-card__date">{report.date}</div>
+          <div className="report-card__date">{report.year}</div>
 
           <h2 className="report-card__title">{report.title}</h2>
 
+          <p className="report-card__desc">{report.description}</p>
+
           <div className="report-card__image">
             <Image
-              src={`/assets/${report.img}.png`}
-              alt={`report`}
+              src={report.image}
+              alt={`book`}
               width={254}
               height={168}
               className="rounded"
             />
           </div>
 
-          <div className="report-card__recource flex items-center">
-            <div className="report-card__recource-icon">
-              <Image
-                src={`/assets/${report.recource_icon}.svg`}
-                alt={`report`}
-                layout="fill"
-                objectFit="contain"
-              />
+          <section className="mt-3 text-xs text-gray-300 font-gothamMedium">
+            <div className="flex gap-3 items-center author-icon">
+              <AuthorIcon color="#fff" />
+
+              <span>{report.authors}</span>
             </div>
 
-            <h6 className="report-card__recource-name">
-              {report.recource_name}
-            </h6>
-          </div>
+            <div className="mt-3 flex gap-3 items-center location-icon">
+              <LocationIcon color="#fff" />
+
+              <span>{report.location}</span>
+            </div>
+          </section>
         </div>
 
         <div className="report-card__link-icon centered-content orange-gradient-onHover">
@@ -77,11 +79,11 @@ const ReportLists = () => {
   ));
 };
 
-export default function Reports() {
+export default function BookChapter() {
   return (
     <div className="reports reports__section">
       <div className="container">
-        <Heading title="Reports" className="mb-2" />
+        <Heading title="Book chapters" className="mb-2" />
         <h2 className="reports__section-title uppercase md:capitalize">
           Uncover Yemen&apos;s Untold Realities. Explore in-depth <br />{" "}
           analysis and first-hand accounts from local communities.
@@ -91,12 +93,12 @@ export default function Reports() {
           <div className="m-0">
             <div className="lg:ms-20 2xl:ms-28">
               <hr />
-              <ReportLists />
+              <BookChapterList />
               <hr />
             </div>
           </div>
         </div>
-        <div className="mt-8  w-full flex justify-center md:justify-end">
+        <div className="mt-8 relative z-10  w-full flex justify-center md:justify-end">
           <ShowMoreLink link="/reports" text="Show All Reports" />
         </div>
       </div>

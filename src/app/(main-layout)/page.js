@@ -33,15 +33,11 @@ export default function Home() {
 
   return (
     <main className="-mb-8  md:-mb-16">
-      <Hero />
+      {/* <Hero /> */}
       <About />
       <QuickLinks />
       <Articles />
       <Reports />
-      <Photos key={keyCount} />
-      <BookChapters />
-      <UnpublishedResearch />
-      <PolicyPapers />
       <Interviews />
       <Stories />
     </main>
