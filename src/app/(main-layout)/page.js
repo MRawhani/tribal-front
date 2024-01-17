@@ -11,6 +11,7 @@ import PolicyPapers from "@/components/home/PolicyPapers";
 import Interviews from "@/components/home/Interviews";
 import Stories from "@/components/home/Stories";
 import { useEffect, useState } from "react";
+import { homeData } from "@/utils/data";
 
 export default function Home() {
   const [keyCount, setKeyCount] = useState(0);
@@ -34,7 +35,7 @@ export default function Home() {
   return (
     <main className="-mb-8  md:-mb-16">
       {/* <Hero /> */}
-      <About />
+      <About aboutData={homeData.aboutHomePage}/>
       <QuickLinks />
       <Articles />
       <Reports />

@@ -5,19 +5,40 @@ export const homeData = {
       "Discover the resounding echoes of Yemeni tribes at their finest on our platform.",
     backgroundImage: "",
   },
-  about: {
-    title: "About Yemen Travel Voices",
+  aboutHomePage: {
+    title: "About me.",
     mainDescription:
-      "Writing about Yemen usually focuses on political parties, but Nadwa's writing covers local affairs and perspectives from locals like youth, women, tribes, and local security. This viewpoint can often be overlooked by readers with specific interests.",
-    secondDescription:
-      "The Yemen Travel Voices project aims to document these perspectives and create an archive, with the potential for establishing an institution in the future. ",
+      "I am a conflict analyst and practitioner specialized in Yemen and Persian Gulf. My research examines regional power and conflict dynamics, peacebuilding efforts, nonstate armed groups, protection of civilians, counter violent extremism, and tribes.",
+    secondDescription: `
+      If you're a policymaker, a think tank professional, or part of a development organization, I'm here to help you navigate the complexities and make well-informed decisions. 
+      <br />
+      <br />
+      This website highlights my published work and the stories I've encounter along the way.
+      `,
     image: "/assets/about-bg.png",
   },
   aboutPage: {
-    mainDescription:
-      "Writing about Yemen usually focuses on political parties, but Nadwa's writing covers local affairs and perspectives from locals like youth, women, tribes, and local security. This viewpoint can often be overlooked by readers with specific interests.",
-    secondDescription:
-      "The Yemen Travel Voices project aims to document these perspectives and create an archive, with the potential for establishing an institution in the future. ",
+    mainDescription: `
+    <p class="text-sm">
+      Nadwa Al-Dawsari is an independent consultant, a researcher and conflict practitioner with twenty years of field experience in Yemen where she worked with tribes, civil society, local authorities, security actors, and non-state armed groups. She has worked as the Yemen Country Director at the Center for Civilians in Conflict, the founding Director at Partners Yemen, the MENA advisor at Partners Global, and a Senior Program Manager at the National Democratic Institute (NDI). 
+    </p>
+    `,
+    secondDescription: `
+    <p class="text-sm">
+      Nadwa’s research and advocacy work examines regional power and conflict dynamics, peacebuilding efforts, nonstate armed groups, security sector, protection of civilians, counter violent extremism, and tribes. 
+    </p>
+
+    <br />
+    <p class="text-sm">
+    Nadwa is currently a Nonresident Scholar at the Middle East Institute and a Fellow at the Center on Armed Groups. Previously she was a Nonresident Senior Fellow at the Project on Middle East Democracy (POMED), a member of the Century Foundation’s Working Group on Militias, and an advisory Board member for Chatham House’s Future Dynamics in the Gulf Region project. She is also a member of the Institute of Inclusive Security’s Women Waging Peace Network. 
+    </p>
+
+    <br />
+
+    <p class="text-sm">
+    She holds a Master degree in Development Studies from the University of Leeds in the U.K and a Bachelor of Arts in English Literature from Sana’a University in Yemen. 
+    </p>
+    `,
     image: "/assets/about-bg.png",
   },
   photos: {

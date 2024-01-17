@@ -20,7 +20,7 @@ const DesktopNavbarItems = () => {
       return (
         <li key={link.id} className="header__dropdown">
           <div className="nav-link flex items-center">
-            <span className="nav-link-title">My Writing</span>
+            <span className="nav-link-title">{link.name}</span>
 
             <svg
               className="me-3 dropdown-svg "

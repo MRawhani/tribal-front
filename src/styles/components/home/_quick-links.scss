@@ -3,7 +3,7 @@
   max-width: 100vw;
   overflow: hidden;
 
-  @include respond(m) {
+  @include respond(lg) {
     position: relative;
     z-index: 10;
   }

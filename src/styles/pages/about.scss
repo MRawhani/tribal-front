@@ -1,7 +1,15 @@
 .page-about {
-  @include respond(lg) {
-    .about__img-wrapper {
-      margin-top: -100px;
-    }
+  // @include respond(lg) {
+  //   .about__img-wrapper {
+  //     margin-top: -100px;
+  //   }
+  // }
+
+  .about__content {
+    padding-block: 16px;
+  }
+
+  .about__img-wrapper {
+    border-radius: 2rem;
   }
 }

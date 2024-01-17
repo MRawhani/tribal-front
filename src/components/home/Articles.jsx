@@ -29,7 +29,7 @@ export default function Articles() {
     <div className="articles articles__section pt-20 pb-4">
       <div className="">
         <div className="container articles__content">
-          <Heading title="Articles" className="mb-4" />
+          <Heading title="Reports" className="mb-4" />
 
           <div className="flex justify-between gap-20 items-center  mb-8 md:mb-12">
             <div className="lg:flex justify-between items-end ">

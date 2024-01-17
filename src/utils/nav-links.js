@@ -10,12 +10,12 @@ export const links = [
     path: "/about",
   },
   {
-    name: "My Writing",
+    name: "Publications",
     id: 3,
     children: [
       {
         id: 1,
-        name: "Articles",
+        name: "Reports",
         path: "/articles",
       },
       {
@@ -45,7 +45,7 @@ export const links = [
 export const short_links = [
   {
     id: 1,
-    name: "Articles",
+    name: "Reports",
     icon: "/icons/articles.svg",
     count: 4,
     path: "/articles",
