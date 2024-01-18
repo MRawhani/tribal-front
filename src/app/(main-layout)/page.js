@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import Hero from "@/components/home/Hero";
 import About from "@/components/global/About";
 import QuickLinks from "@/components/home/QuickLinks";
@@ -10,37 +10,54 @@ import UnpublishedResearch from "@/components/home/UnpublishedResearch";
 import PolicyPapers from "@/components/home/PolicyPapers";
 import Interviews from "@/components/home/Interviews";
 import Stories from "@/components/home/Stories";
-import { useEffect, useState } from "react";
 import { homeData } from "@/utils/data";
+import { fetchClientData } from "@/utils/globalStore";
 
-export default function Home() {
-  const [keyCount, setKeyCount] = useState(0);
+export default async function Home() {
+  const data = await fetchClientData();
 
-  useEffect(() => {
-    const handleEvent = () => {
-      console.log("close", keyCount);
+  const portfolioData = data?.portfolioData;
 
-      setKeyCount(keyCount + 1);
-    };
-
-    window.addEventListener("router-link", handleEvent);
-    window.addEventListener("popstate", handleEvent);
-
-    return () => {
-      window.removeEventListener("router-link", handleEvent);
-      window.removeEventListener("popstate", handleEvent);
-    };
-  }, [keyCount]);
+  const shortLinks = [
+    {
+      id: 1,
+      name: "Reports",
+      icon: "/icons/articles.svg",
+      count: portfolioData.totalReports,
+      path: "/articles",
+    },
+    {
+      id: 3,
+      name: "Book chapters",
+      icon: "/icons/books.svg",
+      count: portfolioData.totalBooks,
+      path: "/book-chapters",
+    },
+    {
+      id: 4,
+      name: "Interviews",
+      icon: "/icons/interviews.svg",
+      count: portfolioData.totalInterviews,
+      path: "/interviews",
+    },
+    {
+      id: 7,
+      name: "Stories",
+      icon: "/icons/stories.svg",
+      count: portfolioData.totalStories,
+      path: "/stories",
+    },
+  ];
 
   return (
     <main className="-mb-8  md:-mb-16">
       {/* <Hero /> */}
-      <About aboutData={homeData.aboutHomePage}/>
-      <QuickLinks />
-      <Articles />
-      <Reports />
-      <Interviews />
-      <Stories />
+      <About aboutData={homeData.aboutHomePage} />
+      <QuickLinks shortLinks={shortLinks} />
+      <Articles portfolioData={portfolioData} />
+      <Reports portfolioData={portfolioData} />
+      <Interviews portfolioData={portfolioData} />
+      <Stories portfolioData={portfolioData} />
     </main>
   );
 }

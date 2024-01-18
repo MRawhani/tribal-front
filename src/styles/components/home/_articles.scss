@@ -117,7 +117,7 @@
   }
 
   &__img {
-    height: 70%;
+    height: 300px;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -138,12 +138,13 @@
 
     img {
       transition: all 0.3s linear;
+      object-fit: cover;
     }
   }
 
   &__content {
     padding: 1.5rem;
-    min-height: 131px;
+    min-height: 140px;
   }
 
   &__title {
@@ -171,5 +172,11 @@
     font-family: var(--font-gothamBook);
     font-size: 14px;
     color: $tuna-900;
+  }
+}
+
+.reports-page {
+  .article-card__title {
+    min-height: 54px;
   }
 }

@@ -1,3 +1,9 @@
+.interview-page {
+  .interview-card__title {
+    min-height: 54px;
+  }
+}
+
 .interview-card {
   background-color: $pure-white;
   border-radius: 1.5rem;

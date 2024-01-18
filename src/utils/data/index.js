@@ -2,7 +2,7 @@ export * from './home'
 
 export const globalData = {
     footerLinks: [
-        {title: 'Articles', link: '/articles'},
+        {title: 'Reports', link: '/articles'},
         {title: 'Book chapters', link: '/book-chapters'},
         {title: 'Interviews', link: '/interviews'},
         {title: 'Contact me', link: '/contact-me'},

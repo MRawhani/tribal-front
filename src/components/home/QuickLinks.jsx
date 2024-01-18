@@ -1,6 +1,5 @@
 "use client";
-import React, { useRef } from "react";
-import { short_links } from "@/utils/nav-links";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -42,10 +41,10 @@ const QuickLinkCard = ({ link }) => {
   );
 };
 
-const DesktopQuickLinks = () => {
+const DesktopQuickLinks = ({ shortLinks }) => {
   return (
     <div className="grid gap-4 grid-cols-12">
-      {short_links.map((link) => (
+      {shortLinks.map((link) => (
         <Link
           key={link.id}
           href={link.path}
@@ -58,7 +57,7 @@ const DesktopQuickLinks = () => {
   );
 };
 
-const MobileQuickLinks = () => {
+const MobileQuickLinks = ({ shortLinks }) => {
   return (
     <div>
       <Swiper
@@ -73,7 +72,7 @@ const MobileQuickLinks = () => {
           768: { slidesPerView: 2.1, spaceBetween: 20 },
         }}
       >
-        {short_links.map((link) => (
+        {shortLinks.map((link) => (
           <SwiperSlide key={link.name} className="!h-auto">
             <Link href={link.path}>
               <QuickLinkCard link={link} />
@@ -85,7 +84,7 @@ const MobileQuickLinks = () => {
   );
 };
 
-export default function QuickLinksWrapper() {
+export default function QuickLinksWrapper({ shortLinks }) {
   return (
     <div className="shortcuts pt-60 pb-20 md:pt-32">
       <div className="container shortcuts__container">
@@ -98,11 +97,11 @@ export default function QuickLinksWrapper() {
 
         <div className="mt-12">
           <div className="lg:hidden">
-            <MobileQuickLinks />
+            <MobileQuickLinks shortLinks={shortLinks} />
           </div>
 
           <div className="hidden lg:block">
-            <DesktopQuickLinks />
+            <DesktopQuickLinks shortLinks={shortLinks} />
           </div>
         </div>
       </div>

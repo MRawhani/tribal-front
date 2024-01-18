@@ -10,16 +10,8 @@ export const metadata = {
   description:
     "Discover the resounding echoes of Yemeni tribes at their finest on our platform.",
 };
-export default async function RootLayout({ children }) {
-  await new Promise((resolve, reject) => setTimeout(resolve, 2000));
-  const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
-  if (!response.ok) {
-    throw new Error("Network response was not ok");
-  }
-  const data = await response.json();
-  console.log(data);
+export default function RootLayout({ children }) {
   // const [loading, setLoading] = React.useState(true);
-  let loading = false;
   // React.useEffect(() => {
   //   setLoading(false)
   // }, []);
@@ -57,7 +49,7 @@ export default async function RootLayout({ children }) {
       <body className={`${custom_fonts}`}>
         <NextTopLoader color="#90794C" />
 
-        {!loading ? <>{children}</> : <div className="loading">Loading...</div>}
+        {children}
 
         <Footer />
       </body>

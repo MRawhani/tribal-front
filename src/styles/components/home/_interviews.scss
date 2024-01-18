@@ -1,7 +1,7 @@
 .interviews {
   max-width: 100vw;
   overflow: hidden;
-  
+
   .slider-btn-wrapper {
     display: flex;
     justify-content: flex-end;
@@ -25,6 +25,7 @@
 
   .interview-card {
     background-color: $seconday-50;
+    height: 100%;
   }
 
   &__content {
@@ -34,6 +35,14 @@
 
     .swiper {
       overflow: visible;
+
+      .swiper-slide {
+        height: auto;
+        a {
+          height: 100%;
+          display: block;
+        }
+      }
     }
   }
 }

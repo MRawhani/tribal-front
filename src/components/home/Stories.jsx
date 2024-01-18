@@ -11,7 +11,7 @@ import Heading from "../shared/Heading";
 import { homeData } from "@/utils/data";
 import StoryCard from "../global/StoryCard";
 
-export default function Stories() {
+export default function Stories({portfolioData}) {
   const swiperRef = useRef();
   const swiperKey = Date.now();
 
@@ -74,8 +74,8 @@ export default function Stories() {
               },
             }}
           >
-            {homeData.stories.items.map((item) => (
-              <SwiperSlide key={item.id}>
+            {portfolioData.stories.map((item) => (
+              <SwiperSlide key={item._id}>
                 <StoryCard story={item} />
               </SwiperSlide>
             ))}

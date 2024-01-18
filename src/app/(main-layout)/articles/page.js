@@ -2,19 +2,24 @@ import ArticleCard from "@/components/global/ArticleCard";
 import { Breadcrumb } from "@/components/global/Breadcrumb";
 import React from "react";
 import { articles } from "@/utils/fk-data";
+import { fetchClientData } from "@/utils/globalStore";
 
-export default function Articles() {
+export default async function Articles() {
+  const data = await fetchClientData();
+
+  const portfolioData = data?.portfolioData;
+
   return (
-    <div className="bg-white">
+    <div className="bg-white reports-page">
       <div className="container">
         <Breadcrumb
-          links={[{ title: "articles", href: "/articles" }]}
-          title="articles"
+          links={[{ title: "reports", href: "/articles" }]}
+          title="reports"
           description="Unearthing Yemen's Hidden Knowledge. Discover cutting-edge insights."
         />
 
         <section className="mt-8 md:mt-16 grid grid-cols-6 gap-4">
-          {articles.map((article) => (
+          {portfolioData.reports.map((article) => (
             <div
               key={article.id}
               className="col-span-6 sm:col-span-3 lg:col-span-2"

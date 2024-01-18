@@ -1,11 +1,15 @@
 import InterviewCard from "@/components/global/InterviewCard";
 import { Breadcrumb } from "@/components/global/Breadcrumb";
 import React from "react";
-import { interviews } from "@/utils/fk-data";
+import { fetchClientData } from "@/utils/globalStore";
 
-export default function Interviews() {
+export default async function Interviews() {
+  const data = await fetchClientData();
+
+  const portfolioData = data?.portfolioData;
+
   return (
-    <div className="bg-white">
+    <div className="bg-white interview-page">
       <div className="container">
         <Breadcrumb
           links={[{ title: "interviews", href: "/interviews" }]}
@@ -14,7 +18,7 @@ export default function Interviews() {
         />
 
         <section className="mt-8 md:mt-16 grid grid-cols-6 gap-x-4 gap-y-6">
-          {interviews.map((interview) => (
+          {portfolioData.interviews.map((interview) => (
             <div
               key={interview.id}
               className="col-span-6 sm:col-span-3 lg:col-span-2"

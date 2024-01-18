@@ -19,7 +19,7 @@ import ShowMoreLink from "../shared/ShowMoreLink";
 import PrevIcon from "../icons/PrevIcon";
 import NextIcon from "../icons/NextIcon";
 
-export default function Articles() {
+export default function Articles({ portfolioData }) {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const swiperRef = useRef();
@@ -86,9 +86,9 @@ export default function Articles() {
             }}
             className="mySwiper"
           >
-            {articles_list.map((article) => (
-              <SwiperSlide key={article.id}>
-                <ArticleCard article={article} />
+            {portfolioData.reports.map((item) => (
+              <SwiperSlide key={item._id}>
+                <ArticleCard article={item} />
               </SwiperSlide>
             ))}
           </Swiper>

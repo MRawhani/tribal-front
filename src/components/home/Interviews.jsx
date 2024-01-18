@@ -11,7 +11,7 @@ import Heading from "../shared/Heading";
 import InterviewCard from "../global/InterviewCard";
 import { interviews } from "@/utils/fk-data";
 
-export default function Interviews() {
+export default function Interviews({portfolioData}) {
   const swiperRef = useRef();
   const swiperKey = Date.now();
 
@@ -69,8 +69,8 @@ export default function Interviews() {
               },
             }}
           >
-            {interviews.map((item) => (
-              <SwiperSlide key={item.id}>
+            {portfolioData.interviews.map((item) => (
+              <SwiperSlide key={item._id}>
                 <InterviewCard interview={item} />
               </SwiperSlide>
             ))}

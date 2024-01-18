@@ -1,7 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import AuthorIcon from "../icons/AuthorIcon";
 import LocationIcon from "../icons/LocationIcon";
 import Link from "next/link";
 import ArrowLinkIcon from "../icons/ArrowLinkIcon";
+import { getImageLink } from "@/utils/globalStore";
 
 export default function BookChapterCard({ item, className = "" }) {
   return (
@@ -15,9 +17,10 @@ export default function BookChapterCard({ item, className = "" }) {
         <div className="image-container h-72 -mx-4 -mt-4">
           <img
             loading="lazy"
-            srcSet={item.image}
+            src={getImageLink(item.photos[0])}
             alt="Description of the image"
             className="image h-full object-cover w-full"
+            crossOrigin="anonymous"
           />
         </div>
       </div>
@@ -27,27 +30,28 @@ export default function BookChapterCard({ item, className = "" }) {
           {item.title}
         </h2>
 
-        <q className="c-book-chapter__description mt-2">{item.description}</q>
+        <q className="c-book-chapter__description mt-2">{item.chapter}</q>
       </div>
 
       <section className="mt-3 text-xs font-gothamMedium">
         <div className="flex gap-3 items-center author-icon">
           <AuthorIcon />
 
-          <span>{item.authors}</span>
+          <span>{item.book_author}</span>
         </div>
 
-        <div className="mt-3 flex gap-3 items-center location-icon">
-          <LocationIcon />
-
-          <span>{item.location}</span>
-        </div>
+        {item.journal && (
+          <div className="mt-3 flex gap-3 items-center location-icon">
+            <LocationIcon />
+            <span>{item.journal}</span>
+          </div>
+        )}
       </section>
 
       <div className="flex justify-end mt-4">
         <Link
           className="c-page-book-chapter__link  flex justify-between items-center gap-4"
-          href={item?.link ?? "https://google.com"}
+          href={item?.external_link}
           target="_blank"
         >
           <span>Read More</span>

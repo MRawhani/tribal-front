@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Heading from "../shared/Heading";
 import { bookChapters } from "@/utils/fk-data";
@@ -5,30 +7,32 @@ import Image from "next/image";
 import ShowMoreLink from "../shared/ShowMoreLink";
 import AuthorIcon from "../icons/AuthorIcon";
 import LocationIcon from "../icons/LocationIcon";
+import { getImageLink } from "@/utils/globalStore";
 
-const BookChapterList = () => {
-  return bookChapters.slice(0, 4).map((report) => (
+const BookChapterList = ({ books }) => {
+  return books.slice(0, 4).map((report) => (
     <a
-      key={report.id}
-      href={report?.link ?? "https://google.com"}
+      key={report._id}
+      href={report?.external_link}
       target="_blank"
       className="block report-card"
     >
       <section className="flex gap-4 py-4 items-center justify-between">
         <div>
-          <div className="report-card__date">{report.year}</div>
+          <div className="report-card__date">{report.publish_year}</div>
 
           <h2 className="report-card__title">{report.title}</h2>
 
-          <p className="report-card__desc">{report.description}</p>
+          <p className="report-card__desc">{report?.chapter}</p>
 
           <div className="report-card__image">
-            <Image
-              src={report.image}
+            <img
+              src={getImageLink(report.photos[0])}
               alt={`book`}
               width={254}
               height={168}
               className="rounded"
+              crossOrigin="anonymous"
             />
           </div>
 
@@ -36,14 +40,16 @@ const BookChapterList = () => {
             <div className="flex gap-3 items-center author-icon">
               <AuthorIcon color="#fff" />
 
-              <span>{report.authors}</span>
+              <span>{report.book_author}</span>
             </div>
 
-            <div className="mt-3 flex gap-3 items-center location-icon">
-              <LocationIcon color="#fff" />
+            {report.journal && (
+              <div className="mt-3 flex gap-3 items-center location-icon">
+                <LocationIcon color="#fff" />
 
-              <span>{report.location}</span>
-            </div>
+                <span>{report.journal}</span>
+              </div>
+            )}
           </section>
         </div>
 
@@ -79,7 +85,7 @@ const BookChapterList = () => {
   ));
 };
 
-export default function BookChapter() {
+export default function BookChapter({ portfolioData }) {
   return (
     <div className="reports reports__section">
       <div className="container">
@@ -93,7 +99,7 @@ export default function BookChapter() {
           <div className="m-0">
             <div className="lg:ms-20 2xl:ms-28">
               <hr />
-              <BookChapterList />
+              <BookChapterList books={portfolioData.books ?? []} />
               <hr />
             </div>
           </div>

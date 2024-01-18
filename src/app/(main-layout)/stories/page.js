@@ -1,9 +1,14 @@
 import { Breadcrumb } from "@/components/global/Breadcrumb";
 import StoryCard from "@/components/global/StoryCard";
 import { stories } from "@/utils/fk-data";
+import { fetchClientData } from "@/utils/globalStore";
 import React from "react";
 
-export default function Stories() {
+export default async function Stories() {
+  const data = await fetchClientData();
+
+  const portfolioData = data?.portfolioData;
+  // stories
   return (
     <div className="container">
       <Breadcrumb
@@ -13,9 +18,9 @@ export default function Stories() {
       />
 
       <section className="mt-8 md:mt-16 grid grid-cols-6 gap-3">
-        {stories.map((story) => (
+        {portfolioData.stories.map((story) => (
           <div
-            key={story.id}
+            key={story._id}
             className="col-span-6 sm:col-span-3 lg:col-span-2"
           >
             <StoryCard story={story} />
