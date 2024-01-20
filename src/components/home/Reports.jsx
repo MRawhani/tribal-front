@@ -8,6 +8,7 @@ import ShowMoreLink from "../shared/ShowMoreLink";
 import AuthorIcon from "../icons/AuthorIcon";
 import LocationIcon from "../icons/LocationIcon";
 import { getImageLink } from "@/utils/globalStore";
+import { ResourceSection } from "../global/ResourceSection";
 
 const BookChapterList = ({ books }) => {
   return books.slice(0, 4).map((report) => (
@@ -15,15 +16,17 @@ const BookChapterList = ({ books }) => {
       key={report._id}
       href={report?.external_link}
       target="_blank"
-      className="block report-card"
+      className="block report-card c-resource-section-name--white c-resource-section-icon--md"
     >
       <section className="flex gap-4 py-4 items-center justify-between">
         <div>
-          <div className="report-card__date">{report.publish_year}</div>
+          <div className="report-card__date">
+            <span>&copy;{report.publish_year}</span>
+          </div>
 
           <h2 className="report-card__title">{report.title}</h2>
 
-          <p className="report-card__desc">{report?.chapter}</p>
+          <q className="my-0 report-card__desc">{report?.chapter}</q>
 
           <div className="report-card__image">
             <img
@@ -36,7 +39,13 @@ const BookChapterList = ({ books }) => {
             />
           </div>
 
-          <section className="mt-3 text-xs text-gray-300 font-gothamMedium">
+          <ResourceSection
+            image={report.platform.photos[0]}
+            name={report.platform.name}
+            className="mt-4"
+          />
+
+          {/* <section className="mt-3 text-xs text-gray-300 font-gothamMedium">
             <div className="flex gap-3 items-center author-icon">
               <AuthorIcon color="#fff" />
 
@@ -50,7 +59,7 @@ const BookChapterList = ({ books }) => {
                 <span>{report.journal}</span>
               </div>
             )}
-          </section>
+          </section> */}
         </div>
 
         <div className="report-card__link-icon centered-content orange-gradient-onHover">
@@ -105,7 +114,7 @@ export default function BookChapter({ portfolioData }) {
           </div>
         </div>
         <div className="mt-8 relative z-10  w-full flex justify-center md:justify-end">
-          <ShowMoreLink link="/reports" text="Show All Reports" />
+          <ShowMoreLink link="/book-chapters" text="Show All book chapters" />
         </div>
       </div>
       {/* <div className="reports__logo-pattern">

@@ -1,0 +1,32 @@
+.c-resource-section-name--white {
+  --resource-name-color: white;
+}
+
+.c-resource-section-icon--md {
+  --resource-icon-size: 1.5rem;
+}
+
+.c-resource-section {
+  &__icon {
+    min-width: var(--resource-icon-size, 2rem);
+    min-height: var(--resource-icon-size, 2rem);
+    width: var(--resource-icon-size, 2rem);
+    height: var(--resource-icon-size, 2rem);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-right: 1rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    font-family: var(--font-gothamBook);
+    font-size: 14px;
+    color: var(--resource-name-color, inherit);
+  }
+}

@@ -48,7 +48,6 @@ export default function OtherPhotos({ otherImages }) {
         key={process.env.NODE_ENV === "development" ? swiperKey : undefined}
         slidesPerView="auto"
         spaceBetween={100}
-        loop={true}
         centeredSlides={true}
         modules={[Navigation, EffectCoverflow]}
         effect="coverflow"
@@ -63,17 +62,11 @@ export default function OtherPhotos({ otherImages }) {
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
-        onInit={(swiper) => {
-          setTimeout(() => {
-            swiper.update();
-          }, 300);
-        }}
         navigation={{
           prevEl: ".slider-prev-btn",
           nextEl: ".slider-next-btn",
         }}
-        observer={true}
-        observeParents={true}
+
         className="mySwiper"
       >
         {otherImages.map((item, index) => (

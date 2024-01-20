@@ -1,3 +1,4 @@
+import { formatDate } from "@/utils/date";
 import { getImageLink } from "@/utils/globalStore";
 import Image from "next/image";
 import Link from "next/link";
@@ -21,7 +22,7 @@ export default function ArticleCard({ article, className }) {
         <div className="article-card__content flex">
           <div className="flex flex-col justify-between">
             <div>
-              <span className="article-card__date">{article.date}</span>
+              <span className="article-card__date">{formatDate(article.date)}</span>
 
               <h2 className="article-card__title line-clamp-2">
                 {article.title}

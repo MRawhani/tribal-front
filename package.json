@@ -12,6 +12,7 @@
     "@next/font": "^13.4.13",
     "@tailwindcss/typography": "^0.5.10",
     "autoprefixer": "10.4.14",
+    "dayjs": "^1.11.10",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.13",
     "lightgallery": "^2.7.2",
@@ -20,8 +21,10 @@
     "postcss": "8.4.27",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-loading-skeleton": "^3.3.1",
     "swiper": "^10.2.0",
-    "tailwindcss": "3.3.3"
+    "tailwindcss": "3.3.3",
+    "use-debounce": "^10.0.0"
   },
   "devDependencies": {
     "sass": "^1.65.1"
