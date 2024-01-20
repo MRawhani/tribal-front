@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -58,7 +58,6 @@ export default function OtherPhotos({ otherImages }) {
           modifier: 1.5,
           slideShadows: false,
         }}
-        grabCursor={true}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
@@ -66,23 +65,26 @@ export default function OtherPhotos({ otherImages }) {
           prevEl: ".slider-prev-btn",
           nextEl: ".slider-next-btn",
         }}
-
         className="mySwiper"
       >
         {otherImages.map((item, index) => (
-          <SwiperSlide
-            data-src={getImageLink(item)}
-            key={getImageLink(item) + index}
-          >
-            <img
-              src={getImageLink(item)}
-              alt={item}
-              width={430}
-              height={315}
-              className="rounded"
-              crossOrigin="anonymous"
-              data-src={getImageLink(item)}
-            />
+          <SwiperSlide key={getImageLink(item) + index}>
+            <LightGallery
+              licenseKey="123456789"
+              onBeforeOpen={(e) => console.log("test", e)}
+              speed={500}
+              plugins={[lgThumbnail, lgZoom]}
+            >
+              <img
+                src={getImageLink(item)}
+                alt={item}
+                width={430}
+                height={315}
+                className="rounded"
+                crossOrigin="anonymous"
+                data-src={getImageLink(item)}
+              />
+            </LightGallery>
           </SwiperSlide>
         ))}
 
