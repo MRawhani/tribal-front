@@ -22,10 +22,10 @@ export default async function PhotoDetails({ params }) {
       <div className="container -mt-20">
         <Breadcrumb
           links={[
-            { title: "stores", href: "/stores" },
+            { title: "stores", href: "/stories" },
             {
               title: data?.title,
-              href: `/stores/${params.slug}`,
+              href: `/stories/${params.slug}`,
             },
           ]}
           title="Stories"

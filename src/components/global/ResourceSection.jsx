@@ -13,7 +13,6 @@ export function ResourceSection({
           <img
             src={getImageLink(image)}
             alt={`article`}
-            fill
             crossOrigin="anonymous"
           />
         )}
