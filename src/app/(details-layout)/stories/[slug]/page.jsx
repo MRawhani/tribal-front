@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 import { Breadcrumb } from "@/components/global/Breadcrumb";
 import { ShareToSocialMediaLinks } from "@/components/ShareToSocialMediaLinks";
 import StoryOtherPhotos from "@/components/StoryOtherPhotos";
@@ -15,9 +17,14 @@ export default async function PhotoDetails({ params }) {
     <div className="page-photo-details">
       <div
         className="hero-section"
-        style={{ "--hero-bg-src": `url(${getImageLink(data?.main_image[0])}` }}
-        crossOrigin="anonymous"
-      ></div>
+      >
+        <img
+          src={getImageLink(data?.main_image[0])}
+          crossOrigin="anonymous"
+          width={100}
+          height={100}
+        />
+      </div>
 
       <div className="container -mt-20">
         <Breadcrumb
