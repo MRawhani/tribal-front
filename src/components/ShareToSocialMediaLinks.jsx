@@ -1,7 +1,14 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 export const ShareToSocialMediaLinks = () => {
-    const currentPageUrl = window && window.location.href;
+  const [currentPageUrl, setCurrentPageUrl] = useState('');
+
+  useEffect(() => {
+    // This code runs after the component mounts, and thus on the client-side
+    setCurrentPageUrl(window.location.href);
+  }, []); // The empty array ensures this effect runs only once after initial render
 
     return (
       <div className="mt-11">

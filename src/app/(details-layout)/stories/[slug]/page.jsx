@@ -5,13 +5,12 @@ import { ShareToSocialMediaLinks } from "@/components/ShareToSocialMediaLinks";
 import StoryOtherPhotos from "@/components/StoryOtherPhotos";
 import { photoDetails } from "@/utils/fk-data";
 import { fetchStoryData, getImageLink } from "@/utils/globalStore";
+import Image from "next/image";
 import React from "react";
 
 export default async function PhotoDetails({ params }) {
   const data = (await fetchStoryData(params.slug)).item ?? {};
 
-  console.log("=======");
-  console.log(data, params.slug);
 
   return (
     <div className="page-photo-details">
@@ -50,7 +49,7 @@ export default async function PhotoDetails({ params }) {
 
         {/* content */}
         <div
-          className="col-span-12 md:col-span-8 font-gothamLight text-lg"
+          className="col-span-12 md:col-span-8 font-gothamLight story-content"
           dangerouslySetInnerHTML={{ __html: data?.body ?? "" }}
         />
       </section>

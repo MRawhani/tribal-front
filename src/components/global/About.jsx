@@ -180,11 +180,11 @@ function ImageBackgroundShape({ className }) {
   );
 }
 
-export default function About({ aboutData = homeData.aboutPage }) {
+export default function About({page, aboutData = homeData.aboutPage }) {
   return (
     <div className="about pt-20 lg:pt-0">
       <div className="container not-hidden">
-        <div className="about__content flex flex-col lg:flex-row gap-8 lg:gap-20 items-center justify-between  ">
+        <div className={`${page? 'py-20' : 'about__content'}  flex flex-col lg:flex-row gap-8 lg:gap-20 items-center justify-between `}>
           <div className="lg:order-2 about__text md:w-full">
             <AboutWavesAnimatedIcon />
 
@@ -213,8 +213,8 @@ export default function About({ aboutData = homeData.aboutPage }) {
           <div className="lg:order-1 about__img-wrapper md:max-h-[800px] ">
             <ImageBackgroundShape className="absolute" />
             <Image
-              className="about__profile -translate-x-3"
-              src="/assets/nadwa.png"
+              className="about__profile object-cover -translate-x-3"
+              src="/assets/nadwa2.png"
               alt="nadwa"
               width={500}
               height={700}

@@ -13,7 +13,7 @@ export default function AboutPage() {
         />
       </div>
 
-      <About />
+      <About page={true}/>
     </div>
   );
 }

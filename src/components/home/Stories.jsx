@@ -10,6 +10,7 @@ import NextIcon from "@/components/icons/NextIcon";
 import Heading from "../shared/Heading";
 import { homeData } from "@/utils/data";
 import StoryCard from "../global/StoryCard";
+import ShowMoreLink from "../shared/ShowMoreLink";
 
 export default function Stories({portfolioData}) {
   const swiperRef = useRef();
@@ -81,6 +82,9 @@ export default function Stories({portfolioData}) {
             ))}
           </Swiper>
         </section>
+        <div className="flex justify-center mt-20 ">
+          <ShowMoreLink link="/stories" text="Show All Stories" />
+        </div>
       </div>
     </div>
   );
