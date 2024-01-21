@@ -15,13 +15,12 @@ export default async function PhotoDetails({ params }) {
   return (
     <div className="page-photo-details">
       <div className="hero-section">
-        <img
+        <Image
           src={getImageLink(data?.main_image[0])}
           crossOrigin="anonymous"
-          width={710}
-          height={780}
           alt="background image"
           loading="lazy"
+          layout="fill"
         />
       </div>
 
