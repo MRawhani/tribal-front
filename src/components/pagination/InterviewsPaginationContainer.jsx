@@ -4,6 +4,7 @@ import { usePagination } from "ahooks";
 import { Pagination } from "antd";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import InterviewCard from "../global/InterviewCard";
+import { LoadingBox } from "./LoadingBox";
 
 export default function PaginationContainer({ items = [] }) {
   const searchParams = useSearchParams();
@@ -54,7 +55,7 @@ export default function PaginationContainer({ items = [] }) {
     defaultPageSize: 6,
   });
 
-  if (loading) return <div>Loading.....</div>;
+  if (loading) return <LoadingBox />;
 
   if (data)
     return (

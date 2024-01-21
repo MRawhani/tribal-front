@@ -5,6 +5,7 @@ import { Pagination } from "antd";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import ArticleCard from "../global/ArticleCard";
 import { useEffect, useRef, useState } from "react";
+import { LoadingBox } from "./LoadingBox";
 
 export default function PaginationContainer({ items = [] }) {
   const searchParams = useSearchParams();
@@ -56,7 +57,7 @@ const handlePageChange = (page, pageSize) => {
     defaultPageSize: 6, // Set default page size to 5
   });
 
-  if (loading) return <div>Loading.....</div>;
+  if (loading) return <LoadingBox />;
 
   if (data)
     return (
