@@ -71,9 +71,9 @@ export default function OtherPhotos({ otherImages }) {
           <SwiperSlide key={getImageLink(item) + index}>
             <LightGallery
               licenseKey="123456789"
-              onBeforeOpen={(e) => console.log("test", e)}
               speed={500}
               plugins={[lgThumbnail, lgZoom]}
+              zoom={false}
             >
               <img
                 src={getImageLink(item)}

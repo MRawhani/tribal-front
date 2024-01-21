@@ -12,7 +12,7 @@ export default function ReportCard({ item, className = "" }) {
             <Image
               src={`/assets/${item.recource_icon}.svg`}
               alt={`report`}
-              fill
+              fill={true}
             />
           </div>
 

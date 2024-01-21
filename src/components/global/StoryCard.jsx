@@ -14,8 +14,8 @@ export default function StoryCard({ story }) {
         <img
           src={getImageLink(story.main_image[0])}
           alt={`story`}
-          width="0"
-          height="0"
+          width="290"
+          height="410"
           style={{ width: "100%", height: "100%" }}
           className="object-cover"
           crossOrigin="anonymous"

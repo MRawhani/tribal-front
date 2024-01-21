@@ -14,7 +14,6 @@ export default function ArticleCard({ article, className }) {
           <img
             src={getImageLink(article.photos[0])}
             alt={`article`}
-            objectFit="cover"
             style={{ width: "100%", height: "100%" }}
             crossOrigin="anonymous"
           />
@@ -22,7 +21,9 @@ export default function ArticleCard({ article, className }) {
         <div className="article-card__content flex">
           <div className="flex flex-col justify-between">
             <div>
-              <span className="article-card__date">{formatDate(article.date)}</span>
+              <span className="article-card__date">
+                {formatDate(article.date)}
+              </span>
 
               <h2 className="article-card__title line-clamp-2">
                 {article.title}
@@ -34,7 +35,6 @@ export default function ArticleCard({ article, className }) {
                   <img
                     src={getImageLink(article.platform.photos[0])}
                     alt={`article`}
-                    fill
                     crossOrigin="anonymous"
                   />
                 )}

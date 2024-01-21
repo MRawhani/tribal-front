@@ -1,3 +1,5 @@
+import { BASE_API_URL, BASE_IMAGE_URL } from "../../globalConfig";
+
 export const globalStore = {
   staticesNumbers: {
     totalBooks: 4,
@@ -12,7 +14,7 @@ export const globalStore = {
 };
 
 export const fetchClientData = async () => {
-  const res = await fetch(process.env.BASE_API_URL + "client/get-data", {
+  const res = await fetch(`${BASE_API_URL}/client/get-data`, {
     next: { revalidate: 60 },
   });
   if (!res.ok) {
@@ -23,10 +25,9 @@ export const fetchClientData = async () => {
 };
 
 export const fetchSearchData = async (query) => {
-  const res = await fetch(
-    `https://tribal-api.onrender.com/api/v1/client/search?title=${query}`,
-    { cache: "no-cache" }
-  );
+  const res = await fetch(`${BASE_API_URL}/client/search?title=${query}`, {
+    cache: "no-cache",
+  });
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
@@ -35,12 +36,9 @@ export const fetchSearchData = async (query) => {
 };
 
 export const fetchStoryData = async (slug) => {
-  const res = await fetch(
-    `${process.env.BASE_API_URL}client/get-story/${slug}`,
-    {
-      next: { revalidate: 10 },
-    }
-  );
+  const res = await fetch(`${BASE_API_URL}/client/get-story/${slug}`, {
+    next: { revalidate: 10 },
+  });
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
@@ -49,5 +47,5 @@ export const fetchStoryData = async (slug) => {
 };
 
 export const getImageLink = (image) => {
-  return `https://tribal-api.onrender.com/images/${image}`;
+  return `${BASE_IMAGE_URL}/${image}`;
 };

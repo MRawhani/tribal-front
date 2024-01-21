@@ -34,7 +34,7 @@ export default function ReportCard({ report, className = "" }) {
               <Image
                 src={`/assets/${report.recource_icon}.svg`}
                 alt={`report`}
-                fill
+                fill={true}
               />
             </div>
             <h6 className="c-report-card__recource-name line-clamp-1">
