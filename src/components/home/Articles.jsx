@@ -94,7 +94,7 @@ export default function Articles({ portfolioData }) {
           </Swiper>
 
           <div className="w-full flex justify-center xl:justify-end">
-            <ShowMoreLink link="/articles" text="Show All Articles" />
+            <ShowMoreLink link="/reports" text="Show all reports" />
           </div>
         </div>
       </div>

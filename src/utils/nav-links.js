@@ -16,7 +16,7 @@ export const links = [
       {
         id: 1,
         name: "Reports",
-        path: "/articles",
+        path: "/reports",
       },
       {
         id: 3,
@@ -48,15 +48,8 @@ export const short_links = [
     name: "Reports",
     icon: "/icons/articles.svg",
     count: 4,
-    path: "/articles",
+    path: "/reports",
   },
-  // {
-  //   id: 2,
-  //   name: "Reports",
-  //   icon: "/icons/reports.svg",
-  //   count: 8,
-  //   path: "/reports",
-  // },
   {
     id: 3,
     name: "Book chapters",

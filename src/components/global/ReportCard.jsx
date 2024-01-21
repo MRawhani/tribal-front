@@ -25,7 +25,6 @@ export default function ReportCard({ report, className = "" }) {
           href={report?.link ?? "https://google.com"}
           
           >
-            {/* href={`/reports/${report.id}`} */}
             {report.title}
           </Link>
 

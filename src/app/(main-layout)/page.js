@@ -24,7 +24,7 @@ export default async function Home() {
       name: "Reports",
       icon: "/icons/articles.svg",
       count: portfolioData.totalReports,
-      path: "/articles",
+      path: "/reports",
     },
     {
       id: 3,
