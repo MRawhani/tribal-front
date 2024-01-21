@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { Fragment } from "react";
 import LocationIcon from "../icons/LocationIcon";
+import { formatDate } from "@/utils/date";
 
 const BreadcrumbLinks = ({ links }) => {
   const onLinkClick = () => {
@@ -107,8 +108,8 @@ export function Breadcrumb({
                   </defs>
                 </svg>
                 <h6 className=" text-sm font-gothamLight text-neutral-800">
-                  {date}
-                </h6>
+                {formatDate(date)}
+                </h6> 
               </div>
             )}
 
@@ -124,10 +125,10 @@ export function Breadcrumb({
           </div>
 
           {description && (
-            <p className="mt-2 text-xs md:text-sm text-neutral-900 font-gothamLight">
+            <p className="mt-2  text-xs md:text-xs text-neutral-900 font-gothamLight">
               {description}
             </p>
-          )}
+          )}  
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@ const nextConfig = {
     includePaths: [path.join(__dirname, "styles")],
   },
   images: {
-    domains: ["https://tribal-api.onrender.com"],
+    domains: ["tribal-api.onrender.com"],
   },
   async headers() {
     return [

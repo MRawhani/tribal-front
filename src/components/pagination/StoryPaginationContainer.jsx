@@ -9,7 +9,28 @@ export default function PaginationContainer({ items = [] }) {
   const searchParams = useSearchParams();
   const { replace } = useRouter();
   const pathname = usePathname();
-
+  const handlePageChange = (page, pageSize) => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+  
+      let isScrolling;
+  
+      const onScroll = () => {
+        window.clearTimeout(isScrolling);
+  
+        isScrolling = setTimeout(() => {
+          // Run the pagination change after scrolling stops
+          pagination.onChange(page, pageSize);
+          window.removeEventListener('scroll', onScroll);
+        }, 150); // Adjust the timeout as needed
+      };
+  
+      window.addEventListener('scroll', onScroll);
+    }
+  };
   const loadData = (params) => {
     return new Promise((resolve) => {
       const urlSearchParams = new URLSearchParams(searchParams);
@@ -20,7 +41,6 @@ export default function PaginationContainer({ items = [] }) {
         params.current === 1 ? 0 : (params.current - 1) * params.pageSize;
       const toItemIndex = params.current * params.pageSize;
 
-      console.log(params, { fromItemIndex, toItemIndex });
 
       resolve({
         total: items.length,
@@ -31,6 +51,7 @@ export default function PaginationContainer({ items = [] }) {
 
   const { data, loading, pagination } = usePagination(loadData, {
     defaultCurrent: searchParams.get("page") ?? 1,
+    defaultPageSize: 6,
   });
 
   if (loading) return <div>Loading.....</div>;
@@ -56,7 +77,7 @@ export default function PaginationContainer({ items = [] }) {
             current={pagination.current}
             pageSize={pagination.pageSize}
             total={data?.total}
-            onChange={pagination.onChange}
+            onChange={handlePageChange}
             style={{ marginTop: 16, textAlign: "right" }}
           />
         </div>

@@ -2,6 +2,7 @@ import { formatDate } from "@/utils/date";
 import { getImageLink } from "@/utils/globalStore";
 import Image from "next/image";
 import Link from "next/link";
+import { ResourceSection } from "./ResourceSection";
 
 export default function ArticleCard({ article, className }) {
   return (
@@ -28,7 +29,11 @@ export default function ArticleCard({ article, className }) {
                 {article.title}
               </h2>
             </div>
-            <div className="article-card__recource flex items-center">
+            <ResourceSection
+          image={article.platform.photos[0]}
+          name={article.platform.name}
+        />
+            {/* <div className="article-card__recource flex items-center">
               <div className="article-card__recource-icon">
                 {article.platform.photos.length && (
                   <img
@@ -42,7 +47,7 @@ export default function ArticleCard({ article, className }) {
               <h6 className="article-card__recource-name line-clamp-1">
                 {article.platform.name}
               </h6>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

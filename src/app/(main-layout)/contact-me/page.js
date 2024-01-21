@@ -15,10 +15,11 @@ export default function AboutPage() {
         <h2 className="contact-me__title">Let&apos;s Talk</h2>
 
         <p className="contact-me__description">
-          Thank you to all the faithful portfolio lovers. You gave me motivation
-          to keep my love for portfolios alive. Leave a mail & keep in touch
-          with us.
-        </p>
+  Leave me a message in the contact form below, or contact me through my email 
+  <a className="ml-1 text-seconday_800" href="mailto:info@yementribalvoices.com">
+    info@yementribalvoices.com
+  </a>
+</p>
 
         <form className="mt-12 grid grid-cols-2 gap-6">
           <div className="form-control col-span-2 sm:col-span-1">

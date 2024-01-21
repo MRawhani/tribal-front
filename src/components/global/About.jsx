@@ -213,8 +213,8 @@ export default function About({ aboutData = homeData.aboutPage }) {
           <div className="lg:order-1 about__img-wrapper md:max-h-[800px] ">
             <ImageBackgroundShape className="absolute" />
             <Image
-              className="about__profile -translate-x-3"
-              src="/assets/nadwa.png"
+              className="about__profile object-cover -translate-x-3"
+              src="/assets/nadwa2.png"
               alt="nadwa"
               width={500}
               height={700}

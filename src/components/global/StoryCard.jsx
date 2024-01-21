@@ -2,6 +2,7 @@
 import { formatDate } from "@/utils/date";
 import { getImageLink } from "@/utils/globalStore";
 import { ResourceSection } from "./ResourceSection";
+import LocationIcon from "../icons/LocationIcon";
 
 export default function StoryCard({ story }) {
   return (
@@ -27,8 +28,10 @@ export default function StoryCard({ story }) {
         <h2 className="story-card__title line-clamp-2">{story?.title}</h2>
 
         <ResourceSection
-          image={story.platform.photos[0]}
-          name={story.platform.name}
+          image={'pin.png'}
+         showIcon={true}
+          // Icon={LocationIcon}
+          name={story.location}
         />
       </div>
     </a>

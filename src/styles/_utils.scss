@@ -113,3 +113,10 @@
 
     }
 }
+.ant-pagination-item-active {
+    a{
+        color: $secondary-secondary !important;
+
+    }
+    border-color: $secondary-secondary !important;
+}

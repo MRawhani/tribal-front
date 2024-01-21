@@ -64,11 +64,12 @@
   &__profile {
     position: relative;
     width: 100%;
-    height: auto;
+    // height: auto;
+    height: 450px;
   }
 
   &__pattern {
-    height: 50rem;
+    height: 45rem;
     width: 67rem;
     position: absolute;
     bottom: -20rem;
@@ -96,7 +97,7 @@
     @include respond(m) {
       display: block;
       bottom: -12rem;
-      width: 17%;
+      width: 11%;
 
       svg {
         // width: 140px;

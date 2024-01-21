@@ -115,7 +115,6 @@ export default function Search({ searchParams }) {
         total: data.portfolioData.total,
       }));
 
-      console.log(dataItems, query);
     });
   }, [query]);
 
@@ -150,15 +149,15 @@ export default function Search({ searchParams }) {
         </div>
         {!items.length && (
           <div>
-            <div class="flex flex-col w-full max-w-sm px-4 mx-auto">
-              <div class="p-3 mx-auto text-secondary_secondary bg-seconday_50 rounded-full">
+            <div className="flex flex-col w-full max-w-sm px-4 mx-auto">
+              <div className="p-3 mx-auto text-secondary_secondary bg-seconday_50 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-6 h-6"
+                  className="w-6 h-6"
                 >
                   <path
                     stroke-linecap="round"
@@ -168,10 +167,10 @@ export default function Search({ searchParams }) {
                 </svg>
               </div>
               <div className=" text-center">
-                <h1 class="mt-2 text-lg text-gray-800 dark:text-white">
+                <h1 className="mt-2 text-lg text-gray-800 dark:text-white">
                   No vendors found
                 </h1>
-                <p class="mt-2 text-gray-500 dark:text-gray-400">
+                <p className="mt-2 text-gray-500 dark:text-gray-400">
                   Your search `{query}` did not match our records. Please try
                   again.
                 </p>
@@ -185,13 +184,12 @@ export default function Search({ searchParams }) {
 }
 
 function SearchItem({ item, className = "" }) {
-  console.log(item);
   if (!item) return;
 
   return (
     <div
       className={
-        "rounded-md overflow-hidden h-full border border-gray-100 " + className
+        "rounded-md overflow-hidden h-full border border-gray-100 flex flex-col " + className
       }
     >
       <div className="h-[300px] mb-4">
@@ -204,7 +202,7 @@ function SearchItem({ item, className = "" }) {
         />
       </div>
 
-      <div className="p-4">
+      <div className="p-4 flex-1 flex flex-col justify-between">
         <div className="">
           <h2 className="c-unpublished-research__title  line-clamp-2">
             {item?.title}

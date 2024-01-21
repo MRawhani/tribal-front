@@ -5,24 +5,22 @@ import { ShareToSocialMediaLinks } from "@/components/ShareToSocialMediaLinks";
 import StoryOtherPhotos from "@/components/StoryOtherPhotos";
 import { photoDetails } from "@/utils/fk-data";
 import { fetchStoryData, getImageLink } from "@/utils/globalStore";
+import Image from "next/image";
 import React from "react";
 
 export default async function PhotoDetails({ params }) {
   const data = (await fetchStoryData(params.slug)).item ?? {};
 
-  console.log("=======");
-  console.log(data, params.slug);
 
   return (
     <div className="page-photo-details">
       <div
         className="hero-section"
       >
-        <img
+        <Image
           src={getImageLink(data?.main_image[0])}
           crossOrigin="anonymous"
-          width={100}
-          height={100}
+         layout="fill"
         />
       </div>
 
@@ -50,7 +48,7 @@ export default async function PhotoDetails({ params }) {
 
         {/* content */}
         <div
-          className="col-span-12 md:col-span-8 font-gothamLight text-lg"
+          className="col-span-12 md:col-span-8 font-gothamLight story-content"
           dangerouslySetInnerHTML={{ __html: data?.body ?? "" }}
         />
       </section>
