@@ -15,31 +15,39 @@ export default function AboutPage() {
         <h2 className="contact-me__title">Let&apos;s Talk</h2>
 
         <p className="contact-me__description">
-  Leave me a message in the contact form below, or contact me through my email 
-  <a className="ml-1 text-seconday_800" href="mailto:info@yementribalvoices.com">
-    info@yementribalvoices.com
-  </a>
-</p>
+          Leave me a message in the contact form below, or contact me through my
+          email
+          <a
+            className="ml-1 text-seconday_800"
+            href="mailto:info@yementribalvoices.com"
+          >
+            info@yementribalvoices.com
+          </a>
+        </p>
 
-        <form className="mt-12 grid grid-cols-2 gap-6">
+        <form
+          className="mt-12 grid grid-cols-2 gap-6"
+          action="mailto:info@yementribalvoices.com"
+          method="POST"
+        >
           <div className="form-control col-span-2 sm:col-span-1">
             <label>Name</label>
-            <input type="text" />
+            <input type="text" name="name" />
           </div>
 
           <div className="form-control col-span-2 sm:col-span-1">
             <label>Email</label>
-            <input type="email" />
+            <input name="mail" type="email" />
           </div>
 
           <div className="form-control col-span-2">
             <label>Subject</label>
-            <input type="text" />
+            <input name="subject" type="text" />
           </div>
 
           <div className="form-control col-span-2">
-            <label>Message</label>
-            <textarea rows={6}></textarea>
+            <label >Message</label>
+            <textarea name="message" rows={6}></textarea>
           </div>
 
           <div className="col-span-2">
