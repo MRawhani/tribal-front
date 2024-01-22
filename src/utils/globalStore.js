@@ -1,3 +1,4 @@
+import axios from "axios";
 import { BASE_API_URL, BASE_IMAGE_URL } from "../../globalConfig";
 
 export const globalStore = {
@@ -47,16 +48,7 @@ export const fetchStoryData = async (slug) => {
 };
 
 export const submitContactUsForm = async (data) => {
-  const res = await fetch(`${BASE_API_URL}/client/submit-form`, {
-    body: JSON.stringify(data),
-    method: "post",
-  });
-
-  if (!res.ok) {
-    return Promise.reject(await res.json());
-  }
-
-  return res.json();
+  return axios.post(`${BASE_API_URL}/client/submit-form`, data);
 };
 
 export const getImageLink = (image) => {

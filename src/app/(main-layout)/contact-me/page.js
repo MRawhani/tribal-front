@@ -44,7 +44,7 @@ function FormSection() {
 
     setLoading(true);
     setShowSuccessMessage(false);
-    setErrorMessage('');
+    setErrorMessage("");
 
     submitContactUsForm({
       name: formData.get("name"),
@@ -58,11 +58,11 @@ function FormSection() {
       })
       .catch((err) => {
         console.log(err);
-        setErrorMessage(err.error[0].message);
+        setErrorMessage(err.response.data.error[0].message);
       })
       .finally(() => {
         setLoading(false);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: "smooth" });
       });
   };
 
