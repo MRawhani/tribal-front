@@ -12,10 +12,10 @@ export default function ArticleCard({ article, className }) {
           className="article-card__img"
           style={{ "--card-bg-src": `url(/assets/${article.img}.png)` }}
         >
-          <img
+          <Image
             src={getImageLink(article.photos[0])}
             alt={`article`}
-            style={{ width: "100%", height: "100%" }}
+            fill="layout"
             crossOrigin="anonymous"
           />
         </div>
@@ -31,9 +31,9 @@ export default function ArticleCard({ article, className }) {
               </h2>
             </div>
             <ResourceSection
-          image={article.platform.photos[0]}
-          name={article.platform.name}
-        />
+              image={article.platform.photos[0]}
+              name={article.platform.name}
+            />
             {/* <div className="article-card__recource flex items-center">
               <div className="article-card__recource-icon">
                 {article.platform.photos.length && (
