@@ -6,7 +6,10 @@ const nextConfig = {
     includePaths: [path.join(__dirname, "styles")],
   },
   images: {
-    domains: ["https://tribal-api.onrender.com", "tribal-api.onrender.com"],
+    domains: ["https://tribal-api.onrender.com", "tribal-api.onrender.com",process.env.BASE_URL, process.env.BASE_URL_NO_HTTP],
+  },
+  env: {
+    BASE_URL: process.env.BASE_URL
   },
   async headers() {
     return [
