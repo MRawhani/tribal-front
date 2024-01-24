@@ -179,7 +179,21 @@ function ImageBackgroundShape({ className }) {
     </svg>
   );
 }
+function Pattern({ className }) {
+  return (
+    <svg className={className} width="404" height="314" viewBox="0 0 404 314" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="364.853" cy="225.717" r="224.5" stroke="#FEFAEF"/>
+<circle cx="139.853" cy="294.717" r="224.5" stroke="url(#paint0_linear_277_387890)"/>
+<defs>
+<linearGradient id="paint0_linear_277_387890" x1="-85.1475" y1="294.708" x2="364.857" y2="294.708" gradientUnits="userSpaceOnUse">
+<stop stopColor="#4E4AFF"/>
+<stop offset="1" stopColor="#08044A"/>
+</linearGradient>
+</defs>
+</svg>
 
+  );
+}
 export default function About({page, aboutData = homeData.aboutPage }) {
   return (
     <div className="about pt-20 lg:pt-0">
@@ -219,14 +233,14 @@ export default function About({page, aboutData = homeData.aboutPage }) {
               width={500}
               height={700}
             />
-            <Image
+            <Pattern className="about__pattern max-w-full" />
+           
+            {/* <img
               className="about__pattern "
               src="/assets/pattern_bo.svg"
               alt="nadwa"
-              width="0"
-              height="0"
-              sizes="100vw"
-            />
+            
+            /> */}
           </div>
         </div>
       </div>
