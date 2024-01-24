@@ -8,9 +8,9 @@ export const homeData = {
   aboutHomePage: {
     title: "About me.",
     mainDescription:
-      "I am a conflict analyst and practitioner specialized in Yemen and Persian Gulf. My research examines regional power and conflict dynamics, peacebuilding efforts, nonstate armed groups, protection of civilians, counter violent extremism, and tribes.",
+      "I am an independent researcher and analyst specializing in conflict within Yemen and the Middle East.",
     secondDescription: `
-      If you're a policymaker, a think tank professional, or part of a development organization, I'm here to help you navigate the complexities and make well-informed decisions. 
+    If you're a policymaker, a think tank professional, or part of a development organization, I'm here to simplify the complexities and guide you in making well-informed decisions. 
       <br />
       <br />
       This website highlights my published work and the stories I've encounter along the way.
@@ -20,24 +20,26 @@ export const homeData = {
   aboutPage: {
     mainDescription: `
     <p class="text-sm">
-      Nadwa Al-Dawsari is an independent consultant, a researcher and conflict practitioner with twenty years of field experience in Yemen where she worked with tribes, civil society, local authorities, security actors, and non-state armed groups. She has worked as the Yemen Country Director at the Center for Civilians in Conflict, the founding Director at Partners Yemen, the MENA advisor at Partners Global, and a Senior Program Manager at the National Democratic Institute (NDI). 
+    Nadwa Al-Dawsari is a researcher and conflict analyst with twenty years of field experience in Yemen where she worked with civil society, local authorities, security actors, tribes, and non-state armed groups. </p>
+    <br />
+    <p class="text-sm">
+    Her research is focused on unpacking the complexities of the conflict in Yemen, drawing connections to the broader power dynamics at play in the Middle East. 
     </p>
     `,
     secondDescription: `
     <p class="text-sm">
-      Nadwa’s research and advocacy work examines regional power and conflict dynamics, peacebuilding efforts, nonstate armed groups, security sector, protection of civilians, counter violent extremism, and tribes. 
-    </p>
+    Currently, she is a Nonresident Scholar at the Middle East Institute and a Fellow at the Center on Armed Groups. She has offered her expertise through advisory services and research to numerous donors and international organizations, including the United Nations, the European Union, the Netherlands Embassy, the Foreign Commonwealth and Development Office, the State Department, and the United States Agency for International Development, among others.    </p>
 
     <br />
     <p class="text-sm">
-    Nadwa is currently a Nonresident Scholar at the Middle East Institute and a Fellow at the Center on Armed Groups. Previously she was a Nonresident Senior Fellow at the Project on Middle East Democracy (POMED), a member of the Century Foundation’s Working Group on Militias, and an advisory Board member for Chatham House’s Future Dynamics in the Gulf Region project. She is also a member of the Institute of Inclusive Security’s Women Waging Peace Network. 
-    </p>
+    In her previous roles, Nadwa served as the Yemen Country Director at the Center for Civilians in Conflict, was the founding Director at Partners Yemen, a MENA advisor at Partners Global, and a Nonresident Senior Fellow at the Project on Middle East Democracy (POMED).
+    <br />
+
+    Her engagement extends to being a member of the Century Foundation’s Working Group on Militias and serving as an advisory board member for Chatham House’s Future Dynamics in the Gulf Region project.    </p>
 
     <br />
 
-    <p class="text-sm">
-    She holds a Master degree in Development Studies from the University of Leeds in the U.K and a Bachelor of Arts in English Literature from Sana’a University in Yemen. 
-    </p>
+   
     `,
     image: "/assets/about-bg.png",
   },

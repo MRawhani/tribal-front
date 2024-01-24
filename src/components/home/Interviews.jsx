@@ -10,6 +10,7 @@ import NextIcon from "@/components/icons/NextIcon";
 import Heading from "../shared/Heading";
 import InterviewCard from "../global/InterviewCard";
 import { interviews } from "@/utils/fk-data";
+import ShowMoreLink from "../shared/ShowMoreLink";
 
 export default function Interviews({portfolioData}) {
   const swiperRef = useRef();
