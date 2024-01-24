@@ -9,7 +9,8 @@ const nextConfig = {
     domains: ["https://tribal-api.onrender.com", "tribal-api.onrender.com",process.env.BASE_URL, process.env.BASE_URL_NO_HTTP],
   },
   env: {
-    BASE_URL: process.env.BASE_URL
+    BASE_URL: process.env.BASE_URL,
+    API_BASE_URL: process.env.API_BASE_URL,
   },
   async headers() {
     return [
