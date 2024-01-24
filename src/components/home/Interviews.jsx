@@ -76,6 +76,9 @@ export default function Interviews({portfolioData}) {
             ))}
           </Swiper>
         </section>
+        <div className="flex justify-center mt-20 ">
+          <ShowMoreLink link="/interviews" text="Show All Interviews" />
+        </div>
       </div>
     </div>
   );

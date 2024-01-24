@@ -214,7 +214,7 @@ export default function About({page, aboutData = homeData.aboutPage }) {
             <ImageBackgroundShape className="absolute" />
             <Image
               className="about__profile object-cover -translate-x-3"
-              src="/assets/nadwa2.png"
+              src={`/assets/${page?'nadwa.png' : 'nadwa2.png'}`}
               alt="nadwa"
               width={500}
               height={700}
