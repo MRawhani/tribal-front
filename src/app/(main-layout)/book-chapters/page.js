@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import BookChapterCard from "@/components/global/BookChapterCard";
 import { Breadcrumb } from "@/components/global/Breadcrumb";
 import { fetchClientData, getConfigValue } from "@/utils/globalStore";
@@ -8,8 +8,12 @@ export default async function BookChapterPage() {
   const data = await fetchClientData();
 
   const portfolioData = data?.portfolioData;
-  const title = getConfigValue(portfolioData.configData, 'books_title')?.value || 'Book Chapters';
-  const caption = getConfigValue(portfolioData.configData, 'books_page_caption')?.value || "Unfold history, culture, and untold tales in captivating literature."
+  const title =
+    getConfigValue(portfolioData.configData, "books_title")?.value ||
+    "Book Chapters";
+  const caption =
+    getConfigValue(portfolioData.configData, "books_page_caption")?.value ||
+    "Unfold history, culture, and untold tales in captivating literature.";
 
   return (
     <div className="bg-white page-book-chapters">
@@ -20,9 +24,9 @@ export default async function BookChapterPage() {
           description={caption}
         />
 
-        <BooksPaginationContainer items={portfolioData.books} />
-
-        
+        <Suspense fallback={<div>Loading...</div>}>
+          <BooksPaginationContainer items={portfolioData.books} />
+        </Suspense>
       </div>
     </div>
   );
