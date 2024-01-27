@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Breadcrumb } from "@/components/global/Breadcrumb";
-import { submitContactUsForm } from "@/utils/globalStore";
+import { fetchClientData, getConfigValue, submitContactUsForm } from "@/utils/globalStore";
 
 function SuccessMessageAlert() {
   return (
@@ -71,24 +71,24 @@ function FormSection() {
       {showSuccessMessage && <SuccessMessageAlert />}
       {errorMessage && <ErrorMessageAlert errorMessage={errorMessage} />}
 
-      <form className=" grid grid-cols-2 gap-6 mt-4" onSubmit={handleSubmit}>
+      <form className="px-2 grid grid-cols-2 gap-6 mt-7" onSubmit={handleSubmit}>
         <div className="form-control col-span-2 sm:col-span-1">
-          <label>Name</label>
+          <label className="text-neutral-500">Name</label>
           <input type="text" name="name" required />
         </div>
 
         <div className="form-control col-span-2 sm:col-span-1">
-          <label>Email</label>
+          <label className="text-neutral-500">Email</label>
           <input name="email" type="email" required />
-        </div>
+        </div> 
 
         <div className="form-control col-span-2">
-          <label>Subject</label>
+          <label className="text-neutral-500">Subject</label>
           <input name="subject" type="text" required />
         </div>
 
         <div className="form-control col-span-2">
-          <label>Message</label>
+          <label className="text-neutral-500">Message</label>
           <textarea name="body" required rows={6}></textarea>
         </div>
 
@@ -103,26 +103,44 @@ function FormSection() {
 }
 
 export default function AboutPage() {
+  const [data, setdata] = useState(null);
+  useEffect(() => {
+    const callData = async () => {
+      const data = await fetchClientData();
+
+      const configData = data?.portfolioData?.configData;
+      setdata(configData)
+    };
+    callData()
+  }, []);
+
   return (
     <div className="contact-me">
       <div className="container pb-16">
         <Breadcrumb
           links={[{ title: "contact me", href: "/contact-me" }]}
-          title="contact me"
+          title={getConfigValue(data, "contact_title")?.value || "contact me"}
         />
       </div>
 
       <section className="container">
-        <h2 className="contact-me__title">Let&apos;s Talk</h2>
+        <h2 className="contact-me__title">
+          {getConfigValue(data, "contact_page_heading")?.value || "Let's Talk"}
+        </h2>
 
         <p className="contact-me__description">
-          Leave me a message in the contact form below, or contact me through my
-          email
+          {getConfigValue(data, "contact_page_caption")?.value ||
+            "Leave me a message in the contact form below"}
+          , or contact me through my email
           <a
             className="ml-1 text-seconday_800"
-            href="mailto:info@yementribalvoices.com"
+            href={`mailto:${
+              getConfigValue(data, "contact_email")?.value ||
+              "info@yementribalvoices.com"
+            }`}
           >
-            info@yementribalvoices.com
+            {getConfigValue(data, "contact_email")?.value ||
+              "info@yementribalvoices.com"}
           </a>
         </p>
 

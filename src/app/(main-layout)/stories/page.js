@@ -1,20 +1,23 @@
 import { Breadcrumb } from "@/components/global/Breadcrumb";
 import StoryPaginationContainer from "@/components/pagination/StoryPaginationContainer";
-import { fetchClientData } from "@/utils/globalStore";
+import { fetchClientData, getConfigValue } from "@/utils/globalStore";
 import React from "react";
 
 export default async function Stories() {
   const data = await fetchClientData();
 
   const portfolioData = data?.portfolioData;
+  const title = getConfigValue(portfolioData.configData, 'stories_title')?.value || 'Stories';
+  const caption = getConfigValue(portfolioData.configData, 'stories_page_caption')?.value || "Discover firsthand accounts and perspectives from diverse individuals shaping the nation's future."
+
   // stories
   return (
     <section>
       <div className="container">
         <Breadcrumb
           links={[{ title: "stories", href: "/stories" }]}
-          title="stories"
-          description="Discover firsthand accounts and perspectives from diverse individuals shaping the nation's future."
+          title={title}
+          description={caption}
         />
 
         <StoryPaginationContainer items={portfolioData.stories} />

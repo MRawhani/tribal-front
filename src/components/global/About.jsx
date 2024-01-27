@@ -6,6 +6,7 @@ import { homeData } from "@/utils/data";
 import LogoAnimatedIcon from "../animated-icons/LogoAnimatedIcon";
 import AboutWavesAnimatedIcon from "../animated-icons/AboutWavesAnimatedIcon";
 import Link from "next/link";
+import { getConfigValue } from "@/utils/globalStore";
 
 function ImageBackgroundShape({ className }) {
   return (
@@ -194,7 +195,14 @@ function Pattern({ className }) {
 
   );
 }
-export default function About({page, aboutData = homeData.aboutPage }) {
+export default function About({page, aboutData = homeData.aboutPage,portfolioData:{configData} }) {
+ 
+ const about_page_heading = getConfigValue(configData, 'about_page_heading')
+ const about_home_heading = getConfigValue(configData,  "about_home_heading");
+ const mainContent = page ? getConfigValue(configData,  "about_page_main"):getConfigValue(configData,  "about_home_main");
+ const subContent = page ? getConfigValue(configData,  "about_page_sub"):getConfigValue(configData,  "about_home_sub");
+ const heading = !about_page_heading && !about_home_heading ? "Who Am I?" : page ? about_page_heading.value : about_home_heading.value
+
   return (
     <div className="about pt-20 lg:pt-0">
       <div className="container not-hidden">
@@ -203,18 +211,19 @@ export default function About({page, aboutData = homeData.aboutPage }) {
             <AboutWavesAnimatedIcon />
 
             <div className="mt-3 mb-4 text-sm ">
-              <Title title="Who I am?" standard={false} />
+              <Title title={heading} standard={false} />
             </div>
 
-            <p
-              className="about__description"
-              dangerouslySetInnerHTML={{ __html: aboutData?.mainDescription }}
-            ></p>
+            <div
+              className={`about__description ${!page? '':'text-small'}`}
+              dangerouslySetInnerHTML={{ __html: mainContent?.value || aboutData?.mainDescription }}
+            ></div>
 
-            <p
-              className="mt-4 about__description"
-              dangerouslySetInnerHTML={{ __html: aboutData?.secondDescription }}
-            ></p>
+            <div
+              className={`mt-10  about__description ${!page? '':'text-small'}`}
+
+              dangerouslySetInnerHTML={{ __html:subContent?.value ||  aboutData?.secondDescription }}
+            ></div>
 
             <div className="my-4">
               {/* call to action */}

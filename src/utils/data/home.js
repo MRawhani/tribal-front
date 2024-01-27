@@ -8,12 +8,12 @@ export const homeData = {
   aboutHomePage: {
     title: "About me.",
     mainDescription:
-      "I am an independent researcher and analyst specializing in conflict within Yemen and the Middle East.",
+      "<p> I am an independent researcher and analyst specializing in conflict within Yemen and the Middle East. </p>",
     secondDescription: `
-    If you're a policymaker, a think tank professional, or part of a development organization, I'm here to simplify the complexities and guide you in making well-informed decisions. 
+    <p> If you're a policymaker, a think tank professional, or part of a development organization, I'm here to simplify the complexities and guide you in making well-informed decisions.</p> 
       <br />
       <br />
-      This website highlights my published work and the stories I've encounter along the way.
+      <p>This website highlights my published work and the stories I've encounter along the way.</p>
       `,
     image: "/assets/about-bg.png",
   },

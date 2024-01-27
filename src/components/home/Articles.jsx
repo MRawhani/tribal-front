@@ -18,25 +18,27 @@ import ArticleCard from "../global/ArticleCard";
 import ShowMoreLink from "../shared/ShowMoreLink";
 import PrevIcon from "../icons/PrevIcon";
 import NextIcon from "../icons/NextIcon";
+import { getConfigValue } from "@/utils/globalStore";
 
 export default function Articles({ portfolioData }) {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const swiperRef = useRef();
   const swiperKey = Date.now();
+  const title = getConfigValue(portfolioData.configData, 'reports_title')?.value || 'Reports'
+  const caption = getConfigValue(portfolioData.configData, 'reports_home_caption')?.value || "Discover Yemen's Richness. Explore history, culture, and stories in thought-provoking articles."
 
   return (
     <div className="articles articles__section pt-20 pb-4">
       <div className="">
         <div className="container articles__content">
-          <Heading title="Reports" className="mb-4" />
+          <Heading title={title} className="mb-4" />
 
           <div className="flex justify-between gap-20 items-center  mb-8 md:mb-12">
             <div className="lg:flex justify-between items-end ">
               <h2 className="articles__section-title font-ncs">
-                Discover Yemen&apos;s Richness. Explore history, culture, and
+               {caption}
                 <br className="hidden xl:block" />
-                stories in thought-provoking articles.
               </h2>
             </div>
 

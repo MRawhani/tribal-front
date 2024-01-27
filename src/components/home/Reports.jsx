@@ -7,7 +7,7 @@ import Image from "next/image";
 import ShowMoreLink from "../shared/ShowMoreLink";
 import AuthorIcon from "../icons/AuthorIcon";
 import LocationIcon from "../icons/LocationIcon";
-import { getImageLink } from "@/utils/globalStore";
+import { getConfigValue, getImageLink } from "@/utils/globalStore";
 import { ResourceSection } from "../global/ResourceSection";
 
 const BookChapterList = ({ books }) => {
@@ -95,13 +95,15 @@ const BookChapterList = ({ books }) => {
 };
 
 export default function BookChapter({ portfolioData }) {
+  const title = getConfigValue(portfolioData.configData, 'books_title')?.value || 'Book Chapters'
+  const caption = getConfigValue(portfolioData.configData, 'books_home_caption')?.value || 'Uncover Yemen&apos;s Untold Realities. Explore in-depth analysis and first-hand accounts from local communities.  '
+
   return (
     <div className="reports reports__section">
       <div className="container">
-        <Heading title="Book chapters" className="mb-2" />
+        <Heading title={title} className="mb-2" />
         <h2 className="reports__section-title uppercase md:capitalize">
-          Uncover Yemen&apos;s Untold Realities. Explore in-depth <br />{" "}
-          analysis and first-hand accounts from local communities.
+          {caption}
         </h2>
 
         <div className="reports__content mt-8 md:mt-12">

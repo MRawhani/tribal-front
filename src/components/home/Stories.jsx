@@ -11,20 +11,22 @@ import Heading from "../shared/Heading";
 import { homeData } from "@/utils/data";
 import StoryCard from "../global/StoryCard";
 import ShowMoreLink from "../shared/ShowMoreLink";
+import { getConfigValue } from "@/utils/globalStore";
 
 export default function Stories({portfolioData}) {
   const swiperRef = useRef();
   const swiperKey = Date.now();
+  const title = getConfigValue(portfolioData.configData, 'stories_title')?.value || 'Stories';
+  const caption = getConfigValue(portfolioData.configData, 'stories_home_caption')?.value || "Discover firsthand accounts and perspectives from diverse individuals shaping the nation's future."
 
   return (
     <div className="bg-white stories py-20 md:py-32">
       <div className="container md:flex justify-between">
         <div>
-          <Heading title={homeData.stories.title} />
+          <Heading title={title} />
 
           <p className="stories__description mt-3 uppercase md:capitalize font-ncs text-base md:text-2xl">
-            Discover firsthand accounts and perspectives from <br /> diverse
-            individuals shaping the nation&apos;s future.{" "}
+            {caption}
           </p>
         </div>
 

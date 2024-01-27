@@ -1,9 +1,12 @@
-"use client";
 import React from "react";
 import About from "@/components/global/About";
 import { Breadcrumb } from "@/components/global/Breadcrumb";
+import { fetchClientData } from "@/utils/globalStore";
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const data = await fetchClientData();
+
+  const portfolioData = data?.portfolioData;
   return (
     <div className="page-about pb-48 md:pb-40 lg:pb-8">
       <div className="container pb-8 ">
@@ -13,7 +16,7 @@ export default function AboutPage() {
         />
       </div>
 
-      <About page={true}/>
+      <About portfolioData={portfolioData} page={true}/>
     </div>
   );
 }

@@ -11,21 +11,23 @@ import Heading from "../shared/Heading";
 import InterviewCard from "../global/InterviewCard";
 import { interviews } from "@/utils/fk-data";
 import ShowMoreLink from "../shared/ShowMoreLink";
+import { getConfigValue } from "@/utils/globalStore";
 
 export default function Interviews({portfolioData}) {
   const swiperRef = useRef();
   const swiperKey = Date.now();
+  const title = getConfigValue(portfolioData.configData, 'interviews_title')?.value || 'Interviews';
+  const caption = getConfigValue(portfolioData.configData, 'interviews_home_caption')?.value || "Discover firsthand accounts and perspectives from  diverse individuals shaping the nation's future."
 
   return (
     <div className="bg-white interviews py-20 md:py-32">
-      <div className="container">
-        <Heading title="INTERVIEWS" />
+      <div className="container"> 
+        <Heading title={title} />
       </div>
 
       <div className="container md:flex justify-between items-center gap-10">
         <p className="interviews__description  font-ncs mt-3 uppercase md:capitalize text-base md:text-2xl">
-          Discover firsthand accounts and perspectives from <br /> diverse
-          individuals shaping the nation&apos;s future.{" "}
+          {caption}
         </p>
 
         {/* swiper button */}

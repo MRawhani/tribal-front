@@ -15,9 +15,7 @@ export const globalStore = {
 };
 
 export const fetchClientData = async () => {
-  const res = await fetch(`${BASE_API_URL}/client/get-data`, {
-    next: { revalidate: 60 },
-  });
+  const res = await fetch(`${BASE_API_URL}/client/get-data`);
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
@@ -53,4 +51,7 @@ export const submitContactUsForm = async (data) => {
 
 export const getImageLink = (image) => {
   return `${BASE_IMAGE_URL}/${image}`;
+};
+export const getConfigValue = (configData, key) => {
+  return configData?.find(obj => obj.key === key);
 };

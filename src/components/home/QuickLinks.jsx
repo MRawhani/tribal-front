@@ -6,6 +6,7 @@ import Link from "next/link";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { getConfigValue } from "@/utils/globalStore";
 
 const QuickLinkCard = ({ link }) => {
   return (
@@ -84,15 +85,17 @@ const MobileQuickLinks = ({ shortLinks }) => {
   );
 };
 
-export default function QuickLinksWrapper({ shortLinks }) {
+export default function QuickLinksWrapper({ shortLinks,portfolioData:{configData} }) {
+  const caption = getConfigValue(configData, 'links_caption')?.value || 'Our writings cover local affairs and perspectives from youth, women, tribes, and local security'
+  
   return (
     <div className="shortcuts pt-60 pb-20 md:pt-32">
       <div className="container shortcuts__container">
         <h4 className="shortcuts__heading lg:text-center">
-          <span className="shortcuts__main-title">Our writings </span>
-          cover local affairs and perspectives from youth, women,
+          <span className="shortcuts__main-title">{caption.split(' ').slice(0, 2).join(' ')} </span>
+          {caption.split(' ').slice(2, 8)?.join(' ')}
           <br />
-          tribes, and local security.
+          {caption.split(' ').slice(8)?.join(' ')}
         </h4>
 
         <div className="mt-12">

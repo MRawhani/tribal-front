@@ -17,7 +17,7 @@ export default async function Home() {
   const data = await fetchClientData();
 
   const portfolioData = data?.portfolioData;
-
+  console.log('d')
   const shortLinks = [
     {
       id: 1,
@@ -52,8 +52,8 @@ export default async function Home() {
   return (
     <main className="-mb-8  md:-mb-16">
       {/* <Hero /> */}
-      <About aboutData={homeData.aboutHomePage} />
-      <QuickLinks shortLinks={shortLinks} />
+      <About portfolioData={portfolioData} aboutData={homeData.aboutHomePage} />
+      <QuickLinks shortLinks={shortLinks} portfolioData={portfolioData}/>
       <Articles portfolioData={portfolioData} />
       <Reports portfolioData={portfolioData} />
       <Interviews portfolioData={portfolioData} />

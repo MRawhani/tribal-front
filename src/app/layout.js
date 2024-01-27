@@ -44,18 +44,24 @@ export default function RootLayout({ children }) {
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="theme-color" content="#ffffff" />
         {/* <!-- Open Graph / Facebook Meta Tags --> */}
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://www.yementribalvoices.org"/>
-    <meta property="og:title" content="Yemen Tribal Voices"/>
-    <meta property="og:description" content="Nadwa Dawsari, Independent researcher and analyst specializing in conflict within Yemen and the Middle East"/>
-    <meta property="og:image" content="/assets/nadwa.png"/>
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.yementribalvoices.org" />
+        <meta property="og:title" content="Yemen Tribal Voices" />
+        <meta
+          property="og:description"
+          content="Nadwa Dawsari, Independent researcher and analyst specializing in conflict within Yemen and the Middle East"
+        />
+        <meta property="og:image" content="/assets/nadwa.png" />
 
-    {/* <!-- Twitter Card Meta Tags --/> */}
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:url" content="https://www.yementribalvoices.org"/>
-    <meta name="twitter:title" content="Yemen Tribal Voices"/>
-    <meta name="twitter:description" content="Nadwa Dawsari, Independent researcher and analyst specializing in conflict within Yemen and the Middle East"/>
-    <meta name="twitter:image" content="/assets/nadwa.png"/>
+        {/* <!-- Twitter Card Meta Tags --/> */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="https://www.yementribalvoices.org" />
+        <meta name="twitter:title" content="Yemen Tribal Voices" />
+        <meta
+          name="twitter:description"
+          content="Nadwa Dawsari, Independent researcher and analyst specializing in conflict within Yemen and the Middle East"
+        />
+        <meta name="twitter:image" content="/assets/nadwa.png" />
         <link rel="shortcut icon" href="/logo.svg" type="image/x-icon" />
       </head>
       <body className={`${custom_fonts}`}>
