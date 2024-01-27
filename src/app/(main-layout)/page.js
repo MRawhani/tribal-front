@@ -17,7 +17,6 @@ export default async function Home() {
   const data = await fetchClientData();
 
   const portfolioData = data?.portfolioData;
-  console.log('d')
   const shortLinks = [
     {
       id: 1,

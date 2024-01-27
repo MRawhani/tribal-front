@@ -15,7 +15,9 @@ export const globalStore = {
 };
 
 export const fetchClientData = async () => {
-  const res = await fetch(`${BASE_API_URL}/client/get-data`);
+  const res = await fetch(`${BASE_API_URL}/client/get-data`,{
+    next: { revalidate: 10 },
+  });
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
