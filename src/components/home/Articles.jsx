@@ -68,7 +68,7 @@ export default function Articles({ portfolioData }) {
                 swiper.update();
               }, 300);
             }}
-            pagination={true}
+            pagination={false}
             navigation={{
               prevEl: ".articles-slider-prev-btn",
               nextEl: ".articles-slider-next-btn",

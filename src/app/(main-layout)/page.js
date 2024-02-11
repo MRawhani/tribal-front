@@ -54,7 +54,7 @@ export default async function Home() {
       <About portfolioData={portfolioData} aboutData={homeData.aboutHomePage} />
       <QuickLinks shortLinks={shortLinks} portfolioData={portfolioData}/>
       <Articles portfolioData={portfolioData} />
-      <Reports portfolioData={portfolioData} />
+      <Reports portfolioData={portfolioData} /> {/** this was reports now it is book chapters */}
       <Interviews portfolioData={portfolioData} />
       <Stories portfolioData={portfolioData} />
     </main>
