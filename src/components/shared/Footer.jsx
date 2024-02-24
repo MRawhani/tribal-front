@@ -31,11 +31,11 @@ const FooterLinks = () => {
 };
 const SocialMediaLinks = ({configData}) => {
   const socialMediaLinks= [
-    {title: 'Whatsapp',icon: '/icons/whatsapp.svg', link: getConfigValue(configData, 'whatsapp')?.value ? `https://wa.me/${getConfigValue(configData, 'whatsapp')?.value}`: '#'},
+    // {title: 'Whatsapp',icon: '/icons/whatsapp.svg', link: getConfigValue(configData, 'whatsapp')?.value ? `https://wa.me/${getConfigValue(configData, 'whatsapp')?.value}`: '#'},
   { title: 'LinkedIn',icon: '/icons/linkedin.svg', link: getConfigValue(configData, 'linkedin')?.value ||'#' },
   { title: 'Twitter',icon: '/icons/twitter.svg', link: getConfigValue(configData, 'twitter')?.value ||'#'},
-  {title: 'Facebook',icon: '/icons/facebook.svg', link:getConfigValue(configData, 'facebook')?.value|| '#'},
-  {title: 'Insta',icon: '/icons/insta.svg', link:getConfigValue(configData, 'instagram')?.value|| '#'},
+  // {title: 'Facebook',icon: '/icons/facebook.svg', link:getConfigValue(configData, 'facebook')?.value|| '#'},
+  // {title: 'Insta',icon: '/icons/insta.svg', link:getConfigValue(configData, 'instagram')?.value|| '#'},
 ]
 
   return socialMediaLinks.map((link) => (

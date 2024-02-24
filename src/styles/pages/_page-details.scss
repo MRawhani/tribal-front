@@ -5,36 +5,50 @@
     transform: translateY(10%);
     animation: slide-top 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
-.story-content{
-  p{
-    font-size: 1.2rem;
-    a{
-      color: $primary-600;
-      text-decoration: underline;
-    }
-   
-  }
-  blockquote {
-    border-left: 5px solid $secondary-secondary;
-    color: $tuna-800;
-    
-    font-size: 1.15rem;
-    font-style: italic;
-    line-height: 1.8em;
-    margin: 1rem;
-    padding: 0 0.6rem ;
-    position: relative;
-    transition: 0.2s border ease-in-out;
-    z-index: 0;
-  }
- 
-  
 
-  blockquote:active:after {
-    transform: rotateY(360deg);
+  .story-content {
+    p {
+      font-size: 1.2rem;
+
+      a {
+        color: $primary-600;
+        text-decoration: underline;
+      }
+
+    }
+
+    blockquote {
+      border-left: 5px solid $secondary-secondary;
+      color: $tuna-800;
+
+      font-size: 1.15rem;
+      font-style: italic;
+      line-height: 1.8em;
+      margin: 1rem;
+      padding: 0 0.6rem;
+      position: relative;
+      transition: 0.2s border ease-in-out;
+      z-index: 0;
+    }
+
+
+
+    blockquote:active:after {
+      transform: rotateY(360deg);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: bold;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
   }
- 
-}
+
   .hero-section {
     position: relative;
     margin-top: -119px;
@@ -80,6 +94,7 @@
     .swiper-slide {
       width: 90%;
     }
+
     @include respond(m) {
       .swiper-slide {
         width: 430px;
@@ -118,11 +133,9 @@
     inset: 0;
     opacity: 0;
     transition: all 0.3s linear;
-    background: linear-gradient(
-        122deg,
+    background: linear-gradient(122deg,
         rgba(9, 4, 77, 0.75) 4.25%,
-        rgba(201, 154, 100, 0.75) 101.53%
-      ),
+        rgba(201, 154, 100, 0.75) 101.53%),
       lightgray 50% / cover no-repeat;
     background-size: cover;
     z-index: 0;
